@@ -91,19 +91,20 @@ async function scrapeAccounts() {
           // 获取元素的所有文本内容
           const cardText = card.textContent || '';
           
-                     // 使用正则表达式提取信息
-           const numberMatch = cardText.match(/编号\s*(\d+)/);
-           const emailMatch = cardText.match(/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/);
-           
-                                   // 更精确的正则表达式，确保只匹配到下一个字段之前的内容
-             const passwordMatch = cardText.match(/密码[：:]\s*([^国家]+?)(?=\s*国家[：:])/);
-             const countryMatch = cardText.match(/国家[：:]\s*([^状态]+?)(?=\s*状态[：:])/);
-             const statusMatch = cardText.match(/状态[：:]\s*([^时间]+?)(?=\s*\d{4}-\d{2}-\d{2})/);
-             
-                          // 如果密码字段仍然包含"国家:"，手动清理
-             if (cleanPassword.includes('国家:')) {
-               cleanPassword = cleanPassword.split('国家:')[0].trim();
-             }
+                                 // 使用正则表达式提取信息
+            const numberMatch = cardText.match(/编号\s*(\d+)/);
+            const emailMatch = cardText.match(/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/);
+            
+            // 更精确的正则表达式，确保只匹配到下一个字段之前的内容
+            const passwordMatch = cardText.match(/密码[：:]\s*([^国家]+?)(?=\s*国家[：:])/);
+            const countryMatch = cardText.match(/国家[：:]\s*([^状态]+?)(?=\s*状态[：:])/);
+            const statusMatch = cardText.match(/状态[：:]\s*([^时间]+?)(?=\s*\d{4}-\d{2}-\d{2})/);
+            
+            // 清理密码字段，移除后面的"国家:"等文本
+            let cleanPassword = passwordMatch ? passwordMatch[1].trim() : '';
+            if (cleanPassword.includes('国家:')) {
+              cleanPassword = cleanPassword.split('国家:')[0].trim();
+            }
              
              // 如果状态字段为空，尝试其他匹配方式
              let statusValue = '';
@@ -166,8 +167,7 @@ async function scrapeAccounts() {
 function generateMarkdownTable(accounts) {
   // 获取北京时间
   const now = new Date();
-  const beijingTime = new Date(now.getTime() + (8 * 60 * 60 * 1000)); // UTC+8
-  const timeString = beijingTime.toLocaleString('zh-CN', { 
+  const timeString = now.toLocaleString('zh-CN', { 
     timeZone: 'Asia/Shanghai',
     year: 'numeric',
     month: '2-digit',
