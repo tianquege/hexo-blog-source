@@ -100,8 +100,8 @@ theme: fluid
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-  type: git
-  repo: https://github.com/tianquege/tianquege.github.io.git
-  branch: main
-  token: YOUR_DEPLOY_TOKEN_HERE
+# Note: GitHub Actions will handle deployment automatically
+# deploy:
+#   type: git
+#   repo: https://github.com/tianquege/tianquege.github.io.git
+#   branch: main
