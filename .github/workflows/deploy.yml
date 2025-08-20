@@ -4,6 +4,8 @@ on:
   push:
     branches: [ master ]
   workflow_dispatch:
+  schedule:
+    - cron: '0,30 * * * *'  # 每30分钟运行一次
 
 jobs:
   build-and-deploy:
@@ -28,7 +30,7 @@ jobs:
       run: pnpm install
       
     - name: Install additional dependencies
-      run: npm install puppeteer
+      run: pnpm add puppeteer
       
     - name: Update account info
       run: node scripts/scrape-accounts.js
