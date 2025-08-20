@@ -25,7 +25,9 @@ jobs:
         cache: 'pnpm'
         
     - name: Install dependencies
-      run: pnpm install puppeteer
+      run: |
+        pnpm install
+        pnpm add puppeteer
       
     - name: Scrape and update accounts
       run: node scripts/scrape-accounts.js

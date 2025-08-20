@@ -121,15 +121,21 @@ function updateArticleFile(markdown) {
   
   // 查找账号信息部分并替换
   const accountSectionRegex = /## 共享账号信息[\s\S]*?(?=##|$)/;
-  const newAccountSection = markdown.split('---')[2]; // 去掉 front-matter
+  const newAccountSection = markdown;
   
   let newContent;
   if (accountSectionRegex.test(content)) {
     // 如果已存在账号信息部分，替换它
     newContent = content.replace(accountSectionRegex, newAccountSection);
   } else {
-    // 如果不存在，在文章末尾添加
-    newContent = content + '\n\n' + newAccountSection;
+    // 如果不存在，在文章开头添加（在第一个 ## 标题之前）
+    const firstHeadingIndex = content.indexOf('##');
+    if (firstHeadingIndex !== -1) {
+      newContent = content.substring(0, firstHeadingIndex) + newAccountSection + '\n\n' + content.substring(firstHeadingIndex);
+    } else {
+      // 如果没有找到标题，在文章开头添加
+      newContent = newAccountSection + '\n\n' + content;
+    }
   }
   
   try {
