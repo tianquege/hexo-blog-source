@@ -39,6 +39,10 @@ async function scrapeAccounts() {
        // 输出页面标题和URL用于调试
        console.log('页面标题:', document.title);
        console.log('页面URL:', window.location.href);
+       
+       // 输出页面文本内容的前500个字符用于调试
+       const pageText = document.body.textContent || '';
+       console.log('页面文本内容前500字符:', pageText.substring(0, 500));
       
              // 尝试多种选择器
        const selectors = [
@@ -59,15 +63,24 @@ async function scrapeAccounts() {
         }
       }
       
-      // 如果还是没找到，尝试查找包含特定文本的元素
-      if (accountCards.length === 0) {
-        const allDivs = document.querySelectorAll('div');
-        accountCards = Array.from(allDivs).filter(div => {
-          const text = div.textContent || '';
-          return text.includes('编号') || text.includes('@') || text.includes('密码');
-        });
-        console.log(`通过文本内容找到 ${accountCards.length} 个可能的元素`);
-      }
+             // 如果还是没找到，尝试查找包含特定文本的元素
+       if (accountCards.length === 0) {
+         const allDivs = document.querySelectorAll('div');
+         accountCards = Array.from(allDivs).filter(div => {
+           const text = div.textContent || '';
+           return text.includes('编号') || text.includes('@') || text.includes('密码');
+         });
+         console.log(`通过文本内容找到 ${accountCards.length} 个可能的元素`);
+         
+         // 如果还是没找到，检查整个页面是否包含这些关键词
+         if (accountCards.length === 0) {
+           const fullText = document.body.textContent || '';
+           console.log('页面是否包含"编号":', fullText.includes('编号'));
+           console.log('页面是否包含"邮箱":', fullText.includes('邮箱'));
+           console.log('页面是否包含"密码":', fullText.includes('密码'));
+           console.log('页面是否包含"@":', fullText.includes('@'));
+         }
+       }
       
       const accounts = [];
       
