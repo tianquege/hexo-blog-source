@@ -74,26 +74,30 @@ async function scrapeAccounts() {
            const numberMatch = cardText.match(/编号\s*(\d+)/);
            const emailMatch = cardText.match(/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/);
            
-                       // 更精确的正则表达式，确保只匹配到下一个字段之前的内容
-            const passwordMatch = cardText.match(/密码[：:]\s*([^国家]+?)(?=\s*国家[：:])/);
-            const countryMatch = cardText.match(/国家[：:]\s*([^状态]+?)(?=\s*状态[：:])/);
-            const statusMatch = cardText.match(/状态[：:]\s*([^时间]+?)(?=\s*\d{4}-\d{2}-\d{2})/);
+                                   // 更精确的正则表达式，确保只匹配到下一个字段之前的内容
+             const passwordMatch = cardText.match(/密码[：:]\s*([^国家]+?)(?=\s*国家[：:])/);
+             const countryMatch = cardText.match(/国家[：:]\s*([^状态]+?)(?=\s*状态[：:])/);
+             const statusMatch = cardText.match(/状态[：:]\s*([^时间]+?)(?=\s*\d{4}-\d{2}-\d{2})/);
+             
+                          // 如果密码字段仍然包含"国家:"，手动清理
+             if (cleanPassword.includes('国家:')) {
+               cleanPassword = cleanPassword.split('国家:')[0].trim();
+             }
+             
+             // 如果状态字段为空，尝试其他匹配方式
+             let statusValue = '';
+             if (statusMatch) {
+               statusValue = statusMatch[1].trim();
+             } else {
+               // 尝试匹配状态字段的其他可能格式
+               const statusAltMatch = cardText.match(/状态[：:]\s*([^\s\n]+)/);
+               statusValue = statusAltMatch ? statusAltMatch[1].trim() : '正常';
+             }
+            const timeMatch = cardText.match(/(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2})/);
             
-            // 如果状态字段为空，尝试其他匹配方式
-            let statusValue = '';
-            if (statusMatch) {
-              statusValue = statusMatch[1].trim();
-            } else {
-              // 尝试匹配状态字段的其他可能格式
-              const statusAltMatch = cardText.match(/状态[：:]\s*([^\s\n]+)/);
-              statusValue = statusAltMatch ? statusAltMatch[1].trim() : '正常';
-            }
-           const timeMatch = cardText.match(/(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2})/);
-           
-                       // 清理字段，移除多余的空格和换行
-            const cleanPassword = passwordMatch ? passwordMatch[1].trim() : '';
-            const cleanCountry = countryMatch ? countryMatch[1].trim() : '';
-            const cleanStatus = statusValue;
+                        // 清理字段，移除多余的空格和换行
+             const cleanCountry = countryMatch ? countryMatch[1].trim() : '';
+             const cleanStatus = statusValue;
           
                      const number = numberMatch ? `编号${numberMatch[1]}` : `编号${index + 1}`;
            const email = emailMatch ? emailMatch[1] : '';
@@ -139,16 +143,29 @@ async function scrapeAccounts() {
 }
 
 function generateMarkdownTable(accounts) {
+  // 获取北京时间
+  const now = new Date();
+  const beijingTime = new Date(now.getTime() + (8 * 60 * 60 * 1000)); // UTC+8
+  const timeString = beijingTime.toLocaleString('zh-CN', { 
+    timeZone: 'Asia/Shanghai',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit'
+  });
+
   let markdown = `## 共享账号信息
 
-**更新时间：** ${new Date().toLocaleString('zh-CN')}
+**更新时间：** ${timeString}
 
 | 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
 |------|------|------|------|------|------|------|
 `;
 
   accounts.forEach(account => {
-    const copyButton = `<button onclick="copyAccount('${account.email}', '${account.password}')" style="background: #007bff; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer; font-size: 12px;">复制账号</button>`;
+    const copyButton = `<a href="javascript:void(0)" onclick="copyAccount('${account.email}', '${account.password}')" style="background: #007bff; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer; font-size: 12px; text-decoration: none; display: inline-block;">复制账号</a>`;
     markdown += `| ${account.number} | ${account.email} | ${account.password} | ${account.country} | ${account.status} | ${account.time} | ${copyButton} |\n`;
   });
   
