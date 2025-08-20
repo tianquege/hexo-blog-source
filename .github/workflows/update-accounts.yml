@@ -2,7 +2,7 @@ name: Update iOS Account Info
 
 on:
   schedule:
-    - cron: '0 */6 * * *'  # 每6小时运行一次
+    - cron: '0,30 * * * *'  # 每30分钟运行一次
   workflow_dispatch:  # 手动触发
 
 jobs:
@@ -13,13 +13,19 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
       
+    - name: Install pnpm
+      uses: pnpm/action-setup@v2
+      with:
+        version: 8
+        
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
         node-version: '18'
+        cache: 'pnpm'
         
     - name: Install dependencies
-      run: npm install puppeteer
+      run: pnpm install puppeteer
       
     - name: Scrape and update accounts
       run: node scripts/scrape-accounts.js
