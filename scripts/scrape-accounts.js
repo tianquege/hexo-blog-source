@@ -70,20 +70,38 @@ async function scrapeAccounts() {
           // 获取元素的所有文本内容
           const cardText = card.textContent || '';
           
-          // 使用正则表达式提取信息
-          const numberMatch = cardText.match(/编号\s*(\d+)/);
-          const emailMatch = cardText.match(/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/);
-          const passwordMatch = cardText.match(/密码[：:]\s*([^\s\n]+)/);
-          const countryMatch = cardText.match(/国家[：:]\s*([^\s\n]+)/);
-          const statusMatch = cardText.match(/状态[：:]\s*([^\s\n]+)/);
-          const timeMatch = cardText.match(/(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2})/);
+                     // 使用正则表达式提取信息
+           const numberMatch = cardText.match(/编号\s*(\d+)/);
+           const emailMatch = cardText.match(/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/);
+           const passwordMatch = cardText.match(/密码[：:]\s*([^\s\n]+)/);
+           const countryMatch = cardText.match(/国家[：:]\s*([^\s\n]+)/);
+           const statusMatch = cardText.match(/状态[：:]\s*([^\s\n]+)/);
+           const timeMatch = cardText.match(/(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2})/);
+           
+           // 清理密码字段，移除后面的"国家:"等文本
+           let cleanPassword = passwordMatch ? passwordMatch[1] : '';
+           if (cleanPassword.includes('国家:')) {
+             cleanPassword = cleanPassword.split('国家:')[0].trim();
+           }
+           
+           // 清理国家字段，移除后面的"状态:"等文本
+           let cleanCountry = countryMatch ? countryMatch[1] : '';
+           if (cleanCountry.includes('状态:')) {
+             cleanCountry = cleanCountry.split('状态:')[0].trim();
+           }
+           
+           // 清理状态字段，移除后面的"时间:"等文本
+           let cleanStatus = statusMatch ? statusMatch[1] : '';
+           if (cleanStatus.includes('时间:')) {
+             cleanStatus = cleanStatus.split('时间:')[0].trim();
+           }
           
-          const number = numberMatch ? `编号${numberMatch[1]}` : `编号${index + 1}`;
-          const email = emailMatch ? emailMatch[1] : '';
-          const password = passwordMatch ? passwordMatch[1] : '';
-          const country = countryMatch ? countryMatch[1] : '';
-          const status = statusMatch ? statusMatch[1] : '';
-          const time = timeMatch ? timeMatch[1] : '';
+                     const number = numberMatch ? `编号${numberMatch[1]}` : `编号${index + 1}`;
+           const email = emailMatch ? emailMatch[1] : '';
+           const password = cleanPassword;
+           const country = cleanCountry;
+           const status = cleanStatus;
+           const time = timeMatch ? timeMatch[1] : '';
           
           if (email || password) {
             accounts.push({
