@@ -27,6 +27,12 @@ jobs:
     - name: Install dependencies
       run: pnpm install
       
+    - name: Install additional dependencies
+      run: npm install puppeteer
+      
+    - name: Update account info
+      run: node scripts/scrape-accounts.js
+      
     - name: Build
       run: |
         npx hexo clean
