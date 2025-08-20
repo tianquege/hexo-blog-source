@@ -133,12 +133,13 @@ function generateMarkdownTable(accounts) {
 
 **更新时间：** ${new Date().toLocaleString('zh-CN')}
 
-| 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 |
-|------|------|------|------|------|------|
+| 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
+|------|------|------|------|------|------|------|
 `;
 
   accounts.forEach(account => {
-    markdown += `| ${account.number} | ${account.email} | ${account.password} | ${account.country} | ${account.status} | ${account.time} |\n`;
+    const copyButton = `<button onclick="copyAccount('${account.email}', '${account.password}')" style="background: #007bff; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer; font-size: 12px;">复制账号</button>`;
+    markdown += `| ${account.number} | ${account.email} | ${account.password} | ${account.country} | ${account.status} | ${account.time} | ${copyButton} |\n`;
   });
   
   markdown += `
@@ -146,6 +147,50 @@ function generateMarkdownTable(accounts) {
 - 共享ID，可能随时被盗，强烈建议购买独享ID
 - 严格禁止在手机设置中登录共享ID，防止意外ID锁死和手机变砖
 - 本信息仅供参考，使用风险自负
+
+<script>
+function copyAccount(email, password) {
+  const text = \`邮箱: \${email}\\n密码: \${password}\`;
+  
+  if (navigator.clipboard && window.isSecureContext) {
+    // 使用现代 Clipboard API
+    navigator.clipboard.writeText(text).then(() => {
+      alert('账号信息已复制到剪贴板！');
+    }).catch(err => {
+      console.error('复制失败:', err);
+      fallbackCopyTextToClipboard(text);
+    });
+  } else {
+    // 降级方案
+    fallbackCopyTextToClipboard(text);
+  }
+}
+
+function fallbackCopyTextToClipboard(text) {
+  const textArea = document.createElement("textarea");
+  textArea.value = text;
+  textArea.style.top = "0";
+  textArea.style.left = "0";
+  textArea.style.position = "fixed";
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+  
+  try {
+    const successful = document.execCommand('copy');
+    if (successful) {
+      alert('账号信息已复制到剪贴板！');
+    } else {
+      alert('复制失败，请手动复制');
+    }
+  } catch (err) {
+    console.error('复制失败:', err);
+    alert('复制失败，请手动复制');
+  }
+  
+  document.body.removeChild(textArea);
+}
+</script>
 
 ---
 *本页面由 GitHub Actions 自动更新*
