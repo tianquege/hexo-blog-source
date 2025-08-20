@@ -165,8 +165,9 @@ function generateMarkdownTable(accounts) {
 `;
 
   accounts.forEach(account => {
-    const copyButton = `<a href="javascript:void(0)" onclick="copyAccount('${account.email}', '${account.password}')" style="background: #007bff; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer; font-size: 12px; text-decoration: none; display: inline-block;">复制账号</a>`;
-    markdown += `| ${account.number} | ${account.email} | ${account.password} | ${account.country} | ${account.status} | ${account.time} | ${copyButton} |\n`;
+    const copyEmailButton = `<a href="javascript:void(0)" onclick="copyEmail('${account.email}')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a>`;
+    const copyPasswordButton = `<a href="javascript:void(0)" onclick="copyPassword('${account.password}')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a>`;
+    markdown += `| ${account.number} | ${account.email} | ${account.password} | ${account.country} | ${account.status} | ${account.time} | ${copyEmailButton}${copyPasswordButton} |\n`;
   });
   
   markdown += `
@@ -176,13 +177,30 @@ function generateMarkdownTable(accounts) {
 - 本信息仅供参考，使用风险自负
 
 <script>
-function copyAccount(email, password) {
-  const text = \`邮箱: \${email}\\n密码: \${password}\`;
+function copyEmail(email) {
+  const text = email;
   
   if (navigator.clipboard && window.isSecureContext) {
     // 使用现代 Clipboard API
     navigator.clipboard.writeText(text).then(() => {
-      alert('账号信息已复制到剪贴板！');
+      alert('邮箱已复制到剪贴板！');
+    }).catch(err => {
+      console.error('复制失败:', err);
+      fallbackCopyTextToClipboard(text);
+    });
+  } else {
+    // 降级方案
+    fallbackCopyTextToClipboard(text);
+  }
+}
+
+function copyPassword(password) {
+  const text = password;
+  
+  if (navigator.clipboard && window.isSecureContext) {
+    // 使用现代 Clipboard API
+    navigator.clipboard.writeText(text).then(() => {
+      alert('密码已复制到剪贴板！');
     }).catch(err => {
       console.error('复制失败:', err);
       fallbackCopyTextToClipboard(text);
@@ -206,7 +224,7 @@ function fallbackCopyTextToClipboard(text) {
   try {
     const successful = document.execCommand('copy');
     if (successful) {
-      alert('账号信息已复制到剪贴板！');
+      alert('复制成功！');
     } else {
       alert('复制失败，请手动复制');
     }
