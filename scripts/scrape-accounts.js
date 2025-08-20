@@ -73,9 +73,9 @@ async function scrapeAccounts() {
                      // 使用正则表达式提取信息
            const numberMatch = cardText.match(/编号\s*(\d+)/);
            const emailMatch = cardText.match(/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/);
-           const passwordMatch = cardText.match(/密码[：:]\s*([^\s\n]+)/);
-           const countryMatch = cardText.match(/国家[：:]\s*([^\s\n]+)/);
-           const statusMatch = cardText.match(/状态[：:]\s*([^\s\n]+)/);
+           const passwordMatch = cardText.match(/密码[：:]\s*([^\s\n国家]+)/);
+           const countryMatch = cardText.match(/国家[：:]\s*([^\s\n状态]+)/);
+           const statusMatch = cardText.match(/状态[：:]\s*([^\s\n时间]+)/);
            const timeMatch = cardText.match(/(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2})/);
            
            // 清理密码字段，移除后面的"国家:"等文本
