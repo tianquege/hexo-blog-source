@@ -22,24 +22,32 @@ async function scrapeAccounts() {
       timeout: 30000 
     });
     
-    // 等待页面加载
-    await new Promise(resolve => setTimeout(resolve, 3000));
+         // 等待页面加载
+     await new Promise(resolve => setTimeout(resolve, 5000));
+     
+     // 等待页面完全加载
+     await page.waitForSelector('body', { timeout: 10000 });
     
-    // 抓取账号信息
-    const accounts = await page.evaluate(() => {
-      console.log('开始抓取页面内容...');
+         // 抓取账号信息
+     const accounts = await page.evaluate(() => {
+       console.log('开始抓取页面内容...');
+       
+       // 获取页面HTML用于调试
+       const pageHTML = document.body.innerHTML;
+       console.log('页面HTML长度:', pageHTML.length);
+       
+       // 输出页面标题和URL用于调试
+       console.log('页面标题:', document.title);
+       console.log('页面URL:', window.location.href);
       
-      // 获取页面HTML用于调试
-      const pageHTML = document.body.innerHTML;
-      console.log('页面HTML长度:', pageHTML.length);
-      
-      // 尝试多种选择器
-      const selectors = [
-        '.card', '[class*="card"]', '[class*="account"]', 
-        '.account-card', '.account-item', '.item',
-        'div[style*="border"]', 'div[style*="background"]',
-        'section', 'article', '.container > div'
-      ];
+             // 尝试多种选择器
+       const selectors = [
+         '.card', '[class*="card"]', '[class*="account"]', 
+         '.account-card', '.account-item', '.item',
+         'div[style*="border"]', 'div[style*="background"]',
+         'section', 'article', '.container > div',
+         'div', 'p', 'span', 'td', 'tr'
+       ];
       
       let accountCards = [];
       for (const selector of selectors) {
@@ -125,10 +133,10 @@ async function scrapeAccounts() {
       return accounts;
     });
     
-    console.log(`抓取到 ${accounts.length} 个账号信息`);
-    
-    // 生成 Markdown 表格
-    const markdown = generateMarkdownTable(accounts);
+         console.log(`抓取到 ${accounts.length} 个账号信息`);
+     
+     // 生成 Markdown 表格
+     const markdown = generateMarkdownTable(accounts);
     
     // 更新文章文件
     updateArticleFile(markdown);
