@@ -37,6 +37,6 @@ jobs:
       with:
         personal_token: ${{ secrets.DEPLOY_TOKEN }}
         external_repository: tianquege/tianquege.github.io
+        publish_branch: gh-pages
         publish_dir: ./public
-        destination_dir: .
         force_orphan: true
