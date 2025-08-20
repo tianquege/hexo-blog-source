@@ -23,7 +23,7 @@ async function scrapeAccounts() {
     });
     
     // 等待页面加载
-    await page.waitForTimeout(3000);
+    await new Promise(resolve => setTimeout(resolve, 3000));
     
     // 抓取账号信息
     const accounts = await page.evaluate(() => {
