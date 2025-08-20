@@ -27,18 +27,63 @@ async function scrapeAccounts() {
     
     // 抓取账号信息
     const accounts = await page.evaluate(() => {
-      const accountCards = document.querySelectorAll('.card, [class*="card"], [class*="account"]');
+      console.log('开始抓取页面内容...');
+      
+      // 获取页面HTML用于调试
+      const pageHTML = document.body.innerHTML;
+      console.log('页面HTML长度:', pageHTML.length);
+      
+      // 尝试多种选择器
+      const selectors = [
+        '.card', '[class*="card"]', '[class*="account"]', 
+        '.account-card', '.account-item', '.item',
+        'div[style*="border"]', 'div[style*="background"]',
+        'section', 'article', '.container > div'
+      ];
+      
+      let accountCards = [];
+      for (const selector of selectors) {
+        const cards = document.querySelectorAll(selector);
+        console.log(`选择器 "${selector}" 找到 ${cards.length} 个元素`);
+        if (cards.length > 0) {
+          accountCards = Array.from(cards);
+          break;
+        }
+      }
+      
+      // 如果还是没找到，尝试查找包含特定文本的元素
+      if (accountCards.length === 0) {
+        const allDivs = document.querySelectorAll('div');
+        accountCards = Array.from(allDivs).filter(div => {
+          const text = div.textContent || '';
+          return text.includes('编号') || text.includes('@') || text.includes('密码');
+        });
+        console.log(`通过文本内容找到 ${accountCards.length} 个可能的元素`);
+      }
+      
       const accounts = [];
       
       accountCards.forEach((card, index) => {
         try {
-          // 尝试不同的选择器来获取信息
-          const number = card.querySelector('[class*="number"], [class*="id"], h3, h4')?.textContent?.trim() || `编号${index + 1}`;
-          const email = card.querySelector('[class*="email"], [class*="mail"]')?.textContent?.trim() || '';
-          const password = card.querySelector('[class*="password"], [class*="pwd"]')?.textContent?.trim() || '';
-          const country = card.querySelector('[class*="country"], [class*="region"]')?.textContent?.trim() || '';
-          const status = card.querySelector('[class*="status"], [class*="state"]')?.textContent?.trim() || '';
-          const time = card.querySelector('[class*="time"], [class*="date"]')?.textContent?.trim() || '';
+          console.log(`处理第 ${index + 1} 个元素:`, card.textContent?.substring(0, 100));
+          
+          // 获取元素的所有文本内容
+          const cardText = card.textContent || '';
+          
+          // 使用正则表达式提取信息
+          const numberMatch = cardText.match(/编号\s*(\d+)/);
+          const emailMatch = cardText.match(/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/);
+          const passwordMatch = cardText.match(/密码[：:]\s*([^\s\n]+)/);
+          const countryMatch = cardText.match(/国家[：:]\s*([^\s\n]+)/);
+          const statusMatch = cardText.match(/状态[：:]\s*([^\s\n]+)/);
+          const timeMatch = cardText.match(/(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2})/);
+          
+          const number = numberMatch ? `编号${numberMatch[1]}` : `编号${index + 1}`;
+          const email = emailMatch ? emailMatch[1] : '';
+          const password = passwordMatch ? passwordMatch[1] : '';
+          const country = countryMatch ? countryMatch[1] : '';
+          const status = statusMatch ? statusMatch[1] : '';
+          const time = timeMatch ? timeMatch[1] : '';
           
           if (email || password) {
             accounts.push({
@@ -49,6 +94,7 @@ async function scrapeAccounts() {
               status,
               time
             });
+            console.log(`成功提取账号 ${number}:`, { email, password, country, status, time });
           }
         } catch (error) {
           console.log(`解析卡片 ${index + 1} 时出错:`, error);
