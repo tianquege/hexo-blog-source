@@ -5,7 +5,7 @@ on:
     branches: [ master ]
   workflow_dispatch:
   schedule:
-    - cron: '0,30 * * * *'  # 每30分钟运行一次
+    - cron: '0 * * * *'  # 每60分钟运行一次
 
 jobs:
   build-and-deploy:

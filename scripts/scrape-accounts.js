@@ -74,16 +74,26 @@ async function scrapeAccounts() {
            const numberMatch = cardText.match(/编号\s*(\d+)/);
            const emailMatch = cardText.match(/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/);
            
-           // 更精确的正则表达式，确保只匹配到下一个字段之前的内容
-           const passwordMatch = cardText.match(/密码[：:]\s*([^国家]+?)(?=\s*国家[：:])/);
-           const countryMatch = cardText.match(/国家[：:]\s*([^状态]+?)(?=\s*状态[：:])/);
-           const statusMatch = cardText.match(/状态[：:]\s*([^时间]+?)(?=\s*\d{4}-\d{2}-\d{2})/);
+                       // 更精确的正则表达式，确保只匹配到下一个字段之前的内容
+            const passwordMatch = cardText.match(/密码[：:]\s*([^国家]+?)(?=\s*国家[：:])/);
+            const countryMatch = cardText.match(/国家[：:]\s*([^状态]+?)(?=\s*状态[：:])/);
+            const statusMatch = cardText.match(/状态[：:]\s*([^时间]+?)(?=\s*\d{4}-\d{2}-\d{2})/);
+            
+            // 如果状态字段为空，尝试其他匹配方式
+            let statusValue = '';
+            if (statusMatch) {
+              statusValue = statusMatch[1].trim();
+            } else {
+              // 尝试匹配状态字段的其他可能格式
+              const statusAltMatch = cardText.match(/状态[：:]\s*([^\s\n]+)/);
+              statusValue = statusAltMatch ? statusAltMatch[1].trim() : '正常';
+            }
            const timeMatch = cardText.match(/(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2})/);
            
-           // 清理字段，移除多余的空格和换行
-           const cleanPassword = passwordMatch ? passwordMatch[1].trim() : '';
-           const cleanCountry = countryMatch ? countryMatch[1].trim() : '';
-           const cleanStatus = statusMatch ? statusMatch[1].trim() : '';
+                       // 清理字段，移除多余的空格和换行
+            const cleanPassword = passwordMatch ? passwordMatch[1].trim() : '';
+            const cleanCountry = countryMatch ? countryMatch[1].trim() : '';
+            const cleanStatus = statusValue;
           
                      const number = numberMatch ? `编号${numberMatch[1]}` : `编号${index + 1}`;
            const email = emailMatch ? emailMatch[1] : '';
