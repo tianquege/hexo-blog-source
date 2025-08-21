@@ -20,7 +20,7 @@ tags:
 
 <div style="text-align: center; margin: 20px 0;">
 <h4>点击观看视频</h4>
-<img src="https://s2.loli.net/2024/09/04/JL3MGakWgXh8s5l.png" alt="Play" style="max-width: 100%; height: auto;" />
+<img src="[https://s2.loli.net/2024/09/04/JL3MGakWgXh8s5l.png](https://free.iosapp.icu/shadowrocket%E5%AF%BC%E5%85%A5%E8%AE%A2%E9%98%85%E6%95%99%E7%A8%8B(1).mp4)" alt="Play" style="max-width: 100%; height: auto;" />
 <img src="https://pic.ybfl.xyz/i/2023/02/23/yw9xwa-0.jpg" alt="图片教程" style="max-width: 100%; height: auto;" />
 </div>
 
