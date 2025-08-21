@@ -10,6 +10,8 @@ tags:
 ---
 ## 详细使用教程
 
+## 详细使用教程
+
 ### 使用方法
 
 **⚠️ 重要提醒：手机设置的ID必须登录自己的，切记！如果你设置里没有登录自己的账号，在商店登录共享ID，会同步到你手机设置里，可能会被人恶意锁机诈骗。**
@@ -17,31 +19,14 @@ tags:
 1. 在 iPhone 或 iPad 主屏幕上找到「App Store」软件打开，点击右上角「头像图标」，下滑到底部，点击「退出登录」现有账号。
 
 2. 输入购买收到的账号，点击「登录」。如果出现「Apple ID 安全」提示，点击下方的「其他选项」，点击「不升级」继续登录。
-  <h4>点击观看视频</h4>
- <div id="youtube-facade" style="cursor: pointer; background-image: url('https://img.youtube.com/vi/ES3jWCc6qqA/maxresdefault.jpg'); background-size: cover; width: 80%; height: 500px;">
-											        
-    <img src="https://s2.loli.net/2024/09/04/JL3MGakWgXh8s5l.png" style="width: 100px; height: 100px; position: absolute; top: 205%; left: 10%; transform: translate(-50%, -50%);" alt="Play">
+
+<div style="text-align: center; margin: 20px 0;">
+<img src="https://s2.loli.net/2024/09/04/JL3MGakWgXh8s5l.png" alt="Play" style="max-width: 100%; height: auto;" />
+<img src="https://pic.ybfl.xyz/i/2023/02/23/yw9xwa-0.jpg" alt="图片教程" style="max-width: 100%; height: auto;" />
 </div>
-<br>
 
-											    <!--<video controls autoplay muted playsinline width="100%" height="" preload="metadata">
-    <source src="https://free.iosapp.icu/6465161.mp4" type="video/mp4">
-</video>-->
+3. <a href="https://apps.apple.com/us/app/shadowrocket/" target="_blank" rel="noopener">点击下载Shadowrocket</a>
 
-											<img style="max-width:100%;overflow:hidden;" src="https://pic.ybfl.xyz/i/2023/02/23/yw9xwa-0.jpg" alt="图片教程">
-										</div>
-										<p>3.<a href="https://apps.apple.com/us/app/shadowrocket/" target="_blank">点击下载Shadowrocket</a></p>
-										<p>PS:盗版软件较多，认准名字<b>Shadowrocket</b></p>
-									</div>
-								<div id="content">
-								    <h1>小火箭APP添加订阅教程</h1>
-								    	<div>
-	  	<video width=80%   controls>
-  <source src="https://free.iosapp.icu/shadowrocket%E5%AF%BC%E5%85%A5%E8%AE%A2%E9%98%85%E6%95%99%E7%A8%8B(1).mp4" type="video/mp4">
- 
-  Your browser does not support the video tag.
-</video>  
-	</div>
 **PS:** 盗版软件较多，认准名字 **Shadowrocket**
 
 ---
@@ -131,7 +116,6 @@ tags:
 **非高级用户推荐使用默认的"配置"模式进行自动分流。**
 
 点击首页右上方系统总开关即可开启代理服务。
-
 ## 正文开始
 <h2>下载免费Hiddify Proxy & VPN  </h2>
 <p><a href="https://apps.apple.com/us/app/hiddify-proxy-vpn/id6596777532"target="_blank"><button class="btn btn-hero-primary"><i class="far fa fa-share"></i>安装Hiddify Proxy & VPN</button></a></p>
