@@ -19,7 +19,7 @@ tags:
 
 2. 输入购买收到的账号，点击「登录」。如果出现「Apple ID 安全」提示，点击下方的「其他选项」，点击「不升级」继续登录。
 
-![导入订阅](/source/_posts/ios/7.jpg)
+![](https://pyxy.126581.xyz/https://github.com/tianquege/hexo-blog-source/blob/master/source/_posts/ios/7.jpg)
 
 **PS:** 盗版软件较多，认准名字 **Shadowrocket**
 
@@ -31,27 +31,27 @@ tags:
 
 1. 使用Safari浏览器登录你购买订阅的网站【没有订阅就去买，有的人傻呵呵的就真的打开浏览器就以为自动出现订阅了，你不买咋会有】进入个人中心，在仪表盘页面或我的订阅页面找到一键订阅按钮，点击并选择导入到Shadowrocket选项。点击后iOS系统会跳转到Shadowrocket客户端内并自动将节点订阅信息填好。
 
-![导入订阅](/source/_posts/ios/1.png)
+![](https://pyxy.126581.xyz/https://github.com/tianquege/hexo-blog-source/blob/master/source/_posts/ios/1.png)
 
 2. 点击Shadowrocket，弹出提示点打开！
 
-![导入订阅](/source/_posts/ios/2.png)
+![](https://pyxy.126581.xyz/https://github.com/tianquege/hexo-blog-source/blob/master/source/_posts/ios/2.png)
 
 3. 会自动打开小火箭并更新订阅
 
-![导入订阅](/source/_posts/ios/3.png)
+![](https://pyxy.126581.xyz/https://github.com/tianquege/hexo-blog-source/blob/master/source/_posts/ios/3.png)
 
 4. 点击选中需要的节点，然后打开右上角的开关按钮
 
-![导入订阅](/source/_posts/ios/4.png)
+![](https://pyxy.126581.xyz/https://github.com/tianquege/hexo-blog-source/blob/master/source/_posts/ios/4.png)
 
 5.点击右下角配置按钮，选择订阅点击进入
 
-![导入订阅](/source/_posts/ios/5.png)
+![](https://pyxy.126581.xyz/https://github.com/tianquege/hexo-blog-source/blob/master/source/_posts/ios/5.png)
 
 6.打开自动更新订阅开关，至此全部设置完毕！下次重启小火箭，订阅将会自动更新最新节点
 
-![导入订阅](/source/_posts/ios/6.png)
+![](https://pyxy.126581.xyz/https://github.com/tianquege/hexo-blog-source/blob/master/source/_posts/ios/6.png)
 
 7. 非必须要！！
     回到首页点击上方全局路由可以更改代理模式，其中：
