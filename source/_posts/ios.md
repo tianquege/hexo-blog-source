@@ -1,5 +1,12 @@
 ---
 title: 苹果IOS系统使用教程
+sticky: 1
+date: 2025-08-20 10:00:00
+categories: 
+  - 账号获取
+tags:
+  - ios
+  - 客户端
 ---
 
 ## 正文开始
