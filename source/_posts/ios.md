@@ -20,12 +20,7 @@ tags:
 
 2. 输入购买收到的账号，点击「登录」。如果出现「Apple ID 安全」提示，点击下方的「其他选项」，点击「不升级」继续登录。
 
-<div style="text-align: center; margin: 20px 0;">
-<img src="https://s2.loli.net/2024/09/04/JL3MGakWgXh8s5l.png" alt="Play" style="max-width: 100%; height: auto;" />
-<img src="https://pic.ybfl.xyz/i/2023/02/23/yw9xwa-0.jpg" alt="图片教程" style="max-width: 100%; height: auto;" />
-</div>
-
-3. <a href="https://apps.apple.com/us/app/shadowrocket/" target="_blank" rel="noopener">点击下载Shadowrocket</a>
+![导入订阅](/source/_posts/ios/7.jpg)
 
 **PS:** 盗版软件较多，认准名字 **Shadowrocket**
 
