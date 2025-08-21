@@ -1,6 +1,6 @@
 ---
 title: Android安卓客户端使用教程
-sticky: 1
+sticky: 2
 date: 2025-08-20 10:00:00
 categories: 
   - 教程
