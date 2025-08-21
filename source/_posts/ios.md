@@ -36,7 +36,7 @@ tags:
 ### 一键订阅
 
 1. 使用Safari浏览器登录你购买订阅的网站【没有订阅就去买，有的人傻呵呵的就真的打开浏览器就以为自动出现订阅了，你不买咋会有】进入个人中心，在仪表盘页面或我的订阅页面找到一键订阅按钮，点击并选择导入到Shadowrocket选项。点击后iOS系统会跳转到Shadowrocket客户端内并自动将节点订阅信息填好。
-![导入订阅](./1.png)
+![导入订阅](/ios/1.png)
 
 <div style="text-align: center; margin: 20px 0;">
 <img src="https://pic.ybfl.xyz/i/2023/02/22/10zhy4x-0.png" alt="一键订阅" style="max-width: 100%; height: auto;" />
