@@ -38,29 +38,27 @@ tags:
 1. 使用Safari浏览器登录你购买订阅的网站【没有订阅就去买，有的人傻呵呵的就真的打开浏览器就以为自动出现订阅了，你不买咋会有】进入个人中心，在仪表盘页面或我的订阅页面找到一键订阅按钮，点击并选择导入到Shadowrocket选项。点击后iOS系统会跳转到Shadowrocket客户端内并自动将节点订阅信息填好。
 ![导入订阅](/source/_posts/ios/1.png)
 
-<div style="text-align: center; margin: 20px 0;">
-<img src="https://pic.ybfl.xyz/i/2023/02/22/10zhy4x-0.png" alt="一键订阅" style="max-width: 100%; height: auto;" />
-</div>
 
-2. 在客户端首页可以看到一键订阅生成的所有节点及相关信息。
+2. 点击Shadowrocket，弹出提示点打开！
 
-<div style="text-align: center; margin: 20px 0;">
-<img src="https://pic.ybfl.xyz/i/2023/02/22/11140tl-0.png" alt="一键订阅" style="max-width: 100%; height: auto;" />
-</div>
+![导入订阅](/source/_posts/ios/2.png)
 
-3. 进入配置选项页，建议使用默认配置文件即可。
+3. 会自动打开小火箭并更新订阅
 
-<div style="text-align: center; margin: 20px 0;">
-<img src="https://pic.ybfl.xyz/i/2023/02/22/10zi0t8-0.png" alt="一键订阅" style="max-width: 100%; height: auto;" />
-</div>
+![导入订阅](/source/_posts/ios/3.png)
 
-4. 进入设置选项页，按照下图将订阅设置项的"打开时更新"和"自动后台更新"选项同时开启。
+4. 点击选中需要的节点，然后打开右上角的开关按钮
 
-<div style="text-align: center; margin: 20px 0;">
-<img src="https://pic.ybfl.xyz/i/2023/02/22/10zhv4u-0.png" alt="一键订阅" style="max-width: 100%; height: auto;" />
-</div>
+![导入订阅](/source/_posts/ios/4.png)
 
-5. 回到首页点击上方全局路由可以更改代理模式，其中：
+5.点击右下角配置按钮，选择订阅点击进入
+![导入订阅](/source/_posts/ios/5.png)
+
+6.打开自动更新订阅开关，至此全部设置完毕！下次重启小火箭，订阅将会自动更新最新节点
+![导入订阅](/source/_posts/ios/6.png)
+
+7. 非必须要！！
+    回到首页点击上方全局路由可以更改代理模式，其中：
    - **"配置"** 为配置文件代理（即按照规则自动分流）
    - **"代理"** 为全局代理（即所有连接均通过代理）
    - **"直连"** 为绕过代理（即所有连接均不通过代理）
