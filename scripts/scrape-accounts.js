@@ -170,10 +170,30 @@ async function scrapeAccounts() {
           const startIndex = match.index;
           // 截取邮箱后面的一段文本（比如后200个字符）来找密码
           const context = fullText.substring(startIndex, startIndex + 200);
+          // 截取邮箱前面的一段文本来找编号（验证是否为正文账号）
+          const preContext = fullText.substring(Math.max(0, startIndex - 100), startIndex);
+
+          // 只有附近有"编号"字样的才认为是有效账号，过滤掉底部的旧数据
+          if (!preContext.includes('编号') && !context.substring(0, 50).includes('编号')) {
+            console.log(`跳过无效账号（无编号）: ${email}`);
+            continue;
+          }
 
           // 在这段上下文中找密码
+          // 页面结构是：邮箱 -> 国家 -> 密码: xxx
           const passMatch = context.match(/密码[：:]\s*([^\s\r\n]+)/);
-          const countryMatch = context.match(/国家[：:]\s*([^\s\r\n]+)/); // 简化国家匹配
+
+          // 尝试在邮箱和密码之间提取国家（通常是中文）
+          // 查找邮箱结尾到"密码"开头之间的内容
+          let country = '未知';
+          if (passMatch) {
+            const betweenText = context.substring(match[0].length, passMatch.index).trim();
+            // 匹配中文（比如"美国"）
+            const countryMatch = betweenText.match(/[\u4e00-\u9fa5]+/);
+            if (countryMatch) {
+              country = countryMatch[0];
+            }
+          }
 
           if (passMatch) {
             let cleanPassword = passMatch[1].trim();
@@ -186,13 +206,11 @@ async function scrapeAccounts() {
             }
             cleanPassword = cleanPassword.replace(/[：:]$/, '');
 
-            const country = countryMatch ? countryMatch[1].trim() : '';
-
             accounts.push({
               number: `编号${count++}`,
               email: email,
               password: cleanPassword,
-              country: country || '未知',
+              country: country,
               status: '正常',
               time: new Date().toISOString().split('T')[0]
             });
