@@ -2,6 +2,23 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 const path = require('path');
 
+// 从本地文件中读取上次的檢查时间
+function getLastCheckTime() {
+  try {
+    const postsDir = path.join(__dirname, '../source/_posts');
+    const files = fs.readdirSync(postsDir);
+    const iosFile = files.find(file => file.toLowerCase().includes('ios') && file.endsWith('.md'));
+    if (!iosFile) return null;
+
+    const content = fs.readFileSync(path.join(postsDir, iosFile), 'utf8');
+    // 在表格里找时间（假设时间格式是 YYYY-MM-DD HH:mm:ss）
+    const match = content.match(/\|\s*(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2})\s*\|/);
+    return match ? match[1] : null;
+  } catch (e) {
+    return null;
+  }
+}
+
 async function scrapeAccounts() {
   console.log('开始抓取账号信息...');
 
@@ -13,228 +30,109 @@ async function scrapeAccounts() {
     });
 
     const page = await browser.newPage();
-
-    // 设置用户代理和请求头
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
-    await page.setExtraHTTPHeaders({
-      'Referer': 'https://www.google.com/',
-      'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8'
-    });
 
-    // 访问网站
-    await page.goto('https://free.iosapp.icu/', {
-      waitUntil: 'networkidle2',
-      timeout: 30000
-    });
+    // 获取本地上次更新时间
+    const lastCheckTime = getLastCheckTime();
+    console.log(`本地记录的上次检查时间: ${lastCheckTime || '无'}`);
 
-    // 等待页面加载
-    await new Promise(resolve => setTimeout(resolve, 5000));
+    // 重试循环
+    let accounts = [];
+    let pageText = '';
+    const maxRetries = 5; // 最多重试5次
 
-    // 等待页面完全加载
-    await page.waitForSelector('body', { timeout: 10000 });
+    for (let i = 0; i < maxRetries; i++) {
+      console.log(`第 ${i + 1} 次尝试抓取...`);
 
-    // 抓取账号信息
-    const result = await page.evaluate(() => {
-      console.log('开始抓取页面内容...');
-
-      // 获取页面HTML用于调试
-      const pageHTML = document.body.innerHTML;
-      console.log('页面HTML长度:', pageHTML.length);
-
-      // 输出页面标题和URL用于调试
-      console.log('页面标题:', document.title);
-      console.log('页面URL:', window.location.href);
-
-      // 输出页面文本内容的前500个字符用于调试
-      const pageText = document.body.textContent || '';
-      console.log('页面文本内容前500字符:', pageText.substring(0, 500));
-
-      // 尝试多种选择器
-      const selectors = [
-        '.card', '[class*="card"]', '[class*="account"]',
-        '.account-card', '.account-item', '.item',
-        'div[style*="border"]', 'div[style*="background"]',
-        'section', 'article', '.container > div',
-        'div', 'p', 'span', 'td', 'tr'
-      ];
-
-      let accountCards = [];
-      for (const selector of selectors) {
-        const cards = document.querySelectorAll(selector);
-        console.log(`选择器 "${selector}" 找到 ${cards.length} 个元素`);
-        if (cards.length > 0) {
-          accountCards = Array.from(cards);
-          break;
-        }
+      try {
+        await page.goto('https://free.iosapp.icu/', { waitUntil: 'networkidle2', timeout: 30000 });
+      } catch (err) {
+        console.log('页面加载超时或失败，尝试继续解析...');
       }
 
-      // 如果还是没找到，尝试查找包含特定文本的元素
-      if (accountCards.length === 0) {
-        const allDivs = document.querySelectorAll('div');
-        accountCards = Array.from(allDivs).filter(div => {
-          const text = div.textContent || '';
-          return text.includes('编号') || text.includes('@') || text.includes('密码');
-        });
-        console.log(`通过文本内容找到 ${accountCards.length} 个可能的元素`);
+      await new Promise(r => setTimeout(r, 5000)); // 等待渲染
 
-        // 如果还是没找到，检查整个页面是否包含这些关键词
-        if (accountCards.length === 0) {
-          const fullText = document.body.textContent || '';
-          console.log('页面是否包含"编号":', fullText.includes('编号'));
-          console.log('页面是否包含"邮箱":', fullText.includes('邮箱'));
-          console.log('页面是否包含"密码":', fullText.includes('密码'));
-          console.log('页面是否包含"@":', fullText.includes('@'));
-        }
+      const fullText = await page.evaluate(() => document.body.innerText);
+      pageText = fullText.substring(0, 800) + '...'; // Debug用
+
+      // 提取网页上的"检查时间"（寻找最新的那个）
+      // 格式：检查时间: 2025-12-17 23:03:58
+      const timeMatches = fullText.match(/检查时间[：:]\s*(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2})/g);
+      let currentCheckTime = null;
+      if (timeMatches && timeMatches.length > 0) {
+        // 假设第一个找到的时间就是最新的（通常由上而下）
+        const tm = timeMatches[0].match(/(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2})/);
+        if (tm) currentCheckTime = tm[1];
       }
 
-      const accounts = [];
+      console.log(`网页上的最新检查时间: ${currentCheckTime || '未找到'}`);
 
-      accountCards.forEach((card, index) => {
-        try {
-          console.log(`处理第 ${index + 1} 个元素:`, card.textContent?.substring(0, 100));
+      if (currentCheckTime && lastCheckTime && currentCheckTime === lastCheckTime) {
+        console.log('检测到上游并未更新，等待30秒后重试...');
+        if (i < maxRetries - 1) {
+          await new Promise(r => setTimeout(r, 30000));
+          continue;
+        } else {
+          console.log('重试次数耗尽，强制更新（可能是网页结构变了）');
+        }
+      } else {
+        console.log('检测到新数据或无历史数据，开始解析...');
+      }
 
-          // 获取元素的所有文本内容
-          const cardText = card.textContent || '';
+      // 开始解析账号
+      accounts = [];
+      const emailRegex = /([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g;
 
-          // 使用正则表达式提取信息
-          // 更通用的正则表达式，匹配"密码:"后的非空白字符
-          const passwordMatch = cardText.match(/密码[：:]\s*([^\s\r\n]+)/);
-          const countryMatch = cardText.match(/国家[：:]\s*([^状态\n\r]+?)(?=\s*状态[：:])/);
-          const statusMatch = cardText.match(/状态[：:]\s*([^时间\n\r]+?)(?=\s*\d{4}-\d{2}-\d{2})/);
+      let match;
+      let count = 1;
 
-          // 获取密码并清理
-          let cleanPassword = passwordMatch ? passwordMatch[1].trim() : '';
+      while ((match = emailRegex.exec(fullText)) !== null) {
+        const email = match[1];
+        const startIndex = match.index;
+        const context = fullText.substring(startIndex, startIndex + 200);
+        const preContext = fullText.substring(Math.max(0, startIndex - 100), startIndex);
 
-          // 清理可能粘连的后缀词
+        if (!preContext.includes('编号') && !context.substring(0, 50).includes('编号')) continue;
+
+        const passMatch = context.match(/密码[：:]\s*([^\s\r\n]+)/);
+
+        // 提取该账号的具体检查时间
+        const accountTimeMatch = context.match(/检查时间[：:]\s*(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2})/);
+        const accountTime = accountTimeMatch ? accountTimeMatch[1] : (currentCheckTime || new Date().toISOString().split('T')[0]);
+
+        let country = '未知';
+        if (passMatch) {
+          const betweenText = context.substring(match[0].length, passMatch.index).trim();
+          const countryMatch = betweenText.match(/[\u4e00-\u9fa5]+/);
+          if (countryMatch) country = countryMatch[0];
+        }
+
+        if (passMatch) {
+          let cleanPassword = passMatch[1].trim();
           const suffixesToRemove = ['检查时间', '国家', '状态', '时间'];
           for (const suffix of suffixesToRemove) {
-            if (cleanPassword.includes(suffix)) {
-              cleanPassword = cleanPassword.split(suffix)[0].trim();
-            }
+            if (cleanPassword.includes(suffix)) cleanPassword = cleanPassword.split(suffix)[0].trim();
           }
-          // 清理可能的中文冒号或英文冒号结尾（如果有）
           cleanPassword = cleanPassword.replace(/[：:]$/, '');
 
-          // 如果状态字段为空，尝试其他匹配方式
-          let statusValue = '';
-          if (statusMatch) {
-            statusValue = statusMatch[1].trim();
-          } else {
-            // 尝试匹配状态字段的其他可能格式
-            const statusAltMatch = cardText.match(/状态[：:]\s*([^\s\n]+)/);
-            statusValue = statusAltMatch ? statusAltMatch[1].trim() : '正常';
-          }
-          const timeMatch = cardText.match(/(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2})/);
-
-          // 清理字段，移除多余的空格和换行
-          const cleanCountry = countryMatch ? countryMatch[1].trim() : '';
-          const cleanStatus = statusValue;
-
-          const number = numberMatch ? `编号${numberMatch[1]}` : `编号${index + 1}`;
-          const email = emailMatch ? emailMatch[1] : '';
-          const password = cleanPassword;
-          const country = cleanCountry;
-          const status = cleanStatus;
-          const time = timeMatch ? timeMatch[1] : '';
-
-          if (email || password) {
-            accounts.push({
-              number,
-              email,
-              password,
-              country,
-              status,
-              time
-            });
-            console.log(`成功提取账号 ${number}:`, { email, password, country, status, time });
-          }
-        } catch (error) {
-          console.log(`解析卡片 ${index + 1} 时出错:`, error);
-        }
-      });
-
-      // === 新增：暴力全文匹配兜底策略 ===
-      if (accounts.length === 0) {
-        console.log('DOM 节点抓取失败，尝试全文暴力匹配...');
-        const fullText = document.body.innerText || '';
-
-        // 匹配模式：寻找所有看起来像邮箱的，且后面跟着密码的模式
-        // 假设格式为：账号: xxx@xx.com ... 密码: xxx ...
-        const emailRegex = /([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g;
-        let match;
-        let count = 1;
-
-        // 找出所有邮箱的位置
-        while ((match = emailRegex.exec(fullText)) !== null) {
-          const email = match[1];
-          const startIndex = match.index;
-          // 截取邮箱后面的一段文本（比如后200个字符）来找密码
-          const context = fullText.substring(startIndex, startIndex + 200);
-          // 截取邮箱前面的一段文本来找编号（验证是否为正文账号）
-          const preContext = fullText.substring(Math.max(0, startIndex - 100), startIndex);
-
-          // 只有附近有"编号"字样的才认为是有效账号，过滤掉底部的旧数据
-          if (!preContext.includes('编号') && !context.substring(0, 50).includes('编号')) {
-            console.log(`跳过无效账号（无编号）: ${email}`);
-            continue;
-          }
-
-          // 在这段上下文中找密码
-          // 页面结构是：邮箱 -> 国家 -> 密码: xxx
-          const passMatch = context.match(/密码[：:]\s*([^\s\r\n]+)/);
-
-          // 尝试在邮箱和密码之间提取国家（通常是中文）
-          // 查找邮箱结尾到"密码"开头之间的内容
-          let country = '未知';
-          if (passMatch) {
-            const betweenText = context.substring(match[0].length, passMatch.index).trim();
-            // 匹配中文（比如"美国"）
-            const countryMatch = betweenText.match(/[\u4e00-\u9fa5]+/);
-            if (countryMatch) {
-              country = countryMatch[0];
-            }
-          }
-
-          if (passMatch) {
-            let cleanPassword = passMatch[1].trim();
-            // 再次清理后缀
-            const suffixesToRemove = ['检查时间', '国家', '状态', '时间'];
-            for (const suffix of suffixesToRemove) {
-              if (cleanPassword.includes(suffix)) {
-                cleanPassword = cleanPassword.split(suffix)[0].trim();
-              }
-            }
-            cleanPassword = cleanPassword.replace(/[：:]$/, '');
-
-            accounts.push({
-              number: `编号${count++}`,
-              email: email,
-              password: cleanPassword,
-              country: country,
-              status: '正常',
-              time: new Date().toISOString().split('T')[0]
-            });
-            console.log(`全文匹配找到账号: ${email}`);
-          }
+          accounts.push({
+            number: `编号${count++}`,
+            email: email,
+            password: cleanPassword,
+            country: country,
+            status: '正常',
+            time: accountTime
+          });
+          console.log(`找到账号: ${email} 时间: ${accountTime}`);
         }
       }
 
-      // === 返回结果 ===
-      return {
-        accounts: accounts,
-        debugText: document.body.innerText ? document.body.innerText.substring(0, 800) : '页面无法读取 TextContent'
-      };
-    });
-
-    const accounts = result.accounts;
-    const debugText = result.debugText;
-
-    console.log(`抓取到 ${accounts.length} 个账号信息`);
+      // 如果找到了账号，就跳出
+      if (accounts.length > 0) break;
+    }
 
     // 生成 Markdown 表格
-    const markdown = generateMarkdownTable(accounts, debugText);
-
-    // 更新文章文件
+    const markdown = generateMarkdownTable(accounts, pageText);
     updateArticleFile(markdown);
 
     console.log('账号信息更新完成！');
@@ -261,6 +159,258 @@ async function scrapeAccounts() {
   }
 }
 
+// 从本地文件中读取上次的檢查时间
+function getLastCheckTime() {
+  try {
+    const postsDir = path.join(__dirname, '../source/_posts');
+    const files = fs.readdirSync(postsDir);
+    const iosFile = files.find(file => file.toLowerCase().includes('ios') && file.endsWith('.md'));
+    if (!iosFile) return null;
+
+    const content = fs.readFileSync(path.join(postsDir, iosFile), 'utf8');
+    // 在表格里找时间（假设时间格式是 YYYY-MM-DD HH:mm:ss）
+    const match = content.match(/\|\s*(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2})\s*\|/);
+    return match ? match[1] : null;
+  } catch (e) {
+    return null;
+  }
+}
+
+async function scrapeAccounts() {
+  console.log('开始抓取账号信息...');
+
+  let browser;
+  try {
+    browser = await puppeteer.launch({
+      headless: true,
+      args: ['--no-sandbox', '--disable-setuid-sandbox']
+    });
+
+    const page = await browser.newPage();
+
+    // 设置用户代理和请求头
+    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
+    await page.setExtraHTTPHeaders({
+      'Referer': 'https://www.google.com/',
+      'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8'
+    });
+
+    // 输出页面文本内容的前500个字符用于调试
+    const pageText = document.body.textContent || '';
+    console.log('页面文本内容前500字符:', pageText.substring(0, 500));
+
+    // 尝试多种选择器
+    const selectors = [
+      '.card', '[class*="card"]', '[class*="account"]',
+      '.account-card', '.account-item', '.item',
+      'div[style*="border"]', 'div[style*="background"]',
+      'section', 'article', '.container > div',
+      'div', 'p', 'span', 'td', 'tr'
+    ];
+
+    let accountCards = [];
+    for (const selector of selectors) {
+      const cards = document.querySelectorAll(selector);
+      console.log(`选择器 "${selector}" 找到 ${cards.length} 个元素`);
+      if (cards.length > 0) {
+        accountCards = Array.from(cards);
+        break;
+      }
+    }
+
+    // 如果还是没找到，尝试查找包含特定文本的元素
+    if (accountCards.length === 0) {
+      const allDivs = document.querySelectorAll('div');
+      accountCards = Array.from(allDivs).filter(div => {
+        const text = div.textContent || '';
+        return text.includes('编号') || text.includes('@') || text.includes('密码');
+      });
+      console.log(`通过文本内容找到 ${accountCards.length} 个可能的元素`);
+
+      // 如果还是没找到，检查整个页面是否包含这些关键词
+      if (accountCards.length === 0) {
+        const fullText = document.body.textContent || '';
+        console.log('页面是否包含"编号":', fullText.includes('编号'));
+        console.log('页面是否包含"邮箱":', fullText.includes('邮箱'));
+        console.log('页面是否包含"密码":', fullText.includes('密码'));
+        console.log('页面是否包含"@":', fullText.includes('@'));
+      }
+    }
+
+    const accounts = [];
+
+    accountCards.forEach((card, index) => {
+      try {
+        console.log(`处理第 ${index + 1} 个元素: `, card.textContent?.substring(0, 100));
+
+        // 获取元素的所有文本内容
+        const cardText = card.textContent || '';
+
+        // 使用正则表达式提取信息
+        // 更通用的正则表达式，匹配"密码:"后的非空白字符
+        const passwordMatch = cardText.match(/密码[：:]\s*([^\s\r\n]+)/);
+        const countryMatch = cardText.match(/国家[：:]\s*([^状态\n\r]+?)(?=\s*状态[：:])/);
+        const statusMatch = cardText.match(/状态[：:]\s*([^时间\n\r]+?)(?=\s*\d{4}-\d{2}-\d{2})/);
+
+        // 获取密码并清理
+        let cleanPassword = passwordMatch ? passwordMatch[1].trim() : '';
+
+        // 清理可能粘连的后缀词
+        const suffixesToRemove = ['检查时间', '国家', '状态', '时间'];
+        for (const suffix of suffixesToRemove) {
+          if (cleanPassword.includes(suffix)) {
+            cleanPassword = cleanPassword.split(suffix)[0].trim();
+          }
+        }
+        // 清理可能的中文冒号或英文冒号结尾（如果有）
+        cleanPassword = cleanPassword.replace(/[：:]$/, '');
+
+        // 如果状态字段为空，尝试其他匹配方式
+        let statusValue = '';
+        if (statusMatch) {
+          statusValue = statusMatch[1].trim();
+        } else {
+          // 尝试匹配状态字段的其他可能格式
+          const statusAltMatch = cardText.match(/状态[：:]\s*([^\s\n]+)/);
+          statusValue = statusAltMatch ? statusAltMatch[1].trim() : '正常';
+        }
+        const timeMatch = cardText.match(/(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2})/);
+
+        // 清理字段，移除多余的空格和换行
+        const cleanCountry = countryMatch ? countryMatch[1].trim() : '';
+        const cleanStatus = statusValue;
+
+        const number = numberMatch ? `编号${numberMatch[1]} ` : `编号${index + 1} `;
+        const email = emailMatch ? emailMatch[1] : '';
+        const password = cleanPassword;
+        const country = cleanCountry;
+        const status = cleanStatus;
+        const time = timeMatch ? timeMatch[1] : '';
+
+        if (email || password) {
+          accounts.push({
+            number,
+            email,
+            password,
+            country,
+            status,
+            time
+          });
+          console.log(`成功提取账号 ${number}: `, { email, password, country, status, time });
+        }
+      } catch (error) {
+        console.log(`解析卡片 ${index + 1} 时出错: `, error);
+      }
+    });
+
+    // === 新增：暴力全文匹配兜底策略 ===
+    if (accounts.length === 0) {
+      console.log('DOM 节点抓取失败，尝试全文暴力匹配...');
+      const fullText = document.body.innerText || '';
+
+      // 匹配模式：寻找所有看起来像邮箱的，且后面跟着密码的模式
+      // 假设格式为：账号: xxx@xx.com ... 密码: xxx ...
+      const emailRegex = /([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g;
+      let match;
+      let count = 1;
+
+      // 找出所有邮箱的位置
+      while ((match = emailRegex.exec(fullText)) !== null) {
+        const email = match[1];
+        const startIndex = match.index;
+        // 截取邮箱后面的一段文本（比如后200个字符）来找密码
+        const context = fullText.substring(startIndex, startIndex + 200);
+        // 截取邮箱前面的一段文本来找编号（验证是否为正文账号）
+        const preContext = fullText.substring(Math.max(0, startIndex - 100), startIndex);
+
+        // 只有附近有"编号"字样的才认为是有效账号，过滤掉底部的旧数据
+        if (!preContext.includes('编号') && !context.substring(0, 50).includes('编号')) {
+          console.log(`跳过无效账号（无编号）: ${email} `);
+          continue;
+        }
+
+        // 在这段上下文中找密码
+        // 页面结构是：邮箱 -> 国家 -> 密码: xxx
+        const passMatch = context.match(/密码[：:]\s*([^\s\r\n]+)/);
+
+        // 尝试在邮箱和密码之间提取国家（通常是中文）
+        // 查找邮箱结尾到"密码"开头之间的内容
+        let country = '未知';
+        if (passMatch) {
+          const betweenText = context.substring(match[0].length, passMatch.index).trim();
+          // 匹配中文（比如"美国"）
+          const countryMatch = betweenText.match(/[\u4e00-\u9fa5]+/);
+          if (countryMatch) {
+            country = countryMatch[0];
+          }
+        }
+
+        if (passMatch) {
+          let cleanPassword = passMatch[1].trim();
+          // 再次清理后缀
+          const suffixesToRemove = ['检查时间', '国家', '状态', '时间'];
+          for (const suffix of suffixesToRemove) {
+            if (cleanPassword.includes(suffix)) {
+              cleanPassword = cleanPassword.split(suffix)[0].trim();
+            }
+          }
+          cleanPassword = cleanPassword.replace(/[：:]$/, '');
+
+          accounts.push({
+            number: `编号${count++} `,
+            email: email,
+            password: cleanPassword,
+            country: country,
+            status: '正常',
+            time: new Date().toISOString().split('T')[0]
+          });
+          console.log(`全文匹配找到账号: ${email} `);
+        }
+      }
+    }
+
+    // === 返回结果 ===
+    return {
+      accounts: accounts,
+      debugText: document.body.innerText ? document.body.innerText.substring(0, 800) : '页面无法读取 TextContent'
+    };
+  });
+
+  const accounts = result.accounts;
+  const debugText = result.debugText;
+
+  console.log(`抓取到 ${accounts.length} 个账号信息`);
+
+  // 生成 Markdown 表格
+  const markdown = generateMarkdownTable(accounts, debugText);
+
+  // 更新文章文件
+  updateArticleFile(markdown);
+
+  console.log('账号信息更新完成！');
+
+} catch (error) {
+  console.error('抓取过程中出错:', error);
+
+  // 即使出错，也要更新文件，把错误信息显示出来
+  const errorAccounts = [{
+    number: '错误',
+    email: '抓取失败',
+    password: '请查看调试信息',
+    country: 'Unknown',
+    status: 'Error',
+    time: new Date().toISOString().split('T')[0]
+  }];
+  const errorDebug = `脚本执行出错: ${error.message} \nStack: ${error.stack} `;
+
+  const markdown = generateMarkdownTable(errorAccounts, errorDebug);
+  updateArticleFile(markdown);
+
+} finally {
+  if (browser) await browser.close();
+}
+}
+
 function generateMarkdownTable(accounts, debugText) {
   // 获取北京时间
   const now = new Date();
@@ -275,82 +425,82 @@ function generateMarkdownTable(accounts, debugText) {
   });
 
   let markdown = `## 共享账号信息
-  
-**更新时间：** ${timeString}
+
+  ** 更新时间：** ${timeString}
 
 | 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
-|------|------|------|------|------|------|------|
-`;
+| ------| ------| ------| ------| ------| ------| ------|
+  `;
 
   if (accounts.length === 0) {
-    markdown += `\n| 暂无 | 获取失败 | 请参考 | 下方 | 调试 | 信息 | - |\n`;
+    markdown += `\n | 暂无 | 获取失败 | 请参考 | 下方 | 调试 | 信息 | - |\n`;
   }
 
   accounts.forEach(account => {
-    const copyEmailButton = `<a href="javascript:void(0)" onclick="copyEmail('${account.email}')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a>`;
-    const copyPasswordButton = `<a href="javascript:void(0)" onclick="copyPassword('${account.password}')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a>`;
+    const copyEmailButton = `< a href = "javascript:void(0)" onclick = "copyEmail('${account.email}')" style = "background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;" > 复制邮箱</a > `;
+    const copyPasswordButton = `< a href = "javascript:void(0)" onclick = "copyPassword('${account.password}')" style = "background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;" > 复制密码</a > `;
     markdown += `| ${account.number} | ${account.email} | ${account.password} | ${account.country} | ${account.status} | ${account.time} | ${copyEmailButton}${copyPasswordButton} |\n`;
   });
 
   markdown += `
-**注意：** 
-- 共享ID，可能随时被盗，强烈建议购买独享ID
-- 严格禁止在手机设置中登录共享ID，防止意外ID锁死和手机变砖
-- 本信息仅供参考，使用风险自负
+  ** 注意：**
+    - 共享ID，可能随时被盗，强烈建议购买独享ID
+      - 严格禁止在手机设置中登录共享ID，防止意外ID锁死和手机变砖
+        - 本信息仅供参考，使用风险自负
 
-<details>
+          < details >
 <summary>此处点击查看抓取调试信息（如表格为空请查看这里）</summary>
 <pre>
 ${debugText.replace(/</g, '&lt;').replace(/>/g, '&gt;')}
 </pre>
-</details>
+</details >
 
-<script>
-function copyEmail(email) {
+  <script>
+    function copyEmail(email) {
   const text = email;
-  
-  if (navigator.clipboard && window.isSecureContext) {
-    // 使用现代 Clipboard API
-    navigator.clipboard.writeText(text).then(() => {
-      alert('邮箱已复制到剪贴板！');
-    }).catch(err => {
-      console.error('复制失败:', err);
-      fallbackCopyTextToClipboard(text);
-    });
+
+    if (navigator.clipboard && window.isSecureContext) {
+      // 使用现代 Clipboard API
+      navigator.clipboard.writeText(text).then(() => {
+        alert('邮箱已复制到剪贴板！');
+      }).catch(err => {
+        console.error('复制失败:', err);
+        fallbackCopyTextToClipboard(text);
+      });
   } else {
-    // 降级方案
-    fallbackCopyTextToClipboard(text);
+      // 降级方案
+      fallbackCopyTextToClipboard(text);
   }
 }
 
-function copyPassword(password) {
+    function copyPassword(password) {
   const text = password;
-  
-  if (navigator.clipboard && window.isSecureContext) {
-    // 使用现代 Clipboard API
-    navigator.clipboard.writeText(text).then(() => {
-      alert('密码已复制到剪贴板！');
-    }).catch(err => {
-      console.error('复制失败:', err);
-      fallbackCopyTextToClipboard(text);
-    });
+
+    if (navigator.clipboard && window.isSecureContext) {
+      // 使用现代 Clipboard API
+      navigator.clipboard.writeText(text).then(() => {
+        alert('密码已复制到剪贴板！');
+      }).catch(err => {
+        console.error('复制失败:', err);
+        fallbackCopyTextToClipboard(text);
+      });
   } else {
-    // 降级方案
-    fallbackCopyTextToClipboard(text);
+      // 降级方案
+      fallbackCopyTextToClipboard(text);
   }
 }
 
-function fallbackCopyTextToClipboard(text) {
+    function fallbackCopyTextToClipboard(text) {
   const textArea = document.createElement("textarea");
-  textArea.value = text;
-  textArea.style.top = "0";
-  textArea.style.left = "0";
-  textArea.style.position = "fixed";
-  document.body.appendChild(textArea);
-  textArea.focus();
-  textArea.select();
-  
-  try {
+    textArea.value = text;
+    textArea.style.top = "0";
+    textArea.style.left = "0";
+    textArea.style.position = "fixed";
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+
+    try {
     const successful = document.execCommand('copy');
     if (successful) {
       alert('复制成功！');
@@ -358,17 +508,17 @@ function fallbackCopyTextToClipboard(text) {
       alert('复制失败，请手动复制');
     }
   } catch (err) {
-    console.error('复制失败:', err);
+      console.error('复制失败:', err);
     alert('复制失败，请手动复制');
   }
-  
-  document.body.removeChild(textArea);
+
+    document.body.removeChild(textArea);
 }
-</script>
+  </script>
 
 ---
-*本页面由 GitHub Actions 自动更新*
-`;
+* 本页面由 GitHub Actions 自动更新 *
+  `;
 
   return markdown;
 }

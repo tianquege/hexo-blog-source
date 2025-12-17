@@ -2,7 +2,7 @@ name: Update iOS Account Info
 
 on:
   schedule:
-    - cron: '0,30 * * * *'  # 每30分钟运行一次
+    - cron: '2,32 * * * *'  # 每小时的2分和32分运行（比上游晚2分钟）
   workflow_dispatch:  # 手动触发
 
 permissions:
