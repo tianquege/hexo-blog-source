@@ -148,6 +148,54 @@ async function scrapeAccounts() {
         }
       });
 
+      // === 新增：暴力全文匹配兜底策略 ===
+      if (accounts.length === 0) {
+        console.log('DOM 节点抓取失败，尝试全文暴力匹配...');
+        const fullText = document.body.innerText || '';
+
+        // 匹配模式：寻找所有看起来像邮箱的，且后面跟着密码的模式
+        // 假设格式为：账号: xxx@xx.com ... 密码: xxx ...
+        const emailRegex = /([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g;
+        let match;
+        let count = 1;
+
+        // 找出所有邮箱的位置
+        while ((match = emailRegex.exec(fullText)) !== null) {
+          const email = match[1];
+          const startIndex = match.index;
+          // 截取邮箱后面的一段文本（比如后200个字符）来找密码
+          const context = fullText.substring(startIndex, startIndex + 200);
+
+          // 在这段上下文中找密码
+          const passMatch = context.match(/密码[：:]\s*([^\s\r\n]+)/);
+          const countryMatch = context.match(/国家[：:]\s*([^\s\r\n]+)/); // 简化国家匹配
+
+          if (passMatch) {
+            let cleanPassword = passMatch[1].trim();
+            // 再次清理后缀
+            const suffixesToRemove = ['检查时间', '国家', '状态', '时间'];
+            for (const suffix of suffixesToRemove) {
+              if (cleanPassword.includes(suffix)) {
+                cleanPassword = cleanPassword.split(suffix)[0].trim();
+              }
+            }
+            cleanPassword = cleanPassword.replace(/[：:]$/, '');
+
+            const country = countryMatch ? countryMatch[1].trim() : '';
+
+            accounts.push({
+              number: `编号${count++}`,
+              email: email,
+              password: cleanPassword,
+              country: country || '未知',
+              status: '正常',
+              time: new Date().toISOString().split('T')[0]
+            });
+            console.log(`全文匹配找到账号: ${email}`);
+          }
+        }
+      }
+
       return accounts;
     });
 
