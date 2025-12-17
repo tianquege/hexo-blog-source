@@ -187,23 +187,24 @@ function generateMarkdownTable(accounts, debugText) {
   }
 
   accounts.forEach(account => {
-    const copyEmailButton = `< a href = "javascript:void(0)" onclick = "copyEmail('${account.email}')" style = "background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;" > 复制邮箱</a > `;
-    const copyPasswordButton = `< a href = "javascript:void(0)" onclick = "copyPassword('${account.password}')" style = "background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;" > 复制密码</a > `;
+    const copyEmailButton = `<a href="javascript:void(0)" onclick="copyEmail('${account.email}')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a>`;
+    const copyPasswordButton = `<a href="javascript:void(0)" onclick="copyPassword('${account.password}')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a>`;
     markdown += `| ${account.number} | ${account.email} | ${account.password} | ${account.country} | ${account.status} | ${account.time} | ${copyEmailButton}${copyPasswordButton} |\n`;
   });
 
   markdown += `
-  ** 注意：**
+  **注意：**
     - 共享ID，可能随时被盗，强烈建议购买独享ID
       - 严格禁止在手机设置中登录共享ID，防止意外ID锁死和手机变砖
         - 本信息仅供参考，使用风险自负
 
-          < details >
+<details>
 <summary>此处点击查看抓取调试信息（如表格为空请查看这里）</summary>
 <pre>
 ${debugText.replace(/</g, '&lt;').replace(/>/g, '&gt;')}
 </pre>
-</details >
+</details>
+`;
 
   <script>
     function copyEmail(email) {
@@ -266,9 +267,9 @@ ${debugText.replace(/</g, '&lt;').replace(/>/g, '&gt;')}
 }
   </script>
 
----
+  ---
 * 本页面由 GitHub Actions 自动更新 *
-  `;
+    `;
 
   return markdown;
 }
@@ -312,7 +313,7 @@ function updateArticleFile(markdown) {
 
   try {
     fs.writeFileSync(articlePath, newContent, 'utf8');
-    console.log(`iOS 文章 ${iosFile} 更新成功`);
+    console.log(`iOS 文章 ${ iosFile } 更新成功`);
   } catch (error) {
     console.error('写入文件时出错:', error);
   }
