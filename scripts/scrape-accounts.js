@@ -55,6 +55,15 @@ async function scrapeAccounts() {
 
     const page = await browser.newPage();
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
+    // 设置额外的HTTP头
+    await page.setExtraHTTPHeaders({
+      'Referer': 'https://www.google.com/',
+      'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
+      'Cache-Control': 'no-cache',
+      'Pragma': 'no-cache'
+    });
+    // 禁用缓存，防止抓取到旧数据
+    await page.setCacheEnabled(false);
 
     // 获取本地上次更新时间
     const lastCheckTime = getLastCheckTime();
@@ -69,7 +78,10 @@ async function scrapeAccounts() {
       console.log(`第 ${i + 1} 次尝试侦测上游更新...`);
 
       try {
-        await page.goto('https://free.iosapp.icu/', { waitUntil: 'networkidle2', timeout: 60000 });
+        // 添加随机参数防止缓存
+        const targetUrl = `https://free.iosapp.icu/?t=${new Date().getTime()}`;
+        console.log(`正在访问: ${targetUrl}`);
+        await page.goto(targetUrl, { waitUntil: 'networkidle2', timeout: 60000 });
       } catch (err) {
         console.log('页面加载超时或失败，尝试继续解析...');
       }
