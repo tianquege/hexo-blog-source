@@ -30,10 +30,18 @@ jobs:
     - name: Install dependencies
       run: |
         pnpm install
+        pnpm add -g hexo-cli
         pnpm add puppeteer
       
     - name: Scrape and update accounts
       run: node scripts/scrape-accounts.js
+      
+    - name: Verify Scrape Content
+      run: |
+        echo "=== IOS.MD CONTENT HEAD ==="
+        head -n 20 source/_posts/ios.md
+        echo "=== IOS.MD CONTENT TAIL ==="
+        tail -n 20 source/_posts/ios.md
       
     - name: Check for changes
       id: git-check
@@ -47,6 +55,9 @@ jobs:
         
     - name: Build Hexo
       run: npx hexo generate
+      
+    - name: Verify Public Dir
+      run: ls -R public
         
     - name: Commit and push changes
       if: steps.git-check.outputs.changes == 'true'
