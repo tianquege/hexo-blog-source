@@ -10,11 +10,14 @@ tags:
 
 ## 共享账号信息
   
-**更新时间：** 2025/12/17 23:18:44
+**更新时间：** 2025/12/17 23:24:32
 
 | 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
 |------|------|------|------|------|------|------|
-| 错误 | 抓取失败 | 请查看调试信息 | Unknown | Error | 2025-12-17 | <a href="javascript:void(0)" onclick="copyEmail('抓取失败')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('请查看调试信息')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| 编号1 | wnniset262@hotmail.com | NtCzGXuU8M | 未知 | 正常 | 2025-12-17 | <a href="javascript:void(0)" onclick="copyEmail('wnniset262@hotmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('NtCzGXuU8M')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| 编号2 | vfbetti3073@hotmail.com | x8bf5DK8FJ | 未知 | 正常 | 2025-12-17 | <a href="javascript:void(0)" onclick="copyEmail('vfbetti3073@hotmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('x8bf5DK8FJ')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| 编号3 | saavonlgfkfv@vip.qq.com | m1K2hszUD5 | 未知 | 正常 | 2025-12-17 | <a href="javascript:void(0)" onclick="copyEmail('saavonlgfkfv@vip.qq.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('m1K2hszUD5')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| 编号4 | ce1szyl5k89c7n@126.com | KKf13d34 | 未知 | 正常 | 2025-12-17 | <a href="javascript:void(0)" onclick="copyEmail('ce1szyl5k89c7n@126.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('KKf13d34')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
 
 **注意：** 
 - 共享ID，可能随时被盗，强烈建议购买独享ID
@@ -24,18 +27,57 @@ tags:
 <details>
 <summary>此处点击查看抓取调试信息（如表格为空请查看这里）</summary>
 <pre>
-脚本执行出错: Could not find Chrome (ver. 143.0.7499.42). This can occur if either
- 1. you did not perform an installation before running the script (e.g. `npx puppeteer browsers install chrome`) or
- 2. your cache path is incorrectly configured (which is: /home/runner/.cache/puppeteer).
-For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
-Stack: Error: Could not find Chrome (ver. 143.0.7499.42). This can occur if either
- 1. you did not perform an installation before running the script (e.g. `npx puppeteer browsers install chrome`) or
- 2. your cache path is incorrectly configured (which is: /home/runner/.cache/puppeteer).
-For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
-    at ChromeLauncher.resolveExecutablePath (/home/runner/work/hexo-blog-source/hexo-blog-source/node_modules/.pnpm/puppeteer-core@24.33.0/node_modules/puppeteer-core/lib/cjs/puppeteer/node/BrowserLauncher.js:333:27)
-    at ChromeLauncher.computeLaunchArguments (/home/runner/work/hexo-blog-source/hexo-blog-source/node_modules/.pnpm/puppeteer-core@24.33.0/node_modules/puppeteer-core/lib/cjs/puppeteer/node/ChromeLauncher.js:94:24)
-    at async ChromeLauncher.launch (/home/runner/work/hexo-blog-source/hexo-blog-source/node_modules/.pnpm/puppeteer-core@24.33.0/node_modules/puppeteer-core/lib/cjs/puppeteer/node/BrowserLauncher.js:85:28)
-    at async scrapeAccounts (/home/runner/work/hexo-blog-source/hexo-blog-source/scripts/scrape-accounts.js:10:15)
+首页 电报群组：@freeiosapp2 shadowrocket中文官网
+公告
+本站id已经是免费使用，下载后及时退出
+免费共享id每半小时更新一次，如果遇到不可用，就是被盗了，着急用就先去租一个，不着急等第下次更新新的免费id
+购买独享id【优惠码：iosapp】        去租号【优惠码：iosapp3】
+🚨 严重警告 - 风险提醒：
+
+【安全重申】手机设置中的 Apple ID 必须登录您自己的账号，切记！
+如果您在**手机设置**中未登录自己的 Apple ID，而仅在 App Store 中登录共享 ID，共享 ID 将会**同步覆盖**到您的手机设置中，这可能导致您的设备被恶意用户远程锁定或进行诈骗。请务必保护您的设备安全！
+
+编号1
+
+⚠️️️⚠️严禁共享ID在手机设置里登录，防止出现意外ID被锁，手机变砖⚠️⚠️
+
+类型: 账号信息
+
+账号: wnniset262@hotmail.com 美国
+
+密码: NtCzGXuU8M
+
+检查时间: 2025-12-17 23:03:58
+
+状态: 正常
+
+共享id，随时可能被盗，强烈建议购买独享id
+购买独享id
+此处为账号密码区域，如果没显示，请更换网络【关闭代理】和浏览器
+编号2
+
+⚠️️️⚠️严禁共享ID在手机设置里登录，防止出现意外ID被锁，手机变砖⚠️⚠️
+
+类型: 账号信息
+
+账号: vfbetti3073@hotmail.com 美国
+
+密码: x8bf5DK8FJ
+
+检查时间: 2025-12-17 22:59:26
+
+状态: 正常
+
+共享id，随时可能被盗，强烈建议购买独享id
+购买独享id
+此处为账号密码区域，如果没显示，请更换网络【关闭代理】和浏览器
+编号3
+
+⚠️️️⚠️严禁共享ID在手机设置里登录，防止出现意外ID被锁，手机变砖⚠️⚠️
+
+类型: 账号信息
+
+账号: saavonlg
 </pre>
 </details>
 
