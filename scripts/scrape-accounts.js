@@ -58,9 +58,7 @@ async function scrapeAccounts() {
     // 设置额外的HTTP头
     await page.setExtraHTTPHeaders({
       'Referer': 'https://www.google.com/',
-      'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
-      'Cache-Control': 'no-cache',
-      'Pragma': 'no-cache'
+      'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8'
     });
     // 禁用缓存，防止抓取到旧数据
     await page.setCacheEnabled(false);
@@ -86,7 +84,7 @@ async function scrapeAccounts() {
         console.log('页面加载超时或失败，尝试继续解析...');
       }
 
-      await new Promise(r => setTimeout(r, 5000)); // 等待渲染
+      await new Promise(r => setTimeout(r, 10000)); // 等待渲染
 
       const fullText = await page.evaluate(() => document.body.innerText);
       pageText = fullText.substring(0, 800) + '...'; // Debug用
@@ -102,6 +100,13 @@ async function scrapeAccounts() {
       }
 
       console.log(`网页上的最新检查时间: ${currentCheckTime || '未找到'} (本地记录: ${lastCheckTime || '无'})`);
+
+      // 如果未能获取到时间（可能是反爬虫拦截，或页面加载不全）
+      if (!currentCheckTime) {
+        console.log('警告：未能从页面提取到检查时间，可能是被拦截或页面结构异常。等待 10 秒后重试...');
+        await new Promise(r => setTimeout(r, 10000));
+        continue;
+      }
 
       // 核心逻辑：
       // 1. 如果没有本地记录（第一次运行），直接抓。
