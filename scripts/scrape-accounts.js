@@ -13,8 +13,12 @@ async function scrapeAccounts() {
   try {
     const page = await browser.newPage();
 
-    // 设置用户代理
-    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36');
+    // 设置用户代理和请求头
+    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
+    await page.setExtraHTTPHeaders({
+      'Referer': 'https://www.google.com/',
+      'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8'
+    });
 
     // 访问网站
     await page.goto('https://free.iosapp.icu/', {
@@ -29,7 +33,7 @@ async function scrapeAccounts() {
     await page.waitForSelector('body', { timeout: 10000 });
 
     // 抓取账号信息
-    const accounts = await page.evaluate(() => {
+    const result = await page.evaluate(() => {
       console.log('开始抓取页面内容...');
 
       // 获取页面HTML用于调试
@@ -196,13 +200,20 @@ async function scrapeAccounts() {
         }
       }
 
-      return accounts;
+      // === 返回结果 ===
+      return {
+        accounts: accounts,
+        debugText: document.body.innerText ? document.body.innerText.substring(0, 800) : '页面无法读取 TextContent'
+      };
     });
+
+    const accounts = result.accounts;
+    const debugText = result.debugText;
 
     console.log(`抓取到 ${accounts.length} 个账号信息`);
 
     // 生成 Markdown 表格
-    const markdown = generateMarkdownTable(accounts);
+    const markdown = generateMarkdownTable(accounts, debugText);
 
     // 更新文章文件
     updateArticleFile(markdown);
@@ -216,7 +227,7 @@ async function scrapeAccounts() {
   }
 }
 
-function generateMarkdownTable(accounts) {
+function generateMarkdownTable(accounts, debugText) {
   // 获取北京时间
   const now = new Date();
   const timeString = now.toLocaleString('zh-CN', {
@@ -230,12 +241,16 @@ function generateMarkdownTable(accounts) {
   });
 
   let markdown = `## 共享账号信息
-
+  
 **更新时间：** ${timeString}
 
 | 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
 |------|------|------|------|------|------|------|
 `;
+
+  if (accounts.length === 0) {
+    markdown += `\n| 暂无 | 获取失败 | 请参考 | 下方 | 调试 | 信息 | - |\n`;
+  }
 
   accounts.forEach(account => {
     const copyEmailButton = `<a href="javascript:void(0)" onclick="copyEmail('${account.email}')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a>`;
@@ -248,6 +263,13 @@ function generateMarkdownTable(accounts) {
 - 共享ID，可能随时被盗，强烈建议购买独享ID
 - 严格禁止在手机设置中登录共享ID，防止意外ID锁死和手机变砖
 - 本信息仅供参考，使用风险自负
+
+<details>
+<summary>此处点击查看抓取调试信息（如表格为空请查看这里）</summary>
+<pre>
+${debugText.replace(/</g, '&lt;').replace(/>/g, '&gt;')}
+</pre>
+</details>
 
 <script>
 function copyEmail(email) {
