@@ -204,54 +204,47 @@ function generateMarkdownTable(accounts, debugText) {
 ${debugText.replace(/</g, '&lt;').replace(/>/g, '&gt;')}
 </pre>
 </details>
-`;
 
-  <script>
-    function copyEmail(email) {
+<script>
+function copyEmail(email) {
   const text = email;
-
-    if (navigator.clipboard && window.isSecureContext) {
-      // 使用现代 Clipboard API
-      navigator.clipboard.writeText(text).then(() => {
-        alert('邮箱已复制到剪贴板！');
-      }).catch(err => {
-        console.error('复制失败:', err);
-        fallbackCopyTextToClipboard(text);
-      });
-  } else {
-      // 降级方案
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(() => {
+      alert('邮箱已复制到剪贴板！');
+    }).catch(err => {
+      console.error('复制失败:', err);
       fallbackCopyTextToClipboard(text);
+    });
+  } else {
+    fallbackCopyTextToClipboard(text);
   }
 }
 
-    function copyPassword(password) {
+function copyPassword(password) {
   const text = password;
-
-    if (navigator.clipboard && window.isSecureContext) {
-      // 使用现代 Clipboard API
-      navigator.clipboard.writeText(text).then(() => {
-        alert('密码已复制到剪贴板！');
-      }).catch(err => {
-        console.error('复制失败:', err);
-        fallbackCopyTextToClipboard(text);
-      });
-  } else {
-      // 降级方案
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(() => {
+      alert('密码已复制到剪贴板！');
+    }).catch(err => {
+      console.error('复制失败:', err);
       fallbackCopyTextToClipboard(text);
+    });
+  } else {
+    fallbackCopyTextToClipboard(text);
   }
 }
 
-    function fallbackCopyTextToClipboard(text) {
+function fallbackCopyTextToClipboard(text) {
   const textArea = document.createElement("textarea");
-    textArea.value = text;
-    textArea.style.top = "0";
-    textArea.style.left = "0";
-    textArea.style.position = "fixed";
-    document.body.appendChild(textArea);
-    textArea.focus();
-    textArea.select();
-
-    try {
+  textArea.value = text;
+  textArea.style.top = "0";
+  textArea.style.left = "0";
+  textArea.style.position = "fixed";
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+  
+  try {
     const successful = document.execCommand('copy');
     if (successful) {
       alert('复制成功！');
@@ -259,17 +252,17 @@ ${debugText.replace(/</g, '&lt;').replace(/>/g, '&gt;')}
       alert('复制失败，请手动复制');
     }
   } catch (err) {
-      console.error('复制失败:', err);
+    console.error('复制失败:', err);
     alert('复制失败，请手动复制');
   }
-
-    document.body.removeChild(textArea);
+  
+  document.body.removeChild(textArea);
 }
-  </script>
+</script>
 
-  ---
-* 本页面由 GitHub Actions 自动更新 *
-    `;
+---
+*本页面由 GitHub Actions 自动更新*
+`;
 
   return markdown;
 }
@@ -313,7 +306,7 @@ function updateArticleFile(markdown) {
 
   try {
     fs.writeFileSync(articlePath, newContent, 'utf8');
-    console.log(`iOS 文章 ${ iosFile } 更新成功`);
+    console.log(`iOS 文章 ${iosFile} 更新成功`);
   } catch (error) {
     console.error('写入文件时出错:', error);
   }
