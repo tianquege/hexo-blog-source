@@ -9,19 +9,19 @@ tags:
 ---
 
 ## 共享账号信息
-  
-**更新时间：** 2025/12/17 23:45:53
+
+  ** 更新时间：** 2025/12/18 01:30:04
 
 | 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
-|------|------|------|------|------|------|------|
-| 编号1 | sftpcorona31674@icloud.com | aKXXY7PGJ6 | 香港 | 正常 | 2025-12-17 | <a href="javascript:void(0)" onclick="copyEmail('sftpcorona31674@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('aKXXY7PGJ6')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号2 | vfbetti3073@hotmail.com | f8Qdmq1RZW | 美国 | 正常 | 2025-12-17 | <a href="javascript:void(0)" onclick="copyEmail('vfbetti3073@hotmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('f8Qdmq1RZW')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号3 | xfpfuxper9166@hotmail.com | 6g98KuhgbS | 美国 | 正常 | 2025-12-17 | <a href="javascript:void(0)" onclick="copyEmail('xfpfuxper9166@hotmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('6g98KuhgbS')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| ------| ------| ------| ------| ------| ------| ------|
+  | 编号1 | wnniset262@hotmail.com | k5nfJWyvRU | 美国 | 正常 | 2025-12-18 01:04:30 | <a href="javascript:void(0)" onclick="copyEmail('wnniset262@hotmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('k5nfJWyvRU')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| 编号2 | vfbetti3073@hotmail.com | w9NxHwAstX | 美国 | 正常 | 2025-12-18 01:04:05 | <a href="javascript:void(0)" onclick="copyEmail('vfbetti3073@hotmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('w9NxHwAstX')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| 编号3 | sftpcorona31674@icloud.com | DdQbw94reM | 香港 | 正常 | 2025-12-18 01:02:21 | <a href="javascript:void(0)" onclick="copyEmail('sftpcorona31674@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('DdQbw94reM')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
 
-**注意：** 
-- 共享ID，可能随时被盗，强烈建议购买独享ID
-- 严格禁止在手机设置中登录共享ID，防止意外ID锁死和手机变砖
-- 本信息仅供参考，使用风险自负
+  **注意：**
+    - 共享ID，可能随时被盗，强烈建议购买独享ID
+      - 严格禁止在手机设置中登录共享ID，防止意外ID锁死和手机变砖
+        - 本信息仅供参考，使用风险自负
 
 <details>
 <summary>此处点击查看抓取调试信息（如表格为空请查看这里）</summary>
@@ -42,11 +42,11 @@ tags:
 
 类型: 账号信息
 
-账号: sftpcorona31674@icloud.com 香港
+账号: wnniset262@hotmail.com 美国
 
-密码: aKXXY7PGJ6
+密码: k5nfJWyvRU
 
-检查时间: 2025-12-17 23:34:29
+检查时间: 2025-12-18 01:04:30
 
 状态: 正常
 
@@ -61,9 +61,9 @@ tags:
 
 账号: vfbetti3073@hotmail.com 美国
 
-密码: f8Qdmq1RZW
+密码: w9NxHwAstX
 
-检查时间: 2025-12-17 23:34:26
+检查时间: 2025-12-18 01:04:05
 
 状态: 正常
 
@@ -76,16 +76,14 @@ tags:
 
 类型: 账号信息
 
-账号: xfpf
+账号: sftpcoro...
 </pre>
 </details>
 
 <script>
 function copyEmail(email) {
   const text = email;
-  
   if (navigator.clipboard && window.isSecureContext) {
-    // 使用现代 Clipboard API
     navigator.clipboard.writeText(text).then(() => {
       alert('邮箱已复制到剪贴板！');
     }).catch(err => {
@@ -93,16 +91,13 @@ function copyEmail(email) {
       fallbackCopyTextToClipboard(text);
     });
   } else {
-    // 降级方案
     fallbackCopyTextToClipboard(text);
   }
 }
 
 function copyPassword(password) {
   const text = password;
-  
   if (navigator.clipboard && window.isSecureContext) {
-    // 使用现代 Clipboard API
     navigator.clipboard.writeText(text).then(() => {
       alert('密码已复制到剪贴板！');
     }).catch(err => {
@@ -110,7 +105,6 @@ function copyPassword(password) {
       fallbackCopyTextToClipboard(text);
     });
   } else {
-    // 降级方案
     fallbackCopyTextToClipboard(text);
   }
 }
