@@ -63,13 +63,13 @@ async function scrapeAccounts() {
     // 重试循环
     let accounts = [];
     let pageText = '';
-    const maxRetries = 5; // 最多重试5次
+    const maxRetries = 10; // 最多重试10次（约10分钟）
 
     for (let i = 0; i < maxRetries; i++) {
-      console.log(`第 ${i + 1} 次尝试抓取...`);
+      console.log(`第 ${i + 1} 次尝试侦测上游更新...`);
 
       try {
-        await page.goto('https://free.iosapp.icu/', { waitUntil: 'networkidle2', timeout: 30000 });
+        await page.goto('https://free.iosapp.icu/', { waitUntil: 'networkidle2', timeout: 60000 });
       } catch (err) {
         console.log('页面加载超时或失败，尝试继续解析...');
       }
@@ -89,98 +89,116 @@ async function scrapeAccounts() {
         if (tm) currentCheckTime = tm[1];
       }
 
-      console.log(`网页上的最新检查时间: ${currentCheckTime || '未找到'}`);
+      console.log(`网页上的最新检查时间: ${currentCheckTime || '未找到'} (本地记录: ${lastCheckTime || '无'})`);
 
-      if (currentCheckTime && lastCheckTime && currentCheckTime === lastCheckTime) {
-        console.log('检测到上游并未更新，等待30秒后重试...');
-        if (i < maxRetries - 1) {
-          await new Promise(r => setTimeout(r, 30000));
-          continue;
-        } else {
-          console.log('重试次数耗尽，强制更新（可能是网页结构变了）');
-        }
+      // 核心逻辑：
+      // 1. 如果没有本地记录（第一次运行），直接抓。
+      // 2. 如果网页时间 > 本地时间（有更新），直接抓。
+      // 3. 如果网页时间 == 本地时间（没更新），等待并重试。
+
+      if (!lastCheckTime || (currentCheckTime && currentCheckTime !== lastCheckTime)) {
+        console.log('发现上游新数据（或无本地记录），准备开始抓取！');
+        // 跳出重试循环，向下执行解析
+        // 注意：这里不需要 break，也不需要 continue，自然往下走就行
+        // 但是为了逻辑清晰，我们把解析逻辑放后面，这里不做操作，直接 break 出循环去解析
+        break;
+      }
+
+      // 如果走到这里，说明 currentCheckTime === lastCheckTime
+      if (i < maxRetries - 1) {
+        console.log(`上游数据尚未更新，等待 60 秒后重试... (${i + 1}/${maxRetries})`);
+        await new Promise(r => setTimeout(r, 60000));
+        // 重载页面，进入下一次循环
+        continue;
       } else {
-        console.log('检测到新数据或无历史数据，开始解析...');
+        console.log('重试次数耗尽，上游长时间未更新。本次任务终止，不更新博客。');
+        return;
       }
-
-      // 开始解析账号
-      accounts = [];
-      const emailRegex = /([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g;
-
-      let match;
-      let count = 1;
-
-      while ((match = emailRegex.exec(fullText)) !== null) {
-        const email = match[1];
-        const startIndex = match.index;
-        const context = fullText.substring(startIndex, startIndex + 200);
-        const preContext = fullText.substring(Math.max(0, startIndex - 100), startIndex);
-
-        if (!preContext.includes('编号') && !context.substring(0, 50).includes('编号')) continue;
-
-        const passMatch = context.match(/密码[：:]\s*([^\s\r\n]+)/);
-
-        // 提取该账号的具体检查时间
-        const accountTimeMatch = context.match(/检查时间[：:]\s*(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2})/);
-        const accountTime = accountTimeMatch ? accountTimeMatch[1] : (currentCheckTime || new Date().toISOString().split('T')[0]);
-
-        let country = '未知';
-        if (passMatch) {
-          const betweenText = context.substring(match[0].length, passMatch.index).trim();
-          const countryMatch = betweenText.match(/[\u4e00-\u9fa5]+/);
-          if (countryMatch) country = countryMatch[0];
-        }
-
-        if (passMatch) {
-          let cleanPassword = passMatch[1].trim();
-          const suffixesToRemove = ['检查时间', '国家', '状态', '时间'];
-          for (const suffix of suffixesToRemove) {
-            if (cleanPassword.includes(suffix)) cleanPassword = cleanPassword.split(suffix)[0].trim();
-          }
-          cleanPassword = cleanPassword.replace(/[：:]$/, '');
-
-          accounts.push({
-            number: `编号${count++}`,
-            email: email,
-            password: cleanPassword,
-            country: country,
-            status: '正常',
-            time: accountTime
-          });
-          console.log(`找到账号: ${email} 时间: ${accountTime}`);
-        }
-      }
-
-      // 如果找到了账号，就跳出
-      if (accounts.length > 0) break;
     }
+
+    // 如果循环结束前 return 了，下面不会执行。
+    // 如果 break 了，下面继续执行解析。
+
+
+
+    // 开始解析账号
+    accounts = [];
+    const emailRegex = /([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g;
+
+    let match;
+    let count = 1;
+
+    while ((match = emailRegex.exec(fullText)) !== null) {
+      const email = match[1];
+      const startIndex = match.index;
+      const context = fullText.substring(startIndex, startIndex + 200);
+      const preContext = fullText.substring(Math.max(0, startIndex - 100), startIndex);
+
+      if (!preContext.includes('编号') && !context.substring(0, 50).includes('编号')) continue;
+
+      const passMatch = context.match(/密码[：:]\s*([^\s\r\n]+)/);
+
+      // 提取该账号的具体检查时间
+      const accountTimeMatch = context.match(/检查时间[：:]\s*(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2})/);
+      const accountTime = accountTimeMatch ? accountTimeMatch[1] : (currentCheckTime || new Date().toISOString().split('T')[0]);
+
+      let country = '未知';
+      if (passMatch) {
+        const betweenText = context.substring(match[0].length, passMatch.index).trim();
+        const countryMatch = betweenText.match(/[\u4e00-\u9fa5]+/);
+        if (countryMatch) country = countryMatch[0];
+      }
+
+      if (passMatch) {
+        let cleanPassword = passMatch[1].trim();
+        const suffixesToRemove = ['检查时间', '国家', '状态', '时间'];
+        for (const suffix of suffixesToRemove) {
+          if (cleanPassword.includes(suffix)) cleanPassword = cleanPassword.split(suffix)[0].trim();
+        }
+        cleanPassword = cleanPassword.replace(/[：:]$/, '');
+
+        accounts.push({
+          number: `编号${count++}`,
+          email: email,
+          password: cleanPassword,
+          country: country,
+          status: '正常',
+          time: accountTime
+        });
+        console.log(`找到账号: ${email} 时间: ${accountTime}`);
+      }
+    }
+
+    // 如果找到了账号，就跳出
+    if (accounts.length > 0) break;
+  }
 
     // 生成 Markdown 表格
     const markdown = generateMarkdownTable(accounts, pageText);
-    updateArticleFile(markdown);
+  updateArticleFile(markdown);
 
-    console.log('账号信息更新完成！');
+  console.log('账号信息更新完成！');
 
-  } catch (error) {
-    console.error('抓取过程中出错:', error);
+} catch (error) {
+  console.error('抓取过程中出错:', error);
 
-    // 即使出错，也要更新文件，把错误信息显示出来
-    const errorAccounts = [{
-      number: '错误',
-      email: '抓取失败',
-      password: '请查看调试信息',
-      country: 'Unknown',
-      status: 'Error',
-      time: new Date().toISOString().split('T')[0]
-    }];
-    const errorDebug = `脚本执行出错: ${error.message}\nStack: ${error.stack}`;
+  // 即使出错，也要更新文件，把错误信息显示出来
+  const errorAccounts = [{
+    number: '错误',
+    email: '抓取失败',
+    password: '请查看调试信息',
+    country: 'Unknown',
+    status: 'Error',
+    time: new Date().toISOString().split('T')[0]
+  }];
+  const errorDebug = `脚本执行出错: ${error.message}\nStack: ${error.stack}`;
 
-    const markdown = generateMarkdownTable(errorAccounts, errorDebug);
-    updateArticleFile(markdown);
+  const markdown = generateMarkdownTable(errorAccounts, errorDebug);
+  updateArticleFile(markdown);
 
-  } finally {
-    if (browser) await browser.close();
-  }
+} finally {
+  if (browser) await browser.close();
+}
 }
 
 
