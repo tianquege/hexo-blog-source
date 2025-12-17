@@ -24,10 +24,34 @@ async function scrapeAccounts() {
 
   let browser;
   try {
-    browser = await puppeteer.launch({
-      headless: true,
+    // 自动检测系统 Chrome 路径（针对 GitHub Actions 环境）
+    let executablePath = null;
+    if (process.platform === 'linux') {
+      const possiblePaths = [
+        '/usr/bin/google-chrome',
+        '/usr/bin/google-chrome-stable',
+        '/usr/bin/chromium',
+        '/usr/bin/chromium-browser'
+      ];
+      for (const p of possiblePaths) {
+        if (fs.existsSync(p)) {
+          executablePath = p;
+          console.log(`在 Linux 环境下找到 Chrome: ${p}`);
+          break;
+        }
+      }
+    }
+
+    const launchOptions = {
+      headless: "new", // 使用新版 Headless 模式
       args: ['--no-sandbox', '--disable-setuid-sandbox']
-    });
+    };
+
+    if (executablePath) {
+      launchOptions.executablePath = executablePath;
+    }
+
+    browser = await puppeteer.launch(launchOptions);
 
     const page = await browser.newPage();
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
