@@ -1,5 +1,7 @@
 ---
 title: PC|WIN/MACos端使用教程
+date: 2025-08-20 10:00:00
+sticky: 2
 ---
 
 <h2>1.Win/MAC端推荐使用Flclash-Windows- MAC客户端

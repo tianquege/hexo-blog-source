@@ -96,14 +96,18 @@ async function scrapeAccounts() {
             const emailMatch = cardText.match(/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/);
             
             // 更精确的正则表达式，确保只匹配到下一个字段之前的内容
-            const passwordMatch = cardText.match(/密码[：:]\s*([^国家]+?)(?=\s*国家[：:])/);
-            const countryMatch = cardText.match(/国家[：:]\s*([^状态]+?)(?=\s*状态[：:])/);
-            const statusMatch = cardText.match(/状态[：:]\s*([^时间]+?)(?=\s*\d{4}-\d{2}-\d{2})/);
+            const passwordMatch = cardText.match(/密码[：:]\s*([^国家\n\r]+?)(?=\s*国家[：:])/);
+            const countryMatch = cardText.match(/国家[：:]\s*([^状态\n\r]+?)(?=\s*状态[：:])/);
+            const statusMatch = cardText.match(/状态[：:]\s*([^时间\n\r]+?)(?=\s*\d{4}-\d{2}-\d{2})/);
             
             // 清理密码字段，移除后面的"国家:"等文本
             let cleanPassword = passwordMatch ? passwordMatch[1].trim() : '';
+            // 如果密码字段仍然包含"国家:"，进一步清理
             if (cleanPassword.includes('国家:')) {
               cleanPassword = cleanPassword.split('国家:')[0].trim();
+            }
+            if (cleanPassword.includes('国家：')) {
+              cleanPassword = cleanPassword.split('国家：')[0].trim();
             }
              
              // 如果状态字段为空，尝试其他匹配方式
