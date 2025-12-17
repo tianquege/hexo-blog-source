@@ -5,12 +5,13 @@ const path = require('path');
 async function scrapeAccounts() {
   console.log('开始抓取账号信息...');
 
-  const browser = await puppeteer.launch({
-    headless: true,
-    args: ['--no-sandbox', '--disable-setuid-sandbox']
-  });
-
+  let browser;
   try {
+    browser = await puppeteer.launch({
+      headless: true,
+      args: ['--no-sandbox', '--disable-setuid-sandbox']
+    });
+
     const page = await browser.newPage();
 
     // 设置用户代理和请求头
@@ -222,8 +223,23 @@ async function scrapeAccounts() {
 
   } catch (error) {
     console.error('抓取过程中出错:', error);
+
+    // 即使出错，也要更新文件，把错误信息显示出来
+    const errorAccounts = [{
+      number: '错误',
+      email: '抓取失败',
+      password: '请查看调试信息',
+      country: 'Unknown',
+      status: 'Error',
+      time: new Date().toISOString().split('T')[0]
+    }];
+    const errorDebug = `脚本执行出错: ${error.message}\nStack: ${error.stack}`;
+
+    const markdown = generateMarkdownTable(errorAccounts, errorDebug);
+    updateArticleFile(markdown);
+
   } finally {
-    await browser.close();
+    if (browser) await browser.close();
   }
 }
 
