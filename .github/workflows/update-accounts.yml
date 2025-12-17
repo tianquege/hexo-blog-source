@@ -32,6 +32,7 @@ jobs:
         pnpm install
         pnpm add -g hexo-cli
         pnpm add puppeteer
+        npx puppeteer browsers install chrome
       
     - name: Scrape and update accounts
       run: node scripts/scrape-accounts.js
