@@ -54,6 +54,14 @@ async function scrapeAccounts() {
     browser = await puppeteer.launch(launchOptions);
 
     const page = await browser.newPage();
+    
+    // 隐藏 WebDriver 特征，绕过简单的反爬虫检测
+    await page.evaluateOnNewDocument(() => {
+      Object.defineProperty(navigator, 'webdriver', {
+        get: () => undefined,
+      });
+    });
+
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
     // 设置额外的HTTP头
     await page.setExtraHTTPHeaders({
