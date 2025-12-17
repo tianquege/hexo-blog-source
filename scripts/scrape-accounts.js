@@ -54,7 +54,7 @@ async function scrapeAccounts() {
     browser = await puppeteer.launch(launchOptions);
 
     const page = await browser.newPage();
-    
+
     // 隐藏 WebDriver 特征，绕过简单的反爬虫检测
     await page.evaluateOnNewDocument(() => {
       Object.defineProperty(navigator, 'webdriver', {
@@ -121,15 +121,15 @@ async function scrapeAccounts() {
       // 2. 如果没有本地记录（第一次运行），直接抓。
       // 3. 如果网页时间 > 本地时间（有更新），直接抓。
       // 4. 如果网页时间 == 本地时间（没更新），等待并重试。
-      
+
       const isManualTrigger = process.env.GITHUB_EVENT_NAME === 'workflow_dispatch';
-      
+
       if (isManualTrigger || !lastCheckTime || (currentCheckTime && currentCheckTime !== lastCheckTime)) {
-          if (isManualTrigger) console.log('检测到手动触发，强制抓取更新！');
-          else console.log('发现上游新数据（或无本地记录），准备开始抓取！');
-          // 继续向下执行解析逻辑
+        if (isManualTrigger) console.log('检测到手动触发，强制抓取更新！');
+        else console.log('发现上游新数据（或无本地记录），准备开始抓取！');
+        // 继续向下执行解析逻辑
       } else {
-          // 如果走到这里，说明 currentCheckTime === lastCheckTime 且 非手动触发
+        // 如果走到这里，说明 currentCheckTime === lastCheckTime 且 非手动触发
         if (i < maxRetries - 1) {
           console.log(`上游数据尚未更新，等待 60 秒后重试... (${i + 1}/${maxRetries})`);
           await new Promise(r => setTimeout(r, 60000));
@@ -379,5 +379,7 @@ function updateArticleFile(markdown) {
   }
 }
 
-// 运行脚本
-scrapeAccounts().catch(console.error);
+// 仅当直接运行脚本时才执行，被 Hexo 加载时不执行
+if (require.main === module) {
+  scrapeAccounts().catch(console.error);
+}
