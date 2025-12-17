@@ -9,16 +9,35 @@ tags:
 ---
 
 ## 共享账号信息
-
-**更新时间：** 2025/12/17 22:48:04
+  
+**更新时间：** 2025/12/17 23:15:11
 
 | 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
 |------|------|------|------|------|------|------|
+| 错误 | 抓取失败 | 请查看调试信息 | Unknown | Error | 2025-12-17 | <a href="javascript:void(0)" onclick="copyEmail('抓取失败')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('请查看调试信息')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
 
 **注意：** 
 - 共享ID，可能随时被盗，强烈建议购买独享ID
 - 严格禁止在手机设置中登录共享ID，防止意外ID锁死和手机变砖
 - 本信息仅供参考，使用风险自负
+
+<details>
+<summary>此处点击查看抓取调试信息（如表格为空请查看这里）</summary>
+<pre>
+脚本执行出错: Could not find Chrome (ver. 143.0.7499.42). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npx puppeteer browsers install chrome`) or
+ 2. your cache path is incorrectly configured (which is: /home/runner/.cache/puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+Stack: Error: Could not find Chrome (ver. 143.0.7499.42). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npx puppeteer browsers install chrome`) or
+ 2. your cache path is incorrectly configured (which is: /home/runner/.cache/puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (/home/runner/work/hexo-blog-source/hexo-blog-source/node_modules/.pnpm/puppeteer-core@24.33.0/node_modules/puppeteer-core/lib/cjs/puppeteer/node/BrowserLauncher.js:333:27)
+    at ChromeLauncher.computeLaunchArguments (/home/runner/work/hexo-blog-source/hexo-blog-source/node_modules/.pnpm/puppeteer-core@24.33.0/node_modules/puppeteer-core/lib/cjs/puppeteer/node/ChromeLauncher.js:94:24)
+    at async ChromeLauncher.launch (/home/runner/work/hexo-blog-source/hexo-blog-source/node_modules/.pnpm/puppeteer-core@24.33.0/node_modules/puppeteer-core/lib/cjs/puppeteer/node/BrowserLauncher.js:85:28)
+    at async scrapeAccounts (/home/runner/work/hexo-blog-source/hexo-blog-source/scripts/scrape-accounts.js:10:15)
+</pre>
+</details>
 
 <script>
 function copyEmail(email) {
