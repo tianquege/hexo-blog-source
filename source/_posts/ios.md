@@ -10,13 +10,13 @@ tags:
 
 ## 共享账号信息
 
-  ** 更新时间：** 2025/12/20 22:24:29
+  ** 更新时间：** 2025/12/20 22:43:37
 
 | 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
 | ------| ------| ------| ------| ------| ------| ------|
-  | 编号1 | mahamad.pashaiy@gmail.com | PAvtk6XFPy | 未知 | 正常 | 2025-12-20 21:59:37 | <a href="javascript:void(0)" onclick="copyEmail('mahamad.pashaiy@gmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('PAvtk6XFPy')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号2 | s1g421o749gfzm@maoem.com | VYk9VQ64n2 | 未知 | 正常 | 2025-12-20 21:25:30 | <a href="javascript:void(0)" onclick="copyEmail('s1g421o749gfzm@maoem.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('VYk9VQ64n2')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号3 | sftpcorona31674@icloud.com | zwqEfB8vac | 香港 | 正常 | 2025-12-20 21:02:40 | <a href="javascript:void(0)" onclick="copyEmail('sftpcorona31674@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('zwqEfB8vac')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+  | 编号1 | zhidfzgie9637@hotmail.com | 8kbzjcnJgE | 美国 | 正常 | 2025-12-20 22:30:52 | <a href="javascript:void(0)" onclick="copyEmail('zhidfzgie9637@hotmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('8kbzjcnJgE')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| 编号2 | sftpcorona31674@icloud.com | jfcGZBZh7S | 香港 | 正常 | 2025-12-20 22:30:48 | <a href="javascript:void(0)" onclick="copyEmail('sftpcorona31674@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('jfcGZBZh7S')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| 编号3 | wnniset262@hotmail.com | h3UyxuVryp | 美国 | 正常 | 2025-12-20 22:30:46 | <a href="javascript:void(0)" onclick="copyEmail('wnniset262@hotmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('h3UyxuVryp')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
 
   **注意：**
     - 共享ID，可能随时被盗，强烈建议购买独享ID
@@ -40,13 +40,13 @@ tags:
 
 ⚠️️️⚠️严禁共享ID在手机设置里登录，防止出现意外ID被锁，手机变砖⚠️⚠️
 
-类型: 美国
+类型: 账号信息
 
-账号: mahamad.pashaiy@gmail.com
+账号: zhidfzgie9637@hotmail.com 美国
 
-密码: PAvtk6XFPy
+密码: 8kbzjcnJgE
 
-检查时间: 2025-12-20 21:59:37
+检查时间: 2025-12-20 22:30:52
 
 状态: 正常
 
@@ -57,13 +57,13 @@ tags:
 
 ⚠️️️⚠️严禁共享ID在手机设置里登录，防止出现意外ID被锁，手机变砖⚠️⚠️
 
-类型: 美国
+类型: 账号信息
 
-账号: s1g421o749gfzm@maoem.com
+账号: sftpcorona31674@icloud.com 香港
 
-密码: VYk9VQ64n2
+密码: jfcGZBZh7S
 
-检查时间: 2025-12-20 21:25:30
+检查时间: 2025-12-20 22:30:48
 
 状态: 正常
 
@@ -76,7 +76,7 @@ tags:
 
 类型: 账号信息
 
-账号: sftpcorona3167...
+账号: wn...
 </pre>
 </details>
 
