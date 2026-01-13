@@ -10,13 +10,12 @@ tags:
 
 ## 共享账号信息
 
-  ** 更新时间：** 2026/01/13 12:47:10
+  ** 更新时间：** 2026/01/13 13:36:14
 
 | 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
 | ------| ------| ------| ------| ------| ------| ------|
-  | 编号1 | Falviroxa917H@icloud.com | BCvxW5DqTP | 美国 | 正常 | 2026-01-13 12:40:59 | <a href="javascript:void(0)" onclick="copyEmail('Falviroxa917H@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('BCvxW5DqTP')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号2 | traxoneliv572M@icloud.com | E2N26sgK3k | 美国 | 正常 | 2026-01-13 12:38:36 | <a href="javascript:void(0)" onclick="copyEmail('traxoneliv572M@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('E2N26sgK3k')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号3 | el1i7ki6n6g@icloud.com | sk2eYEUHfT | 美国 | 正常 | 2026-01-13 12:32:12 | <a href="javascript:void(0)" onclick="copyEmail('el1i7ki6n6g@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('sk2eYEUHfT')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+  
+ | 暂无 | 获取失败 | 请参考 | 下方 | 调试 | 信息 | - |
 
   **注意：**
     - 共享ID，可能随时被盗，强烈建议购买独享ID
@@ -40,15 +39,15 @@ tags:
 
 ⚠️️️⚠️严禁共享ID在手机设置里登录，防止出现意外ID被锁，手机变砖⚠️⚠️
 
-类型: 账号信息
+类型:
 
-账号: Falviroxa917H@icloud.com 美国
+账号: djimenez482018711@icloud.com
 
-密码: BCvxW5DqTP
+密码: g8oUu2@N
 
-检查时间: 2026-01-13 12:40:59
+检查时间:
 
-状态: 正常
+状态: 账号可用
 
 共享id，随时可能被盗，强烈建议购买独享id
 购买独享id
@@ -57,15 +56,15 @@ tags:
 
 ⚠️️️⚠️严禁共享ID在手机设置里登录，防止出现意外ID被锁，手机变砖⚠️⚠️
 
-类型: 账号信息
+类型:
 
-账号: traxoneliv572M@icloud.com 美国
+账号: keyonnasma9127@hotmail.com
 
-密码: E2N26sgK3k
+密码: e5JvTsx@
 
-检查时间: 2026-01-13 12:38:36
+检查时间:
 
-状态: 正常
+状态: 账号可用
 
 共享id，随时可能被盗，强烈建议购买独享id
 购买独享id
@@ -74,9 +73,17 @@ tags:
 
 ⚠️️️⚠️严禁共享ID在手机设置里登录，防止出现意外ID被锁，手机变砖⚠️⚠️
 
-类型: 账号信息
+类型:
 
-账号: el1i...
+账号: jaydenbwolson@hotmail.com
+
+密码: SDg17n22
+
+检查时间:
+
+状态: 账号可用
+
+共享...
 </pre>
 </details>
 
