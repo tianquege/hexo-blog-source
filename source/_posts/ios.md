@@ -10,11 +10,13 @@ tags:
 
 ## 共享账号信息
 
-  ** 更新时间：** 2026/01/18 03:41:36
+  ** 更新时间：** 2026/01/18 04:29:45
 
 | 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
 | ------| ------| ------| ------| ------| ------| ------|
-  | 错误 | 抓取失败 | 请查看调试信息 | Unknown | Error | 2026-01-17 | <a href="javascript:void(0)" onclick="copyEmail('抓取失败')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('请查看调试信息')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+  | 编号1 | traxoneliv572M@icloud.com | 1R2mn1MmPT | 美国 | 正常 | 2026-01-18 04:09:19 | <a href="javascript:void(0)" onclick="copyEmail('traxoneliv572M@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('1R2mn1MmPT')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| 编号2 | el1i7ki6n6g@icloud.com | C4xYUM2SCT | 美国 | 正常 | 2026-01-18 04:07:17 | <a href="javascript:void(0)" onclick="copyEmail('el1i7ki6n6g@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('C4xYUM2SCT')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| 编号3 | xdf25186@icloud.com | KNF1yZ1f79 | 未知 | 正常 | 2026-01-18 00:49:25 | <a href="javascript:void(0)" onclick="copyEmail('xdf25186@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('KNF1yZ1f79')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
 
   **注意：**
     - 共享ID，可能随时被盗，强烈建议购买独享ID
@@ -24,15 +26,57 @@ tags:
 <details>
 <summary>此处点击查看抓取调试信息（如表格为空请查看这里）</summary>
 <pre>
-脚本执行出错: Cannot read properties of null (reading 'innerText')
-Stack: TypeError: Cannot read properties of null (reading 'innerText')
-    at evaluate (evaluate at scrapeAccounts (/home/runner/work/hexo-blog-source/hexo-blog-source/scripts/scrape-accounts.js:97:35), &lt;anonymous&gt;:0:21)
-    at #evaluate (/home/runner/work/hexo-blog-source/hexo-blog-source/node_modules/.pnpm/puppeteer-core@24.33.0/node_modules/puppeteer-core/lib/cjs/puppeteer/cdp/ExecutionContext.js:391:56)
-    at async ExecutionContext.evaluate (/home/runner/work/hexo-blog-source/hexo-blog-source/node_modules/.pnpm/puppeteer-core@24.33.0/node_modules/puppeteer-core/lib/cjs/puppeteer/cdp/ExecutionContext.js:277:16)
-    at async IsolatedWorld.evaluate (/home/runner/work/hexo-blog-source/hexo-blog-source/node_modules/.pnpm/puppeteer-core@24.33.0/node_modules/puppeteer-core/lib/cjs/puppeteer/cdp/IsolatedWorld.js:100:16)
-    at async CdpFrame.evaluate (/home/runner/work/hexo-blog-source/hexo-blog-source/node_modules/.pnpm/puppeteer-core@24.33.0/node_modules/puppeteer-core/lib/cjs/puppeteer/api/Frame.js:362:20)
-    at async CdpPage.evaluate (/home/runner/work/hexo-blog-source/hexo-blog-source/node_modules/.pnpm/puppeteer-core@24.33.0/node_modules/puppeteer-core/lib/cjs/puppeteer/api/Page.js:818:20)
-    at async scrapeAccounts (/home/runner/work/hexo-blog-source/hexo-blog-source/scripts/scrape-accounts.js:97:24)
+首页 电报群组：@freeiosapp2 shadowrocket中文官网
+公告
+本站id已经是免费使用，下载后及时退出
+免费共享id每半小时更新一次，如果遇到不可用，就是被盗了，着急用就先去租一个，不着急等第下次更新新的免费id
+购买独享id【优惠码：iosapp】        去租号【优惠码：iosapp3】
+🚨 严重警告 - 风险提醒：
+
+【安全重申】手机设置中的 Apple ID 必须登录您自己的账号，切记！
+如果您在**手机设置**中未登录自己的 Apple ID，而仅在 App Store 中登录共享 ID，共享 ID 将会**同步覆盖**到您的手机设置中，这可能导致您的设备被恶意用户远程锁定或进行诈骗。请务必保护您的设备安全！
+
+编号1
+
+⚠️️️⚠️严禁共享ID在手机设置里登录，防止出现意外ID被锁，手机变砖⚠️⚠️
+
+类型: 账号信息
+
+账号: traxoneliv572M@icloud.com 美国
+
+密码: 1R2mn1MmPT
+
+检查时间: 2026-01-18 04:09:19
+
+状态: 正常
+
+共享id，随时可能被盗，强烈建议购买独享id
+购买独享id
+此处为账号密码区域，如果没显示，请更换网络【关闭代理】和浏览器
+编号2
+
+⚠️️️⚠️严禁共享ID在手机设置里登录，防止出现意外ID被锁，手机变砖⚠️⚠️
+
+类型: 账号信息
+
+账号: el1i7ki6n6g@icloud.com 美国
+
+密码: C4xYUM2SCT
+
+检查时间: 2026-01-18 04:07:17
+
+状态: 正常
+
+共享id，随时可能被盗，强烈建议购买独享id
+购买独享id
+此处为账号密码区域，如果没显示，请更换网络【关闭代理】和浏览器
+编号3
+
+⚠️️️⚠️严禁共享ID在手机设置里登录，防止出现意外ID被锁，手机变砖⚠️⚠️
+
+类型: 美国
+
+账号: xdf25186...
 </pre>
 </details>
 
