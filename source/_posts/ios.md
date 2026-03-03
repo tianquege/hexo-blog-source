@@ -10,11 +10,13 @@ tags:
 
 ## 共享账号信息
 
-  ** 更新时间：** 2026/03/03 10:45:34
+  ** 更新时间：** 2026/03/03 12:53:00
 
 | 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
 | ------| ------| ------| ------| ------| ------| ------|
-  | 错误 | 抓取失败 | 请查看调试信息 | Unknown | Error | 2026-03-03 | <a href="javascript:void(0)" onclick="copyEmail('抓取失败')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('请查看调试信息')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+  | 编号1 | yyfblzlqaq107@outlook.com | NB1mjWeYEe | 未知 | 正常 | 2026-03-03 12:20:27 | <a href="javascript:void(0)" onclick="copyEmail('yyfblzlqaq107@outlook.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('NB1mjWeYEe')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| 编号2 | uzvmbdio2778@outlook.com | wrFKVE7k99 | 未知 | 正常 | 2026-03-03 12:16:52 | <a href="javascript:void(0)" onclick="copyEmail('uzvmbdio2778@outlook.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('wrFKVE7k99')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| 编号3 | umsjnztjsd6069@outlook.com | Y!h3Ve!T | 未知 | 正常 | 2026-03-03 12:20:27 | <a href="javascript:void(0)" onclick="copyEmail('umsjnztjsd6069@outlook.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('Y!h3Ve!T')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
 
   **注意：**
     - 共享ID，可能随时被盗，强烈建议购买独享ID
@@ -24,10 +26,57 @@ tags:
 <details>
 <summary>此处点击查看抓取调试信息（如表格为空请查看这里）</summary>
 <pre>
-脚本执行出错: Timed out after 30000 ms while waiting for the WS endpoint URL to appear in stdout!
-Stack: TimeoutError: Timed out after 30000 ms while waiting for the WS endpoint URL to appear in stdout!
-    at ChromeLauncher.launch (/home/runner/work/hexo-blog-source/hexo-blog-source/node_modules/.pnpm/puppeteer-core@24.33.0/node_modules/puppeteer-core/lib/cjs/puppeteer/node/BrowserLauncher.js:180:23)
-    at async scrapeAccounts (/home/runner/work/hexo-blog-source/hexo-blog-source/scripts/scrape-accounts.js:54:15)
+首页 电报群组：@freeiosapp2 shadowrocket中文官网
+公告
+本站id已经是免费使用，下载后及时退出
+免费共享id每半小时更新一次，如果遇到不可用，就是被盗了，着急用就先去租一个，不着急等第下次更新新的免费id
+购买独享id【优惠码：iosapp】        去租号【优惠码：iosapp3】
+🚨 严重警告 - 风险提醒：
+
+【安全重申】手机设置中的 Apple ID 必须登录您自己的账号，切记！
+如果您在**手机设置**中未登录自己的 Apple ID，而仅在 App Store 中登录共享 ID，共享 ID 将会**同步覆盖**到您的手机设置中，这可能导致您的设备被恶意用户远程锁定或进行诈骗。请务必保护您的设备安全！
+
+编号1
+
+⚠️️️⚠️严禁共享ID在手机设置里登录，防止出现意外ID被锁，手机变砖⚠️⚠️
+
+类型: 美国
+
+账号: yyfblzlqaq107@outlook.com
+
+密码: NB1mjWeYEe
+
+检查时间: 2026-03-03 12:20:27
+
+状态: 正常
+
+共享id，随时可能被盗，强烈建议购买独享id
+购买独享id
+此处为账号密码区域，如果没显示，请更换网络【关闭代理】和浏览器
+编号2
+
+⚠️️️⚠️严禁共享ID在手机设置里登录，防止出现意外ID被锁，手机变砖⚠️⚠️
+
+类型: 美国
+
+账号: uzvmbdio2778@outlook.com
+
+密码: wrFKVE7k99
+
+检查时间: 2026-03-03 12:16:52
+
+状态: 正常
+
+共享id，随时可能被盗，强烈建议购买独享id
+购买独享id
+此处为账号密码区域，如果没显示，请更换网络【关闭代理】和浏览器
+编号3
+
+⚠️️️⚠️严禁共享ID在手机设置里登录，防止出现意外ID被锁，手机变砖⚠️⚠️
+
+类型:
+
+账号: umsjnztjsd6069@outl...
 </pre>
 </details>
 
