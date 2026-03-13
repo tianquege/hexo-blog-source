@@ -10,7 +10,7 @@ tags:
 
 ## 共享账号信息
 
-  ** 更新时间：** 2026/03/13 21:18:37
+  ** 更新时间：** 2026/03/13 22:15:45
 
 | 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
 | ------| ------| ------| ------| ------| ------| ------|
@@ -43,7 +43,7 @@ tags:
 
 账号: neyocksy0205@outlook.com
 
-密码: 58du&7SC
+密码: 6@V3DxzW
 
 检查时间:
 
@@ -77,7 +77,74 @@ tags:
 
 账号: olorcvvk@out1ok.com
 
-密码: f##dWI38
+密码: 56uqVws@
+
+检查时间:
+
+状态: 账号可用
+
+共享id，随时可能被盗，强烈建议购买独...
+</pre>
+</details>
+
+<script>
+function copyEmail(email) {
+  const text = email;
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(() => {
+      alert('邮箱已复制到剪贴板！');
+    }).catch(err => {
+      console.error('复制失败:', err);
+      fallbackCopyTextToClipboard(text);
+    });
+  } else {
+    fallbackCopyTextToClipboard(text);
+  }
+}
+
+function copyPassword(password) {
+  const text = password;
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(() => {
+      alert('密码已复制到剪贴板！');
+    }).catch(err => {
+      console.error('复制失败:', err);
+      fallbackCopyTextToClipboard(text);
+    });
+  } else {
+    fallbackCopyTextToClipboard(text);
+  }
+}
+
+function fallbackCopyTextToClipboard(text) {
+  const textArea = document.createElement("textarea");
+  textArea.value = text;
+  textArea.style.top = "0";
+  textArea.style.left = "0";
+  textArea.style.position = "fixed";
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+  
+  try {
+    const successful = document.execCommand('copy');
+    if (successful) {
+      alert('复制成功！');
+    } else {
+      alert('复制失败，请手动复制');
+    }
+  } catch (err) {
+    console.error('复制失败:', err);
+    alert('复制失败，请手动复制');
+  }
+  
+  document.body.removeChild(textArea);
+}
+</script>
+
+---
+*本页面由 GitHub Actions 自动更新*
+##dWI38
 
 检查时间:
 
