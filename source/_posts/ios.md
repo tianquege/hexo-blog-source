@@ -10,13 +10,12 @@ tags:
 
 ## 共享账号信息
 
-  ** 更新时间：** 2026/03/19 14:02:17
+  ** 更新时间：** 2026/03/19 15:16:32
 
 | 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
 | ------| ------| ------| ------| ------| ------| ------|
-  | 编号1 | v8417ccf@icloud.com | AacFS1s1G9S8 | 未知 | 正常 | 2026-03-19 13:51:31 | <a href="javascript:void(0)" onclick="copyEmail('v8417ccf@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('AacFS1s1G9S8')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号2 | byrdtiffhawkins3a8@icloud.com | AfyA7rG2DB | 未知 | 正常 | 2026-03-19 13:45:50 | <a href="javascript:void(0)" onclick="copyEmail('byrdtiffhawkins3a8@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('AfyA7rG2DB')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号3 | ow8bvtf3@out1ok.com | U4&sIekM | 未知 | 正常 | 2026-03-19 13:51:31 | <a href="javascript:void(0)" onclick="copyEmail('ow8bvtf3@out1ok.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('U4&sIekM')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+  
+ | 暂无 | 获取失败 | 请参考 | 下方 | 调试 | 信息 | - |
 
   **注意：**
     - 共享ID，可能随时被盗，强烈建议购买独享ID
@@ -26,71 +25,32 @@ tags:
 <details>
 <summary>此处点击查看抓取调试信息（如表格为空请查看这里）</summary>
 <pre>
-首页
-Telegram 群组
-中文官网
-Shadowrocket 共享平台
-提供免费 Apple ID 及已购小火箭账号
+Connection timed out Error code 522
+Visit cloudflare.com for more information.
+2026-03-19 07:16:11 UTC
+You
+Browser
+Working
+Chicago
+Cloudflare
+Working
+free.iosapp.icu
+Host
+Error
+What happened?
 
-本站 ID 供学习测试使用，下载后请及时退出。每 30 分钟更新一次。
+The initial connection between Cloudflare's network and the origin web server timed out. As a result, the web page can not be displayed.
 
-购买独享 ID (推荐)
-快速租用账号
-🚨 关键安全提醒：严禁登录 iCloud
+What can I do?
+If you're a visitor of this website:
 
-【绝对禁止】 在手机系统的“设置”中登录共享 Apple ID。 请仅在 App Store 中登录。登录 iCloud 可能导致您的设备被远程锁定，造成不可挽回的损失！
+Please try again in a few minutes.
 
-共享 ID 编号 1
-⚠️ 严禁在设置登录 iCloud，后果自负
+If you're the owner of this website:
 
-类型: 日本
+Contact your hosting provider letting them know your web server is not completing requests. An Error 522 means that the request was able to connect to your web server, but that the request didn't finish. The most likely cause is that something on your server is hogging resources. Additional troubleshooting information here.
 
-账号: v8417ccf@icloud.com
-
-密码: AacFS1s1G9S8
-
-检查时间: 2026-03-19 13:51:31
-
-状态: 正常
-
-购买独享 ID（防锁机）
-共享 ID 编号 2
-⚠️ 共享账号易失效，建议使用独享
-
-类型: 美国带火箭
-
-账号: byrdtiffhawkins3a8@icloud.com
-
-密码: AfyA7rG2DB
-
-检查时间: 2026-03-19 13:45:50
-
-状态: 正常
-
-购买稳定独享号
-共享 ID 编号 3
-⚠️ 请勿在 ID 内充值或改密
-
-类型:
-
-账号: ow8bvtf3@out1ok.com
-
-密码: U4&sIekM
-
-检查时间:
-
-状态: 账号可用
-
-获取个人专属 ID
-为什么推荐购买独享 ID？
-功能特性	共享 ID (免费)	独享 ID (购买)
-安全性	较低 (有锁机风险)	极高 (自主控制)
-稳定性	经常失效/需频繁更换	永久有效/稳定更新
-隐私保护	无 (多人共用)	完全私密 (一人一号)
-App 更新	极其麻烦 (需重新下载)	直接更新 (无缝体验)
-立即获取独享 ID (优惠码：iosapp)
-登录与下载教程
-打开 App Store (禁止在手机设置里...
+Cloudflare Ray ...
 </pre>
 </details>
 
