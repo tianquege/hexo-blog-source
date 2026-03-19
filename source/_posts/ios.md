@@ -10,13 +10,13 @@ tags:
 
 ## 共享账号信息
 
-  ** 更新时间：** 2026/03/19 16:04:23
+  ** 更新时间：** 2026/03/19 16:57:42
 
 | 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
 | ------| ------| ------| ------| ------| ------| ------|
-  | 编号1 | bwxkaren32984@icloud.com | J4GA3jjryd | 未知 | 正常 | 2026-03-19 15:36:47 | <a href="javascript:void(0)" onclick="copyEmail('bwxkaren32984@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('J4GA3jjryd')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号2 | carllxe51009@icloud.com | KEEP30PkICH8 | 未知 | 正常 | 2026-03-19 15:21:27 | <a href="javascript:void(0)" onclick="copyEmail('carllxe51009@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('KEEP30PkICH8')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号3 | ow8bvtf3@out1ok.com | U4&sIekM | 未知 | 正常 | 2026-03-19 15:36:47 | <a href="javascript:void(0)" onclick="copyEmail('ow8bvtf3@out1ok.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('U4&sIekM')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+  | 编号1 | bwxkaren32984@icloud.com | zAPsm8595b | 未知 | 正常 | 2026-03-19 16:52:41 | <a href="javascript:void(0)" onclick="copyEmail('bwxkaren32984@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('zAPsm8595b')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| 编号2 | carllxe51009@icloud.com | QVKuSMW5Pg | 未知 | 正常 | 2026-03-19 16:08:52 | <a href="javascript:void(0)" onclick="copyEmail('carllxe51009@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('QVKuSMW5Pg')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| 编号3 | ow8bvtf3@out1ok.com | U4&sIekM | 未知 | 正常 | 2026-03-19 16:52:41 | <a href="javascript:void(0)" onclick="copyEmail('ow8bvtf3@out1ok.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('U4&sIekM')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
 
   **注意：**
     - 共享ID，可能随时被盗，强烈建议购买独享ID
@@ -47,9 +47,9 @@ Shadowrocket 共享平台
 
 账号: bwxkaren32984@icloud.com
 
-密码: J4GA3jjryd
+密码: zAPsm8595b
 
-检查时间: 2026-03-19 15:36:47
+检查时间: 2026-03-19 16:52:41
 
 状态: 正常
 
@@ -61,9 +61,9 @@ Shadowrocket 共享平台
 
 账号: carllxe51009@icloud.com
 
-密码: KEEP30PkICH8
+密码: QVKuSMW5Pg
 
-检查时间: 2026-03-19 15:21:27
+检查时间: 2026-03-19 16:08:52
 
 状态: 正常
 
@@ -90,7 +90,8 @@ Shadowrocket 共享平台
 App 更新	极其麻烦 (需重新下载)	直接更新 (无缝体验)
 立即获取独享 ID (优惠码：iosapp)
 登录与下载教程
-打开 App Store (禁止在手机设置里登录)。...
+打开 App Store (禁止在手机设置里登录)。
+点...
 </pre>
 </details>
 
