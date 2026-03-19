@@ -10,13 +10,13 @@ tags:
 
 ## 共享账号信息
 
-  ** 更新时间：** 2026/03/19 10:50:37
+  ** 更新时间：** 2026/03/19 13:00:39
 
 | 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
 | ------| ------| ------| ------| ------| ------| ------|
-  | 编号1 | byrdtiffhawkins3a8@icloud.com | X7AYXqTRcX | 未知 | 正常 | 2026-03-19 09:56:50 | <a href="javascript:void(0)" onclick="copyEmail('byrdtiffhawkins3a8@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('X7AYXqTRcX')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号2 | v8417ccf@icloud.com | Aad7tY7RFuSu | 未知 | 正常 | 2026-03-19 09:40:52 | <a href="javascript:void(0)" onclick="copyEmail('v8417ccf@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('Aad7tY7RFuSu')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号3 | jaydenbwolson@hotmail.com | SDg17n22 | 未知 | 正常 | 2026-03-19 09:56:50 | <a href="javascript:void(0)" onclick="copyEmail('jaydenbwolson@hotmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('SDg17n22')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+  | 编号1 | v8417ccf@icloud.com | AacFS1s1G9S8 | 未知 | 正常 | 2026-03-19 12:49:26 | <a href="javascript:void(0)" onclick="copyEmail('v8417ccf@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('AacFS1s1G9S8')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| 编号2 | byrdtiffhawkins3a8@icloud.com | rZGVhRht3v | 未知 | 正常 | 2026-03-19 12:39:45 | <a href="javascript:void(0)" onclick="copyEmail('byrdtiffhawkins3a8@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('rZGVhRht3v')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| 编号3 | ow8bvtf3@out1ok.com | U4&sIekM | 未知 | 正常 | 2026-03-19 12:49:26 | <a href="javascript:void(0)" onclick="copyEmail('ow8bvtf3@out1ok.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('U4&sIekM')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
 
   **注意：**
     - 共享ID，可能随时被盗，强烈建议购买独享ID
@@ -26,57 +26,71 @@ tags:
 <details>
 <summary>此处点击查看抓取调试信息（如表格为空请查看这里）</summary>
 <pre>
-首页 电报群组：@freeiosapp2 shadowrocket中文官网
-公告
-本站id已经是免费使用，下载后及时退出
-免费共享id每半小时更新一次，如果遇到不可用，就是被盗了，着急用就先去租一个，不着急等第下次更新新的免费id
-购买独享id【优惠码：iosapp】        去租号【优惠码：iosapp3】
-🚨 严重警告 - 风险提醒：
+首页
+Telegram 群组
+中文官网
+Shadowrocket 共享平台
+提供免费 Apple ID 及已购小火箭账号
 
-【安全重申】手机设置中的 Apple ID 必须登录您自己的账号，切记！
-如果您在**手机设置**中未登录自己的 Apple ID，而仅在 App Store 中登录共享 ID，共享 ID 将会**同步覆盖**到您的手机设置中，这可能导致您的设备被恶意用户远程锁定或进行诈骗。请务必保护您的设备安全！
+本站 ID 供学习测试使用，下载后请及时退出。每 30 分钟更新一次。
 
-编号1
+购买独享 ID (推荐)
+快速租用账号
+🚨 关键安全提醒：严禁登录 iCloud
 
-⚠️️️⚠️严禁共享ID在手机设置里登录，防止出现意外ID被锁，手机变砖⚠️⚠️
+【绝对禁止】 在手机系统的“设置”中登录共享 Apple ID。 请仅在 App Store 中登录。登录 iCloud 可能导致您的设备被远程锁定，造成不可挽回的损失！
 
-类型: 美国带火箭
-
-账号: byrdtiffhawkins3a8@icloud.com
-
-密码: X7AYXqTRcX
-
-检查时间: 2026-03-19 09:56:50
-
-状态: 正常
-
-共享id，随时可能被盗，强烈建议购买独享id
-购买独享id
-此处为账号密码区域，如果没显示，请更换网络【关闭代理】和浏览器
-编号2
-
-⚠️️️⚠️严禁共享ID在手机设置里登录，防止出现意外ID被锁，手机变砖⚠️⚠️
+共享 ID 编号 1
+⚠️ 严禁在设置登录 iCloud，后果自负
 
 类型: 日本
 
 账号: v8417ccf@icloud.com
 
-密码: Aad7tY7RFuSu
+密码: AacFS1s1G9S8
 
-检查时间: 2026-03-19 09:40:52
+检查时间: 2026-03-19 12:49:26
 
 状态: 正常
 
-共享id，随时可能被盗，强烈建议购买独享id
-购买独享id
-此处为账号密码区域，如果没显示，请更换网络【关闭代理】和浏览器
-编号3
+购买独享 ID（防锁机）
+共享 ID 编号 2
+⚠️ 共享账号易失效，建议使用独享
 
-⚠️️️⚠️严禁共享ID在手机设置里登录，防止出现意外ID被锁，手机变砖⚠️⚠️
+类型: 美国带火箭
+
+账号: byrdtiffhawkins3a8@icloud.com
+
+密码: rZGVhRht3v
+
+检查时间: 2026-03-19 12:39:45
+
+状态: 正常
+
+购买稳定独享号
+共享 ID 编号 3
+⚠️ 请勿在 ID 内充值或改密
 
 类型:
 
-账号: jaydenbwolson@h...
+账号: ow8bvtf3@out1ok.com
+
+密码: U4&sIekM
+
+检查时间:
+
+状态: 账号可用
+
+获取个人专属 ID
+为什么推荐购买独享 ID？
+功能特性	共享 ID (免费)	独享 ID (购买)
+安全性	较低 (有锁机风险)	极高 (自主控制)
+稳定性	经常失效/需频繁更换	永久有效/稳定更新
+隐私保护	无 (多人共用)	完全私密 (一人一号)
+App 更新	极其麻烦 (需重新下载)	直接更新 (无缝体验)
+立即获取独享 ID (优惠码：iosapp)
+登录与下载教程
+打开 App Store (禁止在手机设置里...
 </pre>
 </details>
 
