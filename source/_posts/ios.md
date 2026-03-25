@@ -10,7 +10,7 @@ tags:
 
 ## 共享账号信息
 
-  ** 更新时间：** 2026/03/26 02:05:53
+  ** 更新时间：** 2026/03/26 03:12:16
 
 | 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
 | ------| ------| ------| ------| ------| ------| ------|
@@ -44,9 +44,9 @@ Shadowrocket 共享平台
 
 类型:
 
-账号: alissascapin7639@icloud.com
+账号: dixondaniepeterso5k7@icloud.com
 
-密码: 7En7IO#N
+密码: 4YWaRN!y
 
 检查时间:
 
@@ -58,9 +58,9 @@ Shadowrocket 共享平台
 
 类型:
 
-账号: dixondaniepeterso5k7@icloud.com
+账号: jaydenbwolson@hotmail.com
 
-密码: j!1g9Owk
+密码: SDg17n22
 
 检查时间:
 
@@ -72,9 +72,9 @@ Shadowrocket 共享平台
 
 类型:
 
-账号: jaydenbwolson@hotmail.com
+账号: findlaypinedaeydt@icloud.com
 
-密码: SDg17n22
+密码: xV5FyH#s
 
 检查时间:
 
@@ -90,7 +90,7 @@ App 更新	极其麻烦 (需重新下载)	直接更新 (无缝体验)
 立即获取独享带小火箭的 ID (优惠码：iosapp)
 登录与下载教程
 打开 App Store (禁止在手机设置里登录)。
-点击右上角头像图标，滑动...
+点击右上角头像图标，滑...
 </pre>
 </details>
 
