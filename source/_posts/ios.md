@@ -10,7 +10,7 @@ tags:
 
 ## 共享账号信息
 
-  ** 更新时间：** 2026/03/30 15:56:51
+  ** 更新时间：** 2026/03/30 17:25:15
 
 | 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
 | ------| ------| ------| ------| ------| ------| ------|
@@ -60,7 +60,7 @@ Shadowrocket 共享平台
 
 账号: findlaypinedaeydt@icloud.com
 
-密码: u4Te0a!F
+密码: EH5#COEr
 
 检查时间:
 
@@ -74,7 +74,7 @@ Shadowrocket 共享平台
 
 账号: tamaramitchelleydt@icloud.com
 
-密码: W2@zD@yR
+密码: 2MWiY&qA
 
 检查时间:
 
