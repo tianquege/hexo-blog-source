@@ -10,13 +10,12 @@ tags:
 
 ## 共享账号信息
 
-  ** 更新时间：** 2026/03/31 19:01:39
+  ** 更新时间：** 2026/03/31 19:58:59
 
 | 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
 | ------| ------| ------| ------| ------| ------| ------|
-  | 编号1 | valerieesg83482@icloud.com | JRS96xnW1a | 未知 | 正常 | 2026-03-31 18:39:54 | <a href="javascript:void(0)" onclick="copyEmail('valerieesg83482@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('JRS96xnW1a')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号2 | 2956322109@qq.com | DkkHNzqe9k | 未知 | 正常 | 2026-03-31 18:13:50 | <a href="javascript:void(0)" onclick="copyEmail('2956322109@qq.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('DkkHNzqe9k')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号3 | pereznichojuarez6z3@icloud.com | ylDg&1vo | 未知 | 正常 | 2026-03-31 18:39:54 | <a href="javascript:void(0)" onclick="copyEmail('pereznichojuarez6z3@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('ylDg&1vo')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+  
+ | 暂无 | 获取失败 | 请参考 | 下方 | 调试 | 信息 | - |
 
   **注意：**
     - 共享ID，可能随时被盗，强烈建议购买独享ID
@@ -43,29 +42,29 @@ Shadowrocket 共享平台
 共享 ID 编号 1
 ⚠️ 严禁在设置登录 iCloud，后果自负
 
-类型: 美国
+类型:
 
-账号: valerieesg83482@icloud.com
+账号: daniellegarbeck2k8@icloud.com
 
-密码: JRS96xnW1a
+密码: t4T6#L73
 
-检查时间: 2026-03-31 18:39:54
+检查时间:
 
-状态: 正常
+状态: 账号可用
 
 购买独享 ID（防锁机）
 共享 ID 编号 2
 ⚠️ 共享账号易失效，建议使用独享
 
-类型: 美国
+类型:
 
-账号: 2956322109@qq.com
+账号: jaydenbwolson@hotmail.com
 
-密码: DkkHNzqe9k
+密码: SDg17n22
 
-检查时间: 2026-03-31 18:13:50
+检查时间:
 
-状态: 正常
+状态: 账号可用
 
 购买稳定独享号
 共享 ID 编号 3
@@ -73,9 +72,9 @@ Shadowrocket 共享平台
 
 类型:
 
-账号: pereznichojuarez6z3@icloud.com
+账号: findlaypinedaeydt@icloud.com
 
-密码: ylDg&1vo
+密码: I5dW2p@D
 
 检查时间:
 
@@ -90,7 +89,8 @@ Shadowrocket 共享平台
 App 更新	极其麻烦 (需重新下载)	直接更新 (无缝体验)
 立即获取独享带小火箭的 ID (优惠码：iosapp)
 登录与下载教程
-打开 ...
+打开 App Store (禁止在手机设置里登录)。
+点击右上角头像图标，滑动到...
 </pre>
 </details>
 
