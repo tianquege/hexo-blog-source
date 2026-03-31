@@ -10,13 +10,13 @@ tags:
 
 ## 共享账号信息
 
-  ** 更新时间：** 2026/03/31 23:10:10
+  ** 更新时间：** 2026/04/01 00:34:45
 
 | 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
 | ------| ------| ------| ------| ------| ------| ------|
-  | 编号1 | valerieesg83482@icloud.com | mQz1QfyMre | 未知 | 正常 | 2026-03-31 22:38:52 | <a href="javascript:void(0)" onclick="copyEmail('valerieesg83482@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('mQz1QfyMre')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号2 | 2956322109@qq.com | sY3tYkkZPz | 未知 | 正常 | 2026-03-31 22:20:01 | <a href="javascript:void(0)" onclick="copyEmail('2956322109@qq.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('sY3tYkkZPz')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号3 | findlaypinedaeydt@icloud.com | I5dW2p@D | 未知 | 正常 | 2026-03-31 22:38:52 | <a href="javascript:void(0)" onclick="copyEmail('findlaypinedaeydt@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('I5dW2p@D')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+  | 编号1 | 2956322109@qq.com | McK2cm6q2e | 未知 | 正常 | 2026-03-31 23:48:12 | <a href="javascript:void(0)" onclick="copyEmail('2956322109@qq.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('McK2cm6q2e')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| 编号2 | valerieesg83482@icloud.com | fk8Fg3eWzV | 未知 | 正常 | 2026-03-31 23:32:56 | <a href="javascript:void(0)" onclick="copyEmail('valerieesg83482@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('fk8Fg3eWzV')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| 编号3 | katherineokk459@gmail.com | iA8&Yrse | 未知 | 正常 | 2026-03-31 23:48:12 | <a href="javascript:void(0)" onclick="copyEmail('katherineokk459@gmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('iA8&Yrse')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
 
   **注意：**
     - 共享ID，可能随时被盗，强烈建议购买独享ID
@@ -45,11 +45,11 @@ Shadowrocket 共享平台
 
 类型: 美国
 
-账号: valerieesg83482@icloud.com
+账号: 2956322109@qq.com
 
-密码: mQz1QfyMre
+密码: McK2cm6q2e
 
-检查时间: 2026-03-31 22:38:52
+检查时间: 2026-03-31 23:48:12
 
 状态: 正常
 
@@ -59,11 +59,11 @@ Shadowrocket 共享平台
 
 类型: 美国
 
-账号: 2956322109@qq.com
+账号: valerieesg83482@icloud.com
 
-密码: sY3tYkkZPz
+密码: fk8Fg3eWzV
 
-检查时间: 2026-03-31 22:20:01
+检查时间: 2026-03-31 23:32:56
 
 状态: 正常
 
@@ -73,9 +73,9 @@ Shadowrocket 共享平台
 
 类型:
 
-账号: findlaypinedaeydt@icloud.com
+账号: katherineokk459@gmail.com
 
-密码: I5dW2p@D
+密码: iA8&Yrse
 
 检查时间:
 
@@ -90,7 +90,7 @@ Shadowrocket 共享平台
 App 更新	极其麻烦 (需重新下载)	直接更新 (无缝体验)
 立即获取独享带小火箭的 ID (优惠码：iosapp)
 登录与下载教程
-打开 Ap...
+打开 App S...
 </pre>
 </details>
 
