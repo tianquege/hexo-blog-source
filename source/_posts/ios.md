@@ -10,13 +10,147 @@ tags:
 
 ## 共享账号信息
 
-  ** 更新时间：** 2026/04/03 13:11:22
+  ** 更新时间：** 2026/04/03 14:47:50
 
 | 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
 | ------| ------| ------| ------| ------| ------| ------|
-  | 编号1 | waltersshirestes8z8@icloud.com | BZVCmMv7tv | 未知 | 正常 | 2026-04-03 12:33:34 | <a href="javascript:void(0)" onclick="copyEmail('waltersshirestes8z8@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('BZVCmMv7tv')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号2 | pateljalynch8a6@icloud.com | 55DYFjghuq | 未知 | 正常 | 2026-04-03 12:28:33 | <a href="javascript:void(0)" onclick="copyEmail('pateljalynch8a6@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('55DYFjghuq')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号3 | bobbiekzh71369@icloud.com | f##q1Z6M | 未知 | 正常 | 2026-04-03 12:33:34 | <a href="javascript:void(0)" onclick="copyEmail('bobbiekzh71369@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('f##q1Z6M')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+  | 编号1 | waltersshirestes8z8@icloud.com | fm9Q2hzTRM | 未知 | 正常 | 2026-04-03 14:11:25 | <a href="javascript:void(0)" onclick="copyEmail('waltersshirestes8z8@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('fm9Q2hzTRM')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| 编号2 | hvgjohn99807@icloud.com | Bpm1xUc5Qw | 未知 | 正常 | 2026-04-03 13:59:01 | <a href="javascript:void(0)" onclick="copyEmail('hvgjohn99807@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('Bpm1xUc5Qw')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| 编号3 | jaydenbwolson@hotmail.com | SDg17n22 | 未知 | 正常 | 2026-04-03 14:11:25 | <a href="javascript:void(0)" onclick="copyEmail('jaydenbwolson@hotmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('SDg17n22')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+
+  **注意：**
+    - 共享ID，可能随时被盗，强烈建议购买独享ID
+      - 严格禁止在手机设置中登录共享ID，防止意外ID锁死和手机变砖
+        - 本信息仅供参考，使用风险自负
+
+<details>
+<summary>此处点击查看抓取调试信息（如表格为空请查看这里）</summary>
+<pre>
+首页
+Telegram 群组
+中文官网
+Shadowrocket 共享平台
+提供免费 Apple ID 及已购小火箭账号
+
+本站 ID 供学习测试使用，下载后请及时退出。每 30 分钟更新一次。
+
+购买独享 ID (推荐)
+快速租用账号(优惠码 iosapp3)
+🚨 关键安全提醒：严禁登录 iCloud
+
+【绝对禁止】 在手机系统的“设置”中登录共享 Apple ID。 请仅在 App Store 中登录。登录 iCloud 可能导致您的设备被远程锁定，造成不可挽回的损失！
+
+共享 ID 编号 1
+⚠️ 严禁在设置登录 iCloud，后果自负
+
+类型: 美国
+
+账号: waltersshirestes8z8@icloud.com
+
+密码: fm9Q2hzTRM
+
+检查时间: 2026-04-03 14:11:25
+
+状态: 正常
+
+购买独享 ID（防锁机）
+共享 ID 编号 2
+⚠️ 共享账号易失效，建议使用独享
+
+类型: 美国
+
+账号: hvgjohn99807@icloud.com
+
+密码: Bpm1xUc5Qw
+
+检查时间: 2026-04-03 13:59:01
+
+状态: 正常
+
+购买稳定独享号
+共享 ID 编号 3
+⚠️ 请勿在 ID 内充值或改密
+
+类型:
+
+账号: jaydenbwolson@hotmail.com
+
+密码: SDg17n22
+
+检查时间:
+
+状态: 账号可用
+
+获取个人专属 ID
+为什么推荐购买独享 ID？
+功能特性	共享 ID (免费)	独享 ID (购买)
+安全性	较低 (有锁机风险)	极高 (自主控制)
+稳定性	经常失效/需频繁更换	永久有效/稳定更新
+隐私保护	无 (多人共用)	完全私密 (一人一号)
+App 更新	极其麻烦 (需重新下载)	直接更新 (无缝体验)
+立即获取独享带小火箭的 ID (优惠码：iosapp)
+登录与下载教...
+</pre>
+</details>
+
+<script>
+function copyEmail(email) {
+  const text = email;
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(() => {
+      alert('邮箱已复制到剪贴板！');
+    }).catch(err => {
+      console.error('复制失败:', err);
+      fallbackCopyTextToClipboard(text);
+    });
+  } else {
+    fallbackCopyTextToClipboard(text);
+  }
+}
+
+function copyPassword(password) {
+  const text = password;
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(() => {
+      alert('密码已复制到剪贴板！');
+    }).catch(err => {
+      console.error('复制失败:', err);
+      fallbackCopyTextToClipboard(text);
+    });
+  } else {
+    fallbackCopyTextToClipboard(text);
+  }
+}
+
+function fallbackCopyTextToClipboard(text) {
+  const textArea = document.createElement("textarea");
+  textArea.value = text;
+  textArea.style.top = "0";
+  textArea.style.left = "0";
+  textArea.style.position = "fixed";
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+  
+  try {
+    const successful = document.execCommand('copy');
+    if (successful) {
+      alert('复制成功！');
+    } else {
+      alert('复制失败，请手动复制');
+    }
+  } catch (err) {
+    console.error('复制失败:', err);
+    alert('复制失败，请手动复制');
+  }
+  
+  document.body.removeChild(textArea);
+}
+</script>
+
+---
+*本页面由 GitHub Actions 自动更新*
+##q1Z6M | 未知 | 正常 | 2026-04-03 12:33:34 | <a href="javascript:void(0)" onclick="copyEmail('bobbiekzh71369@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('f##q1Z6M')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
 
   **注意：**
     - 共享ID，可能随时被盗，强烈建议购买独享ID
