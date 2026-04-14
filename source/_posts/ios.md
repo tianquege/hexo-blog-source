@@ -10,13 +10,12 @@ tags:
 
 ## 共享账号信息
 
-  ** 更新时间：** 2026/04/14 11:26:10
+  ** 更新时间：** 2026/04/14 13:40:30
 
 | 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
 | ------| ------| ------| ------| ------| ------| ------|
-  | 编号1 | josie_little_miss_panda@hotmail.com | U94XCrnXrZ | 未知 | 正常 | 2026-04-14 10:45:37 | <a href="javascript:void(0)" onclick="copyEmail('josie_little_miss_panda@hotmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('U94XCrnXrZ')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号2 | tammbonilla9b6@icloud.com | 8RBUMumQ3b | 未知 | 正常 | 2026-04-14 10:08:24 | <a href="javascript:void(0)" onclick="copyEmail('tammbonilla9b6@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('8RBUMumQ3b')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号3 | mcintyrekelharris6w7@icloud.com | zXt#5w3u | 未知 | 正常 | 2026-04-14 10:45:37 | <a href="javascript:void(0)" onclick="copyEmail('mcintyrekelharris6w7@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('zXt#5w3u')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+  
+ | 暂无 | 获取失败 | 请参考 | 下方 | 调试 | 信息 | - |
 
   **注意：**
     - 共享ID，可能随时被盗，强烈建议购买独享ID
@@ -43,29 +42,29 @@ Shadowrocket 共享平台
 共享 ID 编号 1
 ⚠️ 严禁在设置登录 iCloud，后果自负
 
-类型: 美国
+类型:
 
-账号: josie_little_miss_panda@hotmail.com
+账号: invanaepvansw984439@hotmail.com
 
-密码: U94XCrnXrZ
+密码: @4bsbBxA
 
-检查时间: 2026-04-14 10:45:37
+检查时间:
 
-状态: 正常
+状态: 账号可用
 
 购买独享 ID（防锁机）
 共享 ID 编号 2
 ⚠️ 共享账号易失效，建议使用独享
 
-类型: 中国大陆
+类型:
 
-账号: tammbonilla9b6@icloud.com
+账号: jaydenbwolson@hotmail.com
 
-密码: 8RBUMumQ3b
+密码: SDg17n22
 
-检查时间: 2026-04-14 10:08:24
+检查时间:
 
-状态: 正常
+状态: 账号可用
 
 购买稳定独享号
 共享 ID 编号 3
@@ -88,7 +87,10 @@ Shadowrocket 共享平台
 稳定性	经常失效/需频繁更换	永久有效/稳定更新
 隐私保护	无 (多人共用)	完全私密 (一人一号)
 App 更新	极其麻烦 (需重新下载)	直接更新 (无缝体验)
-立即获取独享带小火箭的 ID (优惠码...
+立即获取独享带小火箭的 ID (优惠码：iosapp)
+登录与下载教程
+打开 App Store (禁止在手机设置里登录)。
+点击右上角头像图...
 </pre>
 </details>
 
