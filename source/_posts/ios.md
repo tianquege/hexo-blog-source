@@ -10,13 +10,12 @@ tags:
 
 ## 共享账号信息
 
-  ** 更新时间：** 2026/04/17 21:46:23
+  ** 更新时间：** 2026/04/17 23:04:50
 
 | 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
 | ------| ------| ------| ------| ------| ------| ------|
-  | 编号1 | eroldemir_1969@hotmail.com | ED4t62CGFP | 未知 | 正常 | 2026-04-17 21:30:57 | <a href="javascript:void(0)" onclick="copyEmail('eroldemir_1969@hotmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('ED4t62CGFP')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号2 | josie_little_miss_panda@hotmail.com | qAkFtj13HV | 未知 | 正常 | 2026-04-17 21:28:51 | <a href="javascript:void(0)" onclick="copyEmail('josie_little_miss_panda@hotmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('qAkFtj13HV')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号3 | amandalopez1441@outlook.com | bO767Z!f | 未知 | 正常 | 2026-04-17 21:30:57 | <a href="javascript:void(0)" onclick="copyEmail('amandalopez1441@outlook.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('bO767Z!f')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+  
+ | 暂无 | 获取失败 | 请参考 | 下方 | 调试 | 信息 | - |
 
   **注意：**
     - 共享ID，可能随时被盗，强烈建议购买独享ID
@@ -44,29 +43,29 @@ Shadowrocket 共享平台
 共享 ID 编号 1
 ⚠️ 严禁在设置登录 iCloud，后果自负
 
-类型: 中国大陆
+类型:
 
-账号: eroldemir_1969@hotmail.com
+账号: rdvhh9678@outlook.com
 
-密码: ED4t62CGFP
+密码: Gm54ggC@
 
-检查时间: 2026-04-17 21:30:57
+检查时间:
 
-状态: 正常
+状态: 账号可用
 
 购买独享 ID（防锁机）
 共享 ID 编号 2
 ⚠️ 共享账号易失效，建议使用独享
 
-类型: 韩国
+类型:
 
-账号: josie_little_miss_panda@hotmail.com
+账号: jaydenbwolson@hotmail.com
 
-密码: qAkFtj13HV
+密码: SDg17n22
 
-检查时间: 2026-04-17 21:28:51
+检查时间:
 
-状态: 正常
+状态: 账号可用
 
 购买稳定独享号
 共享 ID 编号 3
@@ -76,7 +75,7 @@ Shadowrocket 共享平台
 
 账号: amandalopez1441@outlook.com
 
-密码: bO767Z!f
+密码: h4oW&tEX
 
 检查时间:
 
@@ -87,7 +86,9 @@ Shadowrocket 共享平台
 功能特性	共享 ID (免费)	独享 ID (购买)
 安全性	较低 (有锁机风险)	极高 (自主控制)
 稳定性	经常失效/需频繁更换	永久有效/稳定更新
-隐私保护	无...
+隐私保护	无 (多人共用)	完全私密 (一人一号)
+App 更新	极其麻烦 (需重新下载)	直接更新 (无缝体验)
+立即获取独享带小火箭的...
 </pre>
 </details>
 
