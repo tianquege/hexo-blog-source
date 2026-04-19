@@ -10,13 +10,13 @@ tags:
 
 ## 共享账号信息
 
-  ** 更新时间：** 2026/04/19 07:42:50
+  ** 更新时间：** 2026/04/19 11:34:29
 
 | 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
 | ------| ------| ------| ------| ------| ------| ------|
-  | 编号1 | eroldemir_1969@hotmail.com | GHp5GJVYvn | 未知 | 正常 | 2026-04-19 07:14:28 | <a href="javascript:void(0)" onclick="copyEmail('eroldemir_1969@hotmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('GHp5GJVYvn')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号2 | josie_little_miss_panda@hotmail.com | c4JaS6b97f | 未知 | 正常 | 2026-04-19 06:56:34 | <a href="javascript:void(0)" onclick="copyEmail('josie_little_miss_panda@hotmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('c4JaS6b97f')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号3 | amandalopez1441@outlook.com | @0bzN7zr | 未知 | 正常 | 2026-04-19 07:14:28 | <a href="javascript:void(0)" onclick="copyEmail('amandalopez1441@outlook.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('@0bzN7zr')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+  | 编号1 | josie_little_miss_panda@hotmail.com | WEeJGd7d2z | 未知 | 正常 | 2026-04-19 11:04:25 | <a href="javascript:void(0)" onclick="copyEmail('josie_little_miss_panda@hotmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('WEeJGd7d2z')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| 编号2 | eroldemir_1969@hotmail.com | V1Ntgupjgw | 未知 | 正常 | 2026-04-19 10:37:46 | <a href="javascript:void(0)" onclick="copyEmail('eroldemir_1969@hotmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('V1Ntgupjgw')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| 编号3 | amandalopez1441@outlook.com | @0bzN7zr | 未知 | 正常 | 2026-04-19 11:04:25 | <a href="javascript:void(0)" onclick="copyEmail('amandalopez1441@outlook.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('@0bzN7zr')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
 
   **注意：**
     - 共享ID，可能随时被盗，强烈建议购买独享ID
@@ -44,13 +44,13 @@ Shadowrocket 共享平台
 共享 ID 编号 1
 ⚠️ 严禁在设置登录 iCloud，后果自负
 
-类型: 中国大陆
+类型: 韩国
 
-账号: eroldemir_1969@hotmail.com
+账号: josie_little_miss_panda@hotmail.com
 
-密码: GHp5GJVYvn
+密码: WEeJGd7d2z
 
-检查时间: 2026-04-19 07:14:28
+检查时间: 2026-04-19 11:04:25
 
 状态: 正常
 
@@ -58,13 +58,13 @@ Shadowrocket 共享平台
 共享 ID 编号 2
 ⚠️ 共享账号易失效，建议使用独享
 
-类型: 韩国
+类型: 香港
 
-账号: josie_little_miss_panda@hotmail.com
+账号: eroldemir_1969@hotmail.com
 
-密码: c4JaS6b97f
+密码: V1Ntgupjgw
 
-检查时间: 2026-04-19 06:56:34
+检查时间: 2026-04-19 10:37:46
 
 状态: 正常
 
@@ -87,7 +87,7 @@ Shadowrocket 共享平台
 功能特性	共享 ID (免费)	独享 ID (购买)
 安全性	较低 (有锁机风险)	极高 (自主控制)
 稳定性	经常失效/需频繁更换	永久有效/稳定更新
-隐私保护	无...
+隐私保护	无 (...
 </pre>
 </details>
 
