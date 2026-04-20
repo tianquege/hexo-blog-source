@@ -10,12 +10,13 @@ tags:
 
 ## 共享账号信息
 
-  ** 更新时间：** 2026/04/21 04:14:06
+  ** 更新时间：** 2026/04/21 05:25:13
 
 | 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
 | ------| ------| ------| ------| ------| ------| ------|
-  
- | 暂无 | 获取失败 | 请参考 | 下方 | 调试 | 信息 | - |
+  | 编号1 | stevensnjjt1@gmail.com | FP5a6bmVH4 | 未知 | 正常 | 2026-04-21 05:08:40 | <a href="javascript:void(0)" onclick="copyEmail('stevensnjjt1@gmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('FP5a6bmVH4')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| 编号2 | owengkmkmoreno@hotmail.com | 9dEHlMC\u0026 | 未知 | 正常 | 2026-04-21 05:08:19 | <a href="javascript:void(0)" onclick="copyEmail('owengkmkmoreno@hotmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('9dEHlMC\u0026')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| 编号3 | david7zksmunoz@hotmail.com | TzTx3!zd | 未知 | 正常 | 2026-04-21 05:08:02 | <a href="javascript:void(0)" onclick="copyEmail('david7zksmunoz@hotmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('TzTx3!zd')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
 
   **注意：**
     - 共享ID，可能随时被盗，强烈建议购买独享ID
@@ -45,13 +46,13 @@ Shadowrocket 共享平台
 
 类型:
 
-账号: kuangzhuoshu100035@outlook.com
+账号: stevensnjjt1@gmail.com
 
-密码: PBly1zc&
+密码: FP5a6bmVH4
 
-检查时间:
+检查时间: 2026-04-21 05:08:40
 
-状态: 账号可用
+状态: 正常
 
 购买独享 ID（防锁机）
 共享 ID 编号 2
@@ -59,13 +60,13 @@ Shadowrocket 共享平台
 
 类型:
 
-账号: jaydenbwolson@hotmail.com
+账号: owengkmkmoreno@hotmail.com
 
-密码: SDg17n22
+密码: 9dEHlMC\u0026
 
-检查时间:
+检查时间: 2026-04-21 05:08:19
 
-状态: 账号可用
+状态: 正常
 
 购买稳定独享号
 共享 ID 编号 3
@@ -73,22 +74,20 @@ Shadowrocket 共享平台
 
 类型:
 
-账号: i7de@js001.club
+账号: david7zksmunoz@hotmail.com
 
-密码: lc!2t9lL
+密码: TzTx3!zd
 
-检查时间:
+检查时间: 2026-04-21 05:08:02
 
-状态: 账号可用
+状态: 正常
 
 获取个人专属 ID
 为什么推荐购买独享 ID？
 功能特性	共享 ID (免费)	独享 ID (购买)
 安全性	较低 (有锁机风险)	极高 (自主控制)
 稳定性	经常失效/需频繁更换	永久有效/稳定更新
-隐私保护	无 (多人共用)	完全私密 (一人一号)
-App 更新	极其麻烦 (需重新下载)	直接更新 (无缝体验)
-立即获取独享带小火箭的 ID...
+隐私保护	无 ...
 </pre>
 </details>
 
