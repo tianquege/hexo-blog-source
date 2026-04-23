@@ -10,13 +10,12 @@ tags:
 
 ## 共享账号信息
 
-  ** 更新时间：** 2026/04/23 11:30:34
+  ** 更新时间：** 2026/04/23 13:55:09
 
 | 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
 | ------| ------| ------| ------| ------| ------| ------|
-  | 编号1 | orprobeso50@outlook.com | 6EJG1crZbk | 未知 | 正常 | 2026-04-23 10:39:06 | <a href="javascript:void(0)" onclick="copyEmail('orprobeso50@outlook.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('6EJG1crZbk')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号2 | pamela53chadwickmjj@outlook.com | ef6BRTCpTj | 未知 | 正常 | 2026-04-23 10:38:53 | <a href="javascript:void(0)" onclick="copyEmail('pamela53chadwickmjj@outlook.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('ef6BRTCpTj')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号3 | qian2007495zhan@163.com | CkMNTrafY8 | 未知 | 正常 | 2026-04-23 10:37:35 | <a href="javascript:void(0)" onclick="copyEmail('qian2007495zhan@163.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('CkMNTrafY8')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+  
+ | 暂无 | 获取失败 | 请参考 | 下方 | 调试 | 信息 | - |
 
   **注意：**
     - 共享ID，可能随时被盗，强烈建议购买独享ID
@@ -46,13 +45,13 @@ Shadowrocket 共享平台
 
 类型:
 
-账号: orprobeso50@outlook.com
+账号: christinabrb57435@icloud.com
 
-密码: 6EJG1crZbk
+密码: 26iBOW!0
 
-检查时间: 2026-04-23 10:39:06
+检查时间:
 
-状态: 正常
+状态: 账号可用
 
 购买独享 ID（防锁机）
 共享 ID 编号 2
@@ -60,13 +59,13 @@ Shadowrocket 共享平台
 
 类型:
 
-账号: pamela53chadwickmjj@outlook.com
+账号: timothycoleman7652@outlook.com.vn
 
-密码: ef6BRTCpTj
+密码: &Cm0ybCG
 
-检查时间: 2026-04-23 10:38:53
+检查时间:
 
-状态: 正常
+状态: 账号可用
 
 购买稳定独享号
 共享 ID 编号 3
@@ -74,20 +73,21 @@ Shadowrocket 共享平台
 
 类型:
 
-账号: qian2007495zhan@163.com
+账号: jaydenbwolson@hotmail.com
 
-密码: CkMNTrafY8
+密码: SDg17n22
 
-检查时间: 2026-04-23 10:37:35
+检查时间:
 
-状态: 正常
+状态: 账号可用
 
 获取个人专属 ID
 为什么推荐购买独享 ID？
 功能特性	共享 ID (免费)	独享 ID (购买)
 安全性	较低 (有锁机风险)	极高 (自主控制)
 稳定性	经常失效/需频繁更换	永久有效/稳定更新
-隐私保护	...
+隐私保护	无 (多人共用)	完全私密 (一人一号)
+App 更新	极其麻烦 (需重新下载)	直接更新 (无缝体验...
 </pre>
 </details>
 
