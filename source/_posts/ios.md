@@ -10,7 +10,7 @@ tags:
 
 ## 共享账号信息
 
-  ** 更新时间：** 2026/04/25 19:46:48
+  ** 更新时间：** 2026/04/25 21:23:13
 
 | 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
 | ------| ------| ------| ------| ------| ------| ------|
@@ -45,9 +45,9 @@ Shadowrocket 共享平台
 
 类型:
 
-账号: devaughanpoint026@outlook.com
+账号: liablega@outlook.com
 
-密码: V!cpS1CS
+密码: 5d@Ic4JU
 
 检查时间:
 
@@ -59,9 +59,9 @@ Shadowrocket 共享平台
 
 类型:
 
-账号: jaydenbwolson@hotmail.com
+账号: devaughanpoint026@outlook.com
 
-密码: SDg17n22
+密码: v&uk92MM
 
 检查时间:
 
@@ -73,9 +73,9 @@ Shadowrocket 共享平台
 
 类型:
 
-账号: evelynmoyer5653@outlook.com
+账号: jaydenbwolson@hotmail.com
 
-密码: X#6vziEe
+密码: SDg17n22
 
 检查时间:
 
@@ -88,7 +88,7 @@ Shadowrocket 共享平台
 稳定性	经常失效/需频繁更换	永久有效/稳定更新
 隐私保护	无 (多人共用)	完全私密 (一人一号)
 App 更新	极其麻烦 (需重新下载)	直接更新 (无缝体验)
-立即获...
+立即获取独享带小火箭...
 </pre>
 </details>
 
