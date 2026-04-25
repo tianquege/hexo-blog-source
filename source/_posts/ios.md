@@ -10,12 +10,13 @@ tags:
 
 ## 共享账号信息
 
-  ** 更新时间：** 2026/04/25 21:23:13
+  ** 更新时间：** 2026/04/25 22:24:31
 
 | 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
 | ------| ------| ------| ------| ------| ------| ------|
-  
- | 暂无 | 获取失败 | 请参考 | 下方 | 调试 | 信息 | - |
+  | 编号1 | liablega@outlook.com | #cFkA9xM | 未知 | 正常 | 2026-04-25 21:38:52 | <a href="javascript:void(0)" onclick="copyEmail('liablega@outlook.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('#cFkA9xM')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| 编号2 | jaydenbwolson@hotmail.com | SDg17n22 | 未知 | 正常 | 2026-04-25 21:38:52 | <a href="javascript:void(0)" onclick="copyEmail('jaydenbwolson@hotmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('SDg17n22')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| 编号3 | michelleqmrwi3@gmail.com | gM7H6p96py | 未知 | 正常 | 2026-04-25 21:38:52 | <a href="javascript:void(0)" onclick="copyEmail('michelleqmrwi3@gmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('gM7H6p96py')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
 
   **注意：**
     - 共享ID，可能随时被盗，强烈建议购买独享ID
@@ -47,7 +48,7 @@ Shadowrocket 共享平台
 
 账号: liablega@outlook.com
 
-密码: 5d@Ic4JU
+密码: #cFkA9xM
 
 检查时间:
 
@@ -59,9 +60,9 @@ Shadowrocket 共享平台
 
 类型:
 
-账号: devaughanpoint026@outlook.com
+账号: jaydenbwolson@hotmail.com
 
-密码: v&uk92MM
+密码: SDg17n22
 
 检查时间:
 
@@ -73,13 +74,13 @@ Shadowrocket 共享平台
 
 类型:
 
-账号: jaydenbwolson@hotmail.com
+账号: michelleqmrwi3@gmail.com
 
-密码: SDg17n22
+密码: gM7H6p96py
 
-检查时间:
+检查时间: 2026-04-25 21:38:52
 
-状态: 账号可用
+状态: 正常
 
 获取个人专属 ID
 为什么推荐购买独享 ID？
@@ -87,8 +88,7 @@ Shadowrocket 共享平台
 安全性	较低 (有锁机风险)	极高 (自主控制)
 稳定性	经常失效/需频繁更换	永久有效/稳定更新
 隐私保护	无 (多人共用)	完全私密 (一人一号)
-App 更新	极其麻烦 (需重新下载)	直接更新 (无缝体验)
-立即获取独享带小火箭...
+App 更新	极其麻烦 (需重新下载)	直接更新 (无...
 </pre>
 </details>
 
