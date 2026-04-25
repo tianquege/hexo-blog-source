@@ -10,13 +10,13 @@ tags:
 
 ## 共享账号信息
 
-  ** 更新时间：** 2026/04/26 01:11:18
+  ** 更新时间：** 2026/04/26 02:06:23
 
 | 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
 | ------| ------| ------| ------| ------| ------| ------|
-  | 编号1 | robertwang380@gmail.com | fgKXq3uWA6 | 未知 | 正常 | 2026-04-26 00:39:25 | <a href="javascript:void(0)" onclick="copyEmail('robertwang380@gmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('fgKXq3uWA6')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号2 | michelleqmrwi3@gmail.com | gM7H6p96py | 未知 | 正常 | 2026-04-26 00:38:48 | <a href="javascript:void(0)" onclick="copyEmail('michelleqmrwi3@gmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('gM7H6p96py')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号3 | jy359840651@163.com | Dd1927013 | 未知 | 正常 | 2026-04-26 00:38:19 | <a href="javascript:void(0)" onclick="copyEmail('jy359840651@163.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('Dd1927013')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+  | 编号1 | owengkmkmoreno@hotmail.com | 9dEHlMC\u0026 | 未知 | 正常 | 2026-04-26 01:37:19 | <a href="javascript:void(0)" onclick="copyEmail('owengkmkmoreno@hotmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('9dEHlMC\u0026')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| 编号2 | KevizpiMe644@icloud.com | jBh1Vj8EH3 | 未知 | 正常 | 2026-04-26 01:37:14 | <a href="javascript:void(0)" onclick="copyEmail('KevizpiMe644@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('jBh1Vj8EH3')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| 编号3 | REBELPRIDE79@hotmail.com | 6CFTdyJpNA | 未知 | 正常 | 2026-04-26 01:37:09 | <a href="javascript:void(0)" onclick="copyEmail('REBELPRIDE79@hotmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('6CFTdyJpNA')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
 
   **注意：**
     - 共享ID，可能随时被盗，强烈建议购买独享ID
@@ -46,11 +46,11 @@ Shadowrocket 共享平台
 
 类型:
 
-账号: robertwang380@gmail.com
+账号: owengkmkmoreno@hotmail.com
 
-密码: fgKXq3uWA6
+密码: 9dEHlMC\u0026
 
-检查时间: 2026-04-26 00:39:25
+检查时间: 2026-04-26 01:37:19
 
 状态: 正常
 
@@ -60,11 +60,11 @@ Shadowrocket 共享平台
 
 类型:
 
-账号: michelleqmrwi3@gmail.com
+账号: KevizpiMe644@icloud.com
 
-密码: gM7H6p96py
+密码: jBh1Vj8EH3
 
-检查时间: 2026-04-26 00:38:48
+检查时间: 2026-04-26 01:37:14
 
 状态: 正常
 
@@ -74,11 +74,11 @@ Shadowrocket 共享平台
 
 类型:
 
-账号: jy359840651@163.com
+账号: REBELPRIDE79@hotmail.com
 
-密码: Dd1927013
+密码: 6CFTdyJpNA
 
-检查时间: 2026-04-26 00:38:19
+检查时间: 2026-04-26 01:37:09
 
 状态: 正常
 
@@ -87,7 +87,7 @@ Shadowrocket 共享平台
 功能特性	共享 ID (免费)	独享 ID (购买)
 安全性	较低 (有锁机风险)	极高 (自主控制)
 稳定性	经常失效/需频繁更换	永久有效/稳定更新
-隐私保护	无 (多人共用)	完全私...
+隐私保护	无...
 </pre>
 </details>
 
