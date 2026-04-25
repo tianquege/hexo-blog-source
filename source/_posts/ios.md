@@ -10,7 +10,7 @@ tags:
 
 ## 共享账号信息
 
-  ** 更新时间：** 2026/04/25 13:55:37
+  ** 更新时间：** 2026/04/25 15:42:25
 
 | 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
 | ------| ------| ------| ------| ------| ------| ------|
@@ -47,7 +47,7 @@ Shadowrocket 共享平台
 
 账号: alexandre-mbox@hotmail.com
 
-密码: P1v&Nu7g
+密码: 84@kTGJl
 
 检查时间:
 
@@ -61,7 +61,7 @@ Shadowrocket 共享平台
 
 账号: tappermentgen614@outlook.com
 
-密码: J@FTff99
+密码: #s6HWjWi
 
 检查时间:
 
@@ -73,9 +73,9 @@ Shadowrocket 共享平台
 
 类型:
 
-账号: jaydenbwolson@hotmail.com
+账号: coughranlagrand5834@outlook.com
 
-密码: SDg17n22
+密码: 5woO3@WT
 
 检查时间:
 
@@ -87,8 +87,7 @@ Shadowrocket 共享平台
 安全性	较低 (有锁机风险)	极高 (自主控制)
 稳定性	经常失效/需频繁更换	永久有效/稳定更新
 隐私保护	无 (多人共用)	完全私密 (一人一号)
-App 更新	极其麻烦 (需重新下载)	直接更新 (无缝体验)
-立即获取独...
+App 更新	极其麻烦 (需重新下载)	直接更新 (无缝体验)...
 </pre>
 </details>
 
