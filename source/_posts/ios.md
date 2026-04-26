@@ -10,13 +10,13 @@ tags:
 
 ## 共享账号信息
 
-  ** 更新时间：** 2026/04/27 05:48:06
+  ** 更新时间：** 2026/04/27 06:49:35
 
 | 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
 | ------| ------| ------| ------| ------| ------| ------|
-  | 编号1 | uchtredmagowandf5018@gmail.com | Y3B9gtum4K | 未知 | 正常 | 2026-04-27 05:38:51 | <a href="javascript:void(0)" onclick="copyEmail('uchtredmagowandf5018@gmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('Y3B9gtum4K')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号2 | rosskennedyjreg5953@gmail.com | De1Hm1h7a9 | 未知 | 正常 | 2026-04-27 05:38:12 | <a href="javascript:void(0)" onclick="copyEmail('rosskennedyjreg5953@gmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('De1Hm1h7a9')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号3 | AllenMilliepyl879@gmail.com | 44s41NP3MD5pf3 | 未知 | 正常 | 2026-04-27 05:36:43 | <a href="javascript:void(0)" onclick="copyEmail('AllenMilliepyl879@gmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('44s41NP3MD5pf3')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+  | 编号1 | niuguadan31016@hotmail.com | nMF#Bhs0 | 未知 | 正常 | 2026-04-27 06:38:00 | <a href="javascript:void(0)" onclick="copyEmail('niuguadan31016@hotmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('nMF#Bhs0')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| 编号2 | jarvarisrivetteuf3409@gmail.com | VG7j2eeg4C | 未知 | 正常 | 2026-04-27 06:37:50 | <a href="javascript:void(0)" onclick="copyEmail('jarvarisrivetteuf3409@gmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('VG7j2eeg4C')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| 编号3 | orprobeso50@outlook.com | 6EJG1crZbk | 未知 | 正常 | 2026-04-27 06:37:09 | <a href="javascript:void(0)" onclick="copyEmail('orprobeso50@outlook.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('6EJG1crZbk')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
 
   **注意：**
     - 共享ID，可能随时被盗，强烈建议购买独享ID
@@ -46,11 +46,11 @@ Shadowrocket 共享平台
 
 类型:
 
-账号: uchtredmagowandf5018@gmail.com
+账号: niuguadan31016@hotmail.com
 
-密码: Y3B9gtum4K
+密码: nMF#Bhs0
 
-检查时间: 2026-04-27 05:38:51
+检查时间: 2026-04-27 06:38:00
 
 状态: 正常
 
@@ -60,11 +60,11 @@ Shadowrocket 共享平台
 
 类型:
 
-账号: rosskennedyjreg5953@gmail.com
+账号: jarvarisrivetteuf3409@gmail.com
 
-密码: De1Hm1h7a9
+密码: VG7j2eeg4C
 
-检查时间: 2026-04-27 05:38:12
+检查时间: 2026-04-27 06:37:50
 
 状态: 正常
 
@@ -74,11 +74,11 @@ Shadowrocket 共享平台
 
 类型:
 
-账号: AllenMilliepyl879@gmail.com
+账号: orprobeso50@outlook.com
 
-密码: 44s41NP3MD5pf3
+密码: 6EJG1crZbk
 
-检查时间: 2026-04-27 05:36:43
+检查时间: 2026-04-27 06:37:09
 
 状态: 正常
 
@@ -86,7 +86,8 @@ Shadowrocket 共享平台
 为什么推荐购买独享 ID？
 功能特性	共享 ID (免费)	独享 ID (购买)
 安全性	较低 (有锁机风险)	极高 (自主控制)
-稳定性	经常失效/需频繁更换	永久...
+稳定性	经常失效/需频繁更换	永久有效/稳定更新
+隐私保护...
 </pre>
 </details>
 
