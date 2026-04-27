@@ -10,13 +10,12 @@ tags:
 
 ## 共享账号信息
 
-  ** 更新时间：** 2026/04/27 11:43:39
+  ** 更新时间：** 2026/04/27 14:37:30
 
 | 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
 | ------| ------| ------| ------| ------| ------| ------|
-  | 编号1 | uchtredmagowandf5018@gmail.com | Y3B9gtum4K | 未知 | 正常 | 2026-04-27 11:09:41 | <a href="javascript:void(0)" onclick="copyEmail('uchtredmagowandf5018@gmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('Y3B9gtum4K')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号2 | madelyncravenlgzx5364@gmail.com | vN151Vd7Dy | 未知 | 正常 | 2026-04-27 11:09:01 | <a href="javascript:void(0)" onclick="copyEmail('madelyncravenlgzx5364@gmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('vN151Vd7Dy')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号3 | qian2007495zhan@163.com | CkMNTrafY8 | 未知 | 正常 | 2026-04-27 11:08:54 | <a href="javascript:void(0)" onclick="copyEmail('qian2007495zhan@163.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('CkMNTrafY8')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+  
+ | 暂无 | 获取失败 | 请参考 | 下方 | 调试 | 信息 | - |
 
   **注意：**
     - 共享ID，可能随时被盗，强烈建议购买独享ID
@@ -46,13 +45,13 @@ Shadowrocket 共享平台
 
 类型:
 
-账号: uchtredmagowandf5018@gmail.com
+账号: yellschaetzle075@outlook.com
 
-密码: Y3B9gtum4K
+密码: &JE9ePgg
 
-检查时间: 2026-04-27 11:09:41
+检查时间:
 
-状态: 正常
+状态: 账号可用
 
 购买独享 ID（防锁机）
 共享 ID 编号 2
@@ -60,13 +59,13 @@ Shadowrocket 共享平台
 
 类型:
 
-账号: madelyncravenlgzx5364@gmail.com
+账号: jaydenbwolson@hotmail.com
 
-密码: vN151Vd7Dy
+密码: SDg17n22
 
-检查时间: 2026-04-27 11:09:01
+检查时间:
 
-状态: 正常
+状态: 账号可用
 
 购买稳定独享号
 共享 ID 编号 3
@@ -74,19 +73,22 @@ Shadowrocket 共享平台
 
 类型:
 
-账号: qian2007495zhan@163.com
+账号: zarspody24593@hotmail.com
 
-密码: CkMNTrafY8
+密码: fX7Z@sTG
 
-检查时间: 2026-04-27 11:08:54
+检查时间:
 
-状态: 正常
+状态: 账号可用
 
 获取个人专属 ID
 为什么推荐购买独享 ID？
 功能特性	共享 ID (免费)	独享 ID (购买)
 安全性	较低 (有锁机风险)	极高 (自主控制)
-稳定性	经常失效/需频繁更换	永久有效/稳定更...
+稳定性	经常失效/需频繁更换	永久有效/稳定更新
+隐私保护	无 (多人共用)	完全私密 (一人一号)
+App 更新	极其麻烦 (需重新下载)	直接更新 (无缝体验)
+立即获取独享...
 </pre>
 </details>
 
