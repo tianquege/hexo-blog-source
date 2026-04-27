@@ -10,13 +10,13 @@ tags:
 
 ## 共享账号信息
 
-  ** 更新时间：** 2026/04/28 02:50:43
+  ** 更新时间：** 2026/04/28 04:13:20
 
 | 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
 | ------| ------| ------| ------| ------| ------| ------|
-  | 编号1 | jaydenbwolson@hotmail.com | SDg17n22 | 未知 | 正常 | 2026-04-28 02:08:02 | <a href="javascript:void(0)" onclick="copyEmail('jaydenbwolson@hotmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('SDg17n22')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号2 | kouzhuiyan98690gs@126.com | Dn!3gNGL | 未知 | 正常 | 2026-04-28 02:08:02 | <a href="javascript:void(0)" onclick="copyEmail('kouzhuiyan98690gs@126.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('Dn!3gNGL')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号3 | madelyncravenlgzx5364@gmail.com | vN151Vd7Dy | 未知 | 正常 | 2026-04-28 02:08:02 | <a href="javascript:void(0)" onclick="copyEmail('madelyncravenlgzx5364@gmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('vN151Vd7Dy')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+  | 编号1 | PerezBettyzzd@gmail.com | 98uXd9NR7w | 未知 | 正常 | 2026-04-28 03:39:58 | <a href="javascript:void(0)" onclick="copyEmail('PerezBettyzzd@gmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('98uXd9NR7w')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| 编号2 | REBELPRIDE79@hotmail.com | 6CFTdyJpNA | 未知 | 正常 | 2026-04-28 03:39:19 | <a href="javascript:void(0)" onclick="copyEmail('REBELPRIDE79@hotmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('6CFTdyJpNA')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| 编号3 | rowenawoodard246042b@icloud.com | BgW5juwnAt | 未知 | 正常 | 2026-04-28 03:38:59 | <a href="javascript:void(0)" onclick="copyEmail('rowenawoodard246042b@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('BgW5juwnAt')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
 
   **注意：**
     - 共享ID，可能随时被盗，强烈建议购买独享ID
@@ -46,13 +46,13 @@ Shadowrocket 共享平台
 
 类型:
 
-账号: jaydenbwolson@hotmail.com
+账号: PerezBettyzzd@gmail.com
 
-密码: SDg17n22
+密码: 98uXd9NR7w
 
-检查时间:
+检查时间: 2026-04-28 03:39:58
 
-状态: 账号可用
+状态: 正常
 
 购买独享 ID（防锁机）
 共享 ID 编号 2
@@ -60,13 +60,13 @@ Shadowrocket 共享平台
 
 类型:
 
-账号: kouzhuiyan98690gs@126.com
+账号: REBELPRIDE79@hotmail.com
 
-密码: Dn!3gNGL
+密码: 6CFTdyJpNA
 
-检查时间:
+检查时间: 2026-04-28 03:39:19
 
-状态: 账号可用
+状态: 正常
 
 购买稳定独享号
 共享 ID 编号 3
@@ -74,11 +74,11 @@ Shadowrocket 共享平台
 
 类型:
 
-账号: madelyncravenlgzx5364@gmail.com
+账号: rowenawoodard246042b@icloud.com
 
-密码: vN151Vd7Dy
+密码: BgW5juwnAt
 
-检查时间: 2026-04-28 02:08:02
+检查时间: 2026-04-28 03:38:59
 
 状态: 正常
 
@@ -87,8 +87,7 @@ Shadowrocket 共享平台
 功能特性	共享 ID (免费)	独享 ID (购买)
 安全性	较低 (有锁机风险)	极高 (自主控制)
 稳定性	经常失效/需频繁更换	永久有效/稳定更新
-隐私保护	无 (多人共用)	完全私密 (一人一号)
-App 更新	极其麻烦 (需重...
+隐私保护...
 </pre>
 </details>
 
