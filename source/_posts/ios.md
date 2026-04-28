@@ -10,13 +10,12 @@ tags:
 
 ## 共享账号信息
 
-  ** 更新时间：** 2026/04/28 13:00:42
+  ** 更新时间：** 2026/04/28 15:37:51
 
 | 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
 | ------| ------| ------| ------| ------| ------| ------|
-  | 编号1 | maxiavenos@hotmail.com | fF3sXGsjZg | 未知 | 正常 | 2026-04-28 12:12:05 | <a href="javascript:void(0)" onclick="copyEmail('maxiavenos@hotmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('fF3sXGsjZg')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号2 | halloween2317010@hotmail.com | kAQd8v4Db2 | 未知 | 正常 | 2026-04-28 11:53:00 | <a href="javascript:void(0)" onclick="copyEmail('halloween2317010@hotmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('kAQd8v4Db2')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号3 | rowenawoodard246042b@icloud.com | BgW5juwnAt | 未知 | 正常 | 2026-04-28 10:27:15 | <a href="javascript:void(0)" onclick="copyEmail('rowenawoodard246042b@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('BgW5juwnAt')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+  
+ | 暂无 | 获取失败 | 请参考 | 下方 | 调试 | 信息 | - |
 
   **注意：**
     - 共享ID，可能随时被盗，强烈建议购买独享ID
@@ -26,67 +25,14 @@ tags:
 <details>
 <summary>此处点击查看抓取调试信息（如表格为空请查看这里）</summary>
 <pre>
-首页
-Telegram 群组
-中文官网
-Shadowrocket 共享平台
-提供免费 Apple ID 及已购小火箭账号
+Your connection is not private
 
-本站 ID 供学习测试使用，下载后请及时退出。每 30 分钟更新一次。
+Attackers might be trying to steal your information from free.iosapp.icu (for example, passwords, messages, or credit cards). Learn more about this warning
 
-购买独享 ID (推荐)
-快速租用账号(优惠码 iosapp3)
-🚨 关键安全提醒：严禁登录 iCloud
-
-【绝对禁止】 在手机系统的“设置”中登录共享 Apple ID。 请仅在 App Store 中登录。登录 iCloud 可能导致您的设备被远程锁定，造成不可挽回的损失！
-
-⚠️ 重要提醒：手机设置中的 Apple ID 必须登录您自己常用的账号，买的账号或者网上的共享ID只能在商店登录。登错位置，手机变砖，后悔莫及！
-共享 ID 编号 1
-⚠️ 严禁在设置登录 iCloud，后果自负
-
-类型: 美国
-
-账号: maxiavenos@hotmail.com
-
-密码: fF3sXGsjZg
-
-检查时间: 2026-04-28 12:12:05
-
-状态: 正常
-
-购买独享 ID（防锁机）
-共享 ID 编号 2
-⚠️ 共享账号易失效，建议使用独享
-
-类型: 美国
-
-账号: halloween2317010@hotmail.com
-
-密码: kAQd8v4Db2
-
-检查时间: 2026-04-28 11:53:00
-
-状态: 正常
-
-购买稳定独享号
-共享 ID 编号 3
-⚠️ 请勿在 ID 内充值或改密
-
-类型:
-
-账号: rowenawoodard246042b@icloud.com
-
-密码: BgW5juwnAt
-
-检查时间: 2026-04-28 10:27:15
-
-状态: 正常
-
-获取个人专属 ID
-为什么推荐购买独享 ID？
-功能特性	共享 ID (免费)	独享 ID (购买)
-安全性	较低 (有锁机风险)	极高 (自主控制)
-稳定性	经常失效/需频繁更换	永久有效/...
+NET::ERR_CERT_AUTHORITY_INVALID
+Turn on enhanced protection to get Chrome's highest level of security
+Back to safety
+Advanced...
 </pre>
 </details>
 
