@@ -10,13 +10,13 @@ tags:
 
 ## 共享账号信息
 
-  ** 更新时间：** 2026/04/28 09:15:18
+  ** 更新时间：** 2026/04/28 13:00:42
 
 | 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
 | ------| ------| ------| ------| ------| ------| ------|
-  | 编号1 | tieshamorwaywi6420@gmail.com | 6ZRcWustJ4 | 未知 | 正常 | 2026-04-28 08:39:34 | <a href="javascript:void(0)" onclick="copyEmail('tieshamorwaywi6420@gmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('6ZRcWustJ4')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号2 | vgilesgh42@gmail.com | 4HWwRkya6B | 未知 | 正常 | 2026-04-28 08:39:25 | <a href="javascript:void(0)" onclick="copyEmail('vgilesgh42@gmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('4HWwRkya6B')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
-| 编号3 | qfpcwzp942@163.com | mxhp8mP9BJ | 未知 | 正常 | 2026-04-28 08:37:27 | <a href="javascript:void(0)" onclick="copyEmail('qfpcwzp942@163.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('mxhp8mP9BJ')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+  | 编号1 | maxiavenos@hotmail.com | fF3sXGsjZg | 未知 | 正常 | 2026-04-28 12:12:05 | <a href="javascript:void(0)" onclick="copyEmail('maxiavenos@hotmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('fF3sXGsjZg')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| 编号2 | halloween2317010@hotmail.com | kAQd8v4Db2 | 未知 | 正常 | 2026-04-28 11:53:00 | <a href="javascript:void(0)" onclick="copyEmail('halloween2317010@hotmail.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('kAQd8v4Db2')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
+| 编号3 | rowenawoodard246042b@icloud.com | BgW5juwnAt | 未知 | 正常 | 2026-04-28 10:27:15 | <a href="javascript:void(0)" onclick="copyEmail('rowenawoodard246042b@icloud.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('BgW5juwnAt')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block;">复制密码</a> |
 
   **注意：**
     - 共享ID，可能随时被盗，强烈建议购买独享ID
@@ -44,13 +44,13 @@ Shadowrocket 共享平台
 共享 ID 编号 1
 ⚠️ 严禁在设置登录 iCloud，后果自负
 
-类型:
+类型: 美国
 
-账号: tieshamorwaywi6420@gmail.com
+账号: maxiavenos@hotmail.com
 
-密码: 6ZRcWustJ4
+密码: fF3sXGsjZg
 
-检查时间: 2026-04-28 08:39:34
+检查时间: 2026-04-28 12:12:05
 
 状态: 正常
 
@@ -58,13 +58,13 @@ Shadowrocket 共享平台
 共享 ID 编号 2
 ⚠️ 共享账号易失效，建议使用独享
 
-类型:
+类型: 美国
 
-账号: vgilesgh42@gmail.com
+账号: halloween2317010@hotmail.com
 
-密码: 4HWwRkya6B
+密码: kAQd8v4Db2
 
-检查时间: 2026-04-28 08:39:25
+检查时间: 2026-04-28 11:53:00
 
 状态: 正常
 
@@ -74,11 +74,11 @@ Shadowrocket 共享平台
 
 类型:
 
-账号: qfpcwzp942@163.com
+账号: rowenawoodard246042b@icloud.com
 
-密码: mxhp8mP9BJ
+密码: BgW5juwnAt
 
-检查时间: 2026-04-28 08:37:27
+检查时间: 2026-04-28 10:27:15
 
 状态: 正常
 
@@ -86,8 +86,7 @@ Shadowrocket 共享平台
 为什么推荐购买独享 ID？
 功能特性	共享 ID (免费)	独享 ID (购买)
 安全性	较低 (有锁机风险)	极高 (自主控制)
-稳定性	经常失效/需频繁更换	永久有效/稳定更新
-隐私保护	无 (多人共用)	完全...
+稳定性	经常失效/需频繁更换	永久有效/...
 </pre>
 </details>
 
