@@ -102,7 +102,7 @@ async function scrapeAccounts() {
       fetchTrumpyunAccounts()
     ]);
 
-    allAccounts = [...appiAccounts, ...trumpyunAccounts];
+    allAccounts = [...trumpyunAccounts, ...appiAccounts];
 
     if (allAccounts.length === 0) {
       throw new Error('未能从任何源抓取到账号数据');
