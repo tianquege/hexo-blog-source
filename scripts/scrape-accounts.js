@@ -1,208 +1,118 @@
-const puppeteer = require('puppeteer');
 const fs = require('fs');
 const path = require('path');
+const https = require('https');
 
-// 从本地文件中读取上次的檢查时间
-function getLastCheckTime() {
+// 通用的 GET 请求封装 (替代 Puppeteer)
+function fetchJSON(url) {
+  return new Promise((resolve, reject) => {
+    https.get(url, { headers: { 'User-Agent': 'Mozilla/5.0' } }, (res) => {
+      let data = '';
+      res.on('data', chunk => data += chunk);
+      res.on('end', () => {
+        try {
+          resolve(JSON.parse(data));
+        } catch (e) {
+          reject(e);
+        }
+      });
+    }).on('error', reject);
+  });
+}
+
+function fetchText(url) {
+  return new Promise((resolve, reject) => {
+    https.get(url, { headers: { 'User-Agent': 'Mozilla/5.0' } }, (res) => {
+      let data = '';
+      res.on('data', chunk => data += chunk);
+      res.on('end', () => resolve(data));
+    }).on('error', reject);
+  });
+}
+
+// 抓取 appi.lol (纯净 JSON 接口)
+async function fetchAppiAccounts() {
+  const accounts = [];
   try {
-    const postsDir = path.join(__dirname, '../source/_posts');
-    const files = fs.readdirSync(postsDir);
-    const iosFile = files.find(file => file.toLowerCase().includes('ios') && file.endsWith('.md'));
-    if (!iosFile) return null;
-
-    const content = fs.readFileSync(path.join(postsDir, iosFile), 'utf8');
-    // 在表格里找时间（假设时间格式是 YYYY-MM-DD HH:mm:ss）
-    const match = content.match(/\|\s*(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2})\s*\|/);
-    return match ? match[1] : null;
-  } catch (e) {
-    return null;
+    console.log('正在抓取 appi.lol ...');
+    const json = await fetchJSON('https://api.appi.lol/appid');
+    if (json.code === 200 && Array.isArray(json.appidList)) {
+      let count = 1;
+      for (const item of json.appidList) {
+        // 格式化数据，去除不需要的文字修饰
+        let timeStr = item.time ? item.time.replace(/.*?检测时间[：:]?\s*/, '').trim() : '';
+        let statusStr = item.status ? item.status.replace(/.*?账号状态[：:]?\s*/, '').trim() : '正常';
+        
+        accounts.push({
+          number: `APPI-${count++}`,
+          email: item.user,
+          password: item.pass,
+          country: '美区(APPI)',
+          status: statusStr,
+          time: timeStr
+        });
+      }
+    }
+    console.log(`成功从 appi.lol 提取到 ${accounts.length} 个账号`);
+  } catch (err) {
+    console.error('抓取 appi.lol 失败:', err.message);
   }
+  return accounts;
+}
+
+// 抓取 trumpyun1.com (源码正则表达式提取，无视弹窗)
+async function fetchTrumpyunAccounts() {
+  const accounts = [];
+  try {
+    console.log('正在抓取 trumpyun1.com ...');
+    const html = await fetchText('https://trumpyun1.com/');
+    
+    // 从源码中直接用正则提取被隐藏的真实账号和密码
+    const emailMatches = [...html.matchAll(/id="email-updated-\d+" data-original="([^"]+)"/g)].map(m => m[1]);
+    const passMatches = [...html.matchAll(/id="password-updated-\d+" data-original="([^"]+)"/g)].map(m => m[1]);
+    const timeMatches = [...html.matchAll(/<i class="fas fa-clock"><\/i>\s*(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2})/g)].map(m => m[1]);
+    
+    // 假设网页生成的顺序是对应的，直接按索引匹配
+    const maxLen = Math.min(emailMatches.length, passMatches.length);
+    for (let i = 0; i < maxLen; i++) {
+      let timeStr = timeMatches[i] || new Date().toISOString().split('T')[0];
+      accounts.push({
+        number: `TY-${i + 1}`,
+        email: emailMatches[i],
+        password: passMatches[i],
+        country: '未知(TY)', 
+        status: '正常',
+        time: timeStr
+      });
+    }
+    console.log(`成功从 trumpyun1.com 提取到 ${accounts.length} 个账号`);
+  } catch (err) {
+    console.error('抓取 trumpyun1.com 失败:', err.message);
+  }
+  return accounts;
 }
 
 async function scrapeAccounts() {
-  console.log('开始抓取账号信息...');
+  console.log('开始执行双源高速抓取...');
 
-  let browser;
+  let allAccounts = [];
   try {
-    // 自动检测系统 Chrome 路径（针对 GitHub Actions 环境）
-    let executablePath = null;
-    if (process.platform === 'linux') {
-      const possiblePaths = [
-        '/usr/bin/google-chrome',
-        '/usr/bin/google-chrome-stable',
-        '/usr/bin/chromium',
-        '/usr/bin/chromium-browser'
-      ];
-      for (const p of possiblePaths) {
-        if (fs.existsSync(p)) {
-          executablePath = p;
-          console.log(`在 Linux 环境下找到 Chrome: ${p}`);
-          break;
-        }
-      }
-    }
+    // 并发抓取两个网站
+    const [appiAccounts, trumpyunAccounts] = await Promise.all([
+      fetchAppiAccounts(),
+      fetchTrumpyunAccounts()
+    ]);
 
-    const launchOptions = {
-      headless: "new", // 使用新版 Headless 模式
-      args: ['--no-sandbox', '--disable-setuid-sandbox']
-    };
+    allAccounts = [...appiAccounts, ...trumpyunAccounts];
 
-    if (executablePath) {
-      launchOptions.executablePath = executablePath;
-    }
-
-    browser = await puppeteer.launch(launchOptions);
-
-    const page = await browser.newPage();
-
-    // 隐藏 WebDriver 特征，绕过简单的反爬虫检测
-    await page.evaluateOnNewDocument(() => {
-      Object.defineProperty(navigator, 'webdriver', {
-        get: () => undefined,
-      });
-    });
-
-    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
-    // 设置额外的HTTP头
-    await page.setExtraHTTPHeaders({
-      'Referer': 'https://www.google.com/',
-      'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8'
-    });
-    // 禁用缓存，防止抓取到旧数据
-    await page.setCacheEnabled(false);
-
-    // 获取本地上次更新时间
-    const lastCheckTime = getLastCheckTime();
-    console.log(`本地记录的上次检查时间: ${lastCheckTime || '无'}`);
-
-    // 重试循环
-    let accounts = [];
-    let pageText = '';
-    const maxRetries = 10; // 最多重试10次（约10分钟）
-
-    for (let i = 0; i < maxRetries; i++) {
-      console.log(`第 ${i + 1} 次尝试侦测上游更新...`);
-
-      try {
-        // 添加随机参数防止缓存
-        const targetUrl = `https://free.iosapp.icu/?t=${new Date().getTime()}`;
-        console.log(`正在访问: ${targetUrl}`);
-        await page.goto(targetUrl, { waitUntil: 'networkidle2', timeout: 60000 });
-      } catch (err) {
-        console.log('页面加载超时或失败，尝试继续解析...');
-      }
-
-      await new Promise(r => setTimeout(r, 10000)); // 等待渲染
-
-      const fullText = await page.evaluate(() => document.body.innerText);
-      pageText = fullText.substring(0, 800) + '...'; // Debug用
-
-      // 提取网页上的"检查时间"（寻找最新的那个）
-      // 格式：检查时间: 2025-12-17 23:03:58
-      const timeMatches = fullText.match(/检查时间[：:]\s*(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2})/g);
-      let currentCheckTime = null;
-      if (timeMatches && timeMatches.length > 0) {
-        // 假设第一个找到的时间就是最新的（通常由上而下）
-        const tm = timeMatches[0].match(/(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2})/);
-        if (tm) currentCheckTime = tm[1];
-      }
-
-      console.log(`网页上的最新检查时间: ${currentCheckTime || '未找到'} (本地记录: ${lastCheckTime || '无'})`);
-
-      // 如果未能获取到时间（可能是反爬虫拦截，或页面加载不全）
-      if (!currentCheckTime) {
-        console.log('警告：未能从页面提取到检查时间，可能是被拦截或页面结构异常。等待 10 秒后重试...');
-        await new Promise(r => setTimeout(r, 10000));
-        continue;
-      }
-
-      // 核心逻辑：
-      // 1. 如果是手动触发 (workflow_dispatch)，强制抓取。
-      // 2. 如果没有本地记录（第一次运行），直接抓。
-      // 3. 如果网页时间 > 本地时间（有更新），直接抓。
-      // 4. 如果网页时间 == 本地时间（没更新），等待并重试。
-
-      const isManualTrigger = process.env.GITHUB_EVENT_NAME === 'workflow_dispatch';
-
-      if (isManualTrigger || !lastCheckTime || (currentCheckTime && currentCheckTime !== lastCheckTime)) {
-        if (isManualTrigger) console.log('检测到手动触发，强制抓取更新！');
-        else console.log('发现上游新数据（或无本地记录），准备开始抓取！');
-        // 继续向下执行解析逻辑
-      } else {
-        // 如果走到这里，说明 currentCheckTime === lastCheckTime 且 非手动触发
-        if (i < maxRetries - 1) {
-          console.log(`上游数据尚未更新，等待 60 秒后重试... (${i + 1}/${maxRetries})`);
-          await new Promise(r => setTimeout(r, 60000));
-          // 重载页面，进入下一次循环
-          continue;
-        } else {
-          console.log('重试次数耗尽，上游长时间未更新。本次任务终止，不更新博客。');
-          return;
-        }
-      }
-
-      // 如果循环结束前 return 了，下面不会执行。
-      // 如果 break 了，下面继续执行解析。
-
-
-
-      // 开始解析账号
-      accounts = [];
-      const emailRegex = /([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g;
-
-      let match;
-      let count = 1;
-
-      while ((match = emailRegex.exec(fullText)) !== null) {
-        const email = match[1];
-        const startIndex = match.index;
-        const context = fullText.substring(startIndex, startIndex + 200);
-        const preContext = fullText.substring(Math.max(0, startIndex - 100), startIndex);
-
-        if (!preContext.includes('编号') && !context.substring(0, 50).includes('编号')) continue;
-
-        const passMatch = context.match(/密码[：:]\s*([^\s\r\n]+)/);
-
-        // 提取该账号的具体检查时间
-        const accountTimeMatch = context.match(/检查时间[：:]\s*(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2})/);
-        const accountTime = accountTimeMatch ? accountTimeMatch[1] : (currentCheckTime || new Date().toISOString().split('T')[0]);
-
-        let country = '未知';
-        if (passMatch) {
-          const betweenText = context.substring(match[0].length, passMatch.index).trim();
-          const countryMatch = betweenText.match(/[\u4e00-\u9fa5]+/);
-          if (countryMatch) country = countryMatch[0];
-        }
-
-        if (passMatch) {
-          let cleanPassword = passMatch[1].trim();
-          const suffixesToRemove = ['检查时间', '国家', '状态', '时间'];
-          for (const suffix of suffixesToRemove) {
-            if (cleanPassword.includes(suffix)) cleanPassword = cleanPassword.split(suffix)[0].trim();
-          }
-          cleanPassword = cleanPassword.replace(/[：:]$/, '');
-
-          accounts.push({
-            number: `编号${count++}`,
-            email: email,
-            password: cleanPassword,
-            country: country,
-            status: '正常',
-            time: accountTime
-          });
-          console.log(`找到账号: ${email} 时间: ${accountTime}`);
-        }
-      }
-
-      // 如果找到了账号，就跳出
-      if (accounts.length > 0) break;
+    if (allAccounts.length === 0) {
+      throw new Error('未能从任何源抓取到账号数据');
     }
 
     // 生成 Markdown 表格
-    const markdown = generateMarkdownTable(accounts, pageText);
+    const markdown = generateMarkdownTable(allAccounts, '通过原生 Node 请求接口获取，无需日志调试。');
     updateArticleFile(markdown);
 
-    console.log('账号信息更新完成！');
+    console.log(`账号信息更新完成！共写入 ${allAccounts.length} 个账号`);
 
   } catch (error) {
     console.error('抓取过程中出错:', error);
@@ -220,13 +130,8 @@ async function scrapeAccounts() {
 
     const markdown = generateMarkdownTable(errorAccounts, errorDebug);
     updateArticleFile(markdown);
-
-  } finally {
-    if (browser) await browser.close();
   }
 }
-
-
 
 function generateMarkdownTable(accounts, debugText) {
   // 获取北京时间
@@ -241,16 +146,10 @@ function generateMarkdownTable(accounts, debugText) {
     second: '2-digit'
   });
 
-  let markdown = `## 共享账号信息
-
-  ** 更新时间：** ${timeString}
-
-| 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |
-| ------| ------| ------| ------| ------| ------| ------|
-  `;
+  let markdown = `## 共享账号信息\n\n**更新时间：** ${timeString}\n\n| 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |\n| ------| ------| ------| ------| ------| ------| ------|\n`;
 
   if (accounts.length === 0) {
-    markdown += `\n | 暂无 | 获取失败 | 请参考 | 下方 | 调试 | 信息 | - |\n`;
+    markdown += `| 暂无 | 获取失败 | 请参考 | 下方 | 调试 | 信息 | - |\n`;
   }
 
   accounts.forEach(account => {
@@ -259,77 +158,7 @@ function generateMarkdownTable(accounts, debugText) {
     markdown += `| ${account.number} | ${account.email} | ${account.password} | ${account.country} | ${account.status} | ${account.time} | ${copyEmailButton}${copyPasswordButton} |\n`;
   });
 
-  markdown += `
-  **注意：**
-    - 共享ID，可能随时被盗，强烈建议购买独享ID
-      - 严格禁止在手机设置中登录共享ID，防止意外ID锁死和手机变砖
-        - 本信息仅供参考，使用风险自负
-
-<details>
-<summary>此处点击查看抓取调试信息（如表格为空请查看这里）</summary>
-<pre>
-${debugText.replace(/</g, '&lt;').replace(/>/g, '&gt;')}
-</pre>
-</details>
-
-<script>
-function copyEmail(email) {
-  const text = email;
-  if (navigator.clipboard && window.isSecureContext) {
-    navigator.clipboard.writeText(text).then(() => {
-      alert('邮箱已复制到剪贴板！');
-    }).catch(err => {
-      console.error('复制失败:', err);
-      fallbackCopyTextToClipboard(text);
-    });
-  } else {
-    fallbackCopyTextToClipboard(text);
-  }
-}
-
-function copyPassword(password) {
-  const text = password;
-  if (navigator.clipboard && window.isSecureContext) {
-    navigator.clipboard.writeText(text).then(() => {
-      alert('密码已复制到剪贴板！');
-    }).catch(err => {
-      console.error('复制失败:', err);
-      fallbackCopyTextToClipboard(text);
-    });
-  } else {
-    fallbackCopyTextToClipboard(text);
-  }
-}
-
-function fallbackCopyTextToClipboard(text) {
-  const textArea = document.createElement("textarea");
-  textArea.value = text;
-  textArea.style.top = "0";
-  textArea.style.left = "0";
-  textArea.style.position = "fixed";
-  document.body.appendChild(textArea);
-  textArea.focus();
-  textArea.select();
-  
-  try {
-    const successful = document.execCommand('copy');
-    if (successful) {
-      alert('复制成功！');
-    } else {
-      alert('复制失败，请手动复制');
-    }
-  } catch (err) {
-    console.error('复制失败:', err);
-    alert('复制失败，请手动复制');
-  }
-  
-  document.body.removeChild(textArea);
-}
-</script>
-
----
-*本页面由 GitHub Actions 自动更新*
-`;
+  markdown += `\n**注意：**\n- 共享ID，可能随时被盗，强烈建议购买独享ID\n- 严格禁止在手机设置中登录共享ID，防止意外ID锁死和手机变砖\n- 本信息仅供参考，使用风险自负\n\n<details>\n<summary>此处点击查看抓取调试信息（如表格为空请查看这里）</summary>\n<pre>\n${debugText.replace(/</g, '&lt;').replace(/>/g, '&gt;')}\n</pre>\n</details>\n\n<script>\nfunction copyEmail(email) {\n  const text = email;\n  if (navigator.clipboard && window.isSecureContext) {\n    navigator.clipboard.writeText(text).then(() => {\n      alert('邮箱已复制到剪贴板！');\n    }).catch(err => {\n      console.error('复制失败:', err);\n      fallbackCopyTextToClipboard(text);\n    });\n  } else {\n    fallbackCopyTextToClipboard(text);\n  }\n}\n\nfunction copyPassword(password) {\n  const text = password;\n  if (navigator.clipboard && window.isSecureContext) {\n    navigator.clipboard.writeText(text).then(() => {\n      alert('密码已复制到剪贴板！');\n    }).catch(err => {\n      console.error('复制失败:', err);\n      fallbackCopyTextToClipboard(text);\n    });\n  } else {\n    fallbackCopyTextToClipboard(text);\n  }\n}\n\nfunction fallbackCopyTextToClipboard(text) {\n  const textArea = document.createElement("textarea");\n  textArea.value = text;\n  textArea.style.top = "0";\n  textArea.style.left = "0";\n  textArea.style.position = "fixed";\n  document.body.appendChild(textArea);\n  textArea.focus();\n  textArea.select();\n  \n  try {\n    const successful = document.execCommand('copy');\n    if (successful) {\n      alert('复制成功！');\n    } else {\n      alert('复制失败，请手动复制');\n    }\n  } catch (err) {\n    console.error('复制失败:', err);\n    alert('复制失败，请手动复制');\n  }\n  \n  document.body.removeChild(textArea);\n}\n</script>\n\n---\n*本页面由 GitHub Actions 自动更新*\n`;
 
   return markdown;
 }
@@ -340,9 +169,7 @@ function updateArticleFile(markdown) {
   const files = fs.readdirSync(postsDir);
 
   // 查找包含 "ios" 的文件
-  const iosFile = files.find(file =>
-    file.toLowerCase().includes('ios') && file.endsWith('.md')
-  );
+  const iosFile = files.find(file => file.toLowerCase().includes('ios') && file.endsWith('.md'));
 
   if (!iosFile) {
     console.log('未找到 iOS 文章文件');

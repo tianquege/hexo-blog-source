@@ -5,7 +5,7 @@ on:
     branches: [ master ]
   workflow_dispatch:
   schedule:
-    - cron: '2,32 * * * *'
+    - cron: '15,45 * * * *'
 
 permissions:
   contents: write
@@ -35,8 +35,6 @@ jobs:
       run: |
         pnpm install
         pnpm add -g hexo-cli
-        pnpm add puppeteer
-        npx puppeteer browsers install chrome
       
     - name: Update account info
       run: node scripts/scrape-accounts.js
