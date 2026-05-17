@@ -146,16 +146,16 @@ function generateMarkdownTable(accounts, debugText) {
     second: '2-digit'
   });
 
-  let markdown = `## 共享账号信息\n\n**更新时间：** ${timeString}\n\n| 编号 | 邮箱 | 密码 | 国家 | 状态 | 时间 | 操作 |\n| ------| ------| ------| ------| ------| ------| ------|\n`;
+  let markdown = `## 共享账号信息\n\n**更新时间：** ${timeString}\n\n| 编号 | 邮箱 | 国家 | 状态 | 时间 | 操作 |\n| ------| ------| ------| ------| ------| ------|\n`;
 
   if (accounts.length === 0) {
-    markdown += `| 暂无 | 获取失败 | 请参考 | 下方 | 调试 | 信息 | - |\n`;
+    markdown += `| 暂无 | 获取失败 | 请参考 | 下方 | 调试 | 信息 |\n`;
   }
 
   accounts.forEach(account => {
     const copyEmailButton = `<a href="javascript:void(0)" onclick="copyEmail('${account.email}')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; white-space: nowrap; margin-right: 5px;">复制邮箱</a>`;
     const copyPasswordButton = `<a href="javascript:void(0)" onclick="copyPassword('${account.password}')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; white-space: nowrap;">复制密码</a>`;
-    markdown += `| ${account.number} | ${account.email} | ${account.password} | ${account.country} | ${account.status} | ${account.time} | ${copyEmailButton}${copyPasswordButton} |\n`;
+    markdown += `| ${account.number} | ${account.email} | ${account.country} | ${account.status} | ${account.time} | ${copyEmailButton}${copyPasswordButton} |\n`;
   });
 
   markdown += `\n**注意：**\n- 共享ID，可能随时被盗，强烈建议购买独享ID\n- 严格禁止在手机设置中登录共享ID，防止意外ID锁死和手机变砖\n- 本信息仅供参考，使用风险自负\n\n<details>\n<summary>此处点击查看抓取调试信息（如表格为空请查看这里）</summary>\n<pre>\n${debugText.replace(/</g, '&lt;').replace(/>/g, '&gt;')}\n</pre>\n</details>\n\n<script>\nfunction copyEmail(email) {\n  const text = email;\n  if (navigator.clipboard && window.isSecureContext) {\n    navigator.clipboard.writeText(text).then(() => {\n      alert('邮箱已复制到剪贴板！');\n    }).catch(err => {\n      console.error('复制失败:', err);\n      fallbackCopyTextToClipboard(text);\n    });\n  } else {\n    fallbackCopyTextToClipboard(text);\n  }\n}\n\nfunction copyPassword(password) {\n  const text = password;\n  if (navigator.clipboard && window.isSecureContext) {\n    navigator.clipboard.writeText(text).then(() => {\n      alert('密码已复制到剪贴板！');\n    }).catch(err => {\n      console.error('复制失败:', err);\n      fallbackCopyTextToClipboard(text);\n    });\n  } else {\n    fallbackCopyTextToClipboard(text);\n  }\n}\n\nfunction fallbackCopyTextToClipboard(text) {\n  const textArea = document.createElement("textarea");\n  textArea.value = text;\n  textArea.style.top = "0";\n  textArea.style.left = "0";\n  textArea.style.position = "fixed";\n  document.body.appendChild(textArea);\n  textArea.focus();\n  textArea.select();\n  \n  try {\n    const successful = document.execCommand('copy');\n    if (successful) {\n      alert('复制成功！');\n    } else {\n      alert('复制失败，请手动复制');\n    }\n  } catch (err) {\n    console.error('复制失败:', err);\n    alert('复制失败，请手动复制');\n  }\n  \n  document.body.removeChild(textArea);\n}\n</script>\n\n---\n*本页面由 GitHub Actions 自动更新*\n`;

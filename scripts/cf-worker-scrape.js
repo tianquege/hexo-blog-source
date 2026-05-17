@@ -84,13 +84,12 @@ function generateHTML(accounts) {
   // 生成无数据时的提示
   let tableBody = '';
   if (accounts.length === 0) {
-    tableBody = `<tr><td colspan="7" style="text-align:center; padding:30px;">上游源暂时无法访问或无数据更新，请稍后再试。</td></tr>`;
+    tableBody = `<tr><td colspan="6" style="text-align:center; padding:30px;">上游源暂时无法访问或无数据更新，请稍后再试。</td></tr>`;
   } else {
     tableBody = accounts.map(acc => `
       <tr>
         <td><strong>${acc.number}</strong></td>
         <td style="color:#0056b3;">${acc.email}</td>
-        <td>${acc.password}</td>
         <td>${acc.country}</td>
         <td><span style="color: #28a745; font-weight:bold;">${acc.status}</span></td>
         <td>${acc.time}</td>
@@ -156,7 +155,6 @@ function generateHTML(accounts) {
               <tr>
                 <th>编号</th>
                 <th>账号(邮箱)</th>
-                <th>密码</th>
                 <th>来源/国家</th>
                 <th>状态</th>
                 <th>上游更新时间</th>
