@@ -10,12 +10,11 @@ tags:
 
 ## 共享账号信息
 
-**更新时间：** 2026/11/19 08:07:41
+**更新时间：** 2026/11/19 15:47:40
 
 | 编号 | 邮箱 | 国家 | 状态 | 时间 | 操作 |
 | ------| ------| ------| ------| ------| ------|
-| TY-1 | ly901@163.com | 未知(TY) | 正常 | 2026-11-19 | <a href="javascript:void(0)" onclick="copyEmail('ly901@163.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; white-space: nowrap; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('3t1zcBbhTbhQ')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; white-space: nowrap;">复制密码</a> |
-| TY-2 | LeithaFroats593573@outlook.com | 未知(TY) | 正常 | 2026-11-19 | <a href="javascript:void(0)" onclick="copyEmail('LeithaFroats593573@outlook.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; white-space: nowrap; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('uh1g938Htw')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; white-space: nowrap;">复制密码</a> |
+| TY-1 | p7j09x89@jiesuo66.xyz | 未知(TY) | 正常 | 2026-11-19 | <a href="javascript:void(0)" onclick="copyEmail('p7j09x89@jiesuo66.xyz')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; white-space: nowrap; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('Ek997729')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; white-space: nowrap;">复制密码</a> |
 
 **注意：**
 - 共享ID，可能随时被盗，强烈建议购买独享ID
