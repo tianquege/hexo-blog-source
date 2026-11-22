@@ -10,11 +10,11 @@ tags:
 
 ## 共享账号信息
 
-**更新时间：** 2026/11/22 22:48:40
+**更新时间：** 2026/11/23 04:58:15
 
 | 编号 | 邮箱 | 国家 | 状态 | 时间 | 操作 |
 | ------| ------| ------| ------| ------| ------|
-| TY-1 | WilliamLloydpz@outlook.com | 未知(TY) | 正常 | 2026-11-22 | <a href="javascript:void(0)" onclick="copyEmail('WilliamLloydpz@outlook.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; white-space: nowrap; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('Pc22K4nVak')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; white-space: nowrap;">复制密码</a> |
+| 错误 | 抓取失败 | Unknown | Error | 2026-11-22 | <a href="javascript:void(0)" onclick="copyEmail('抓取失败')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; white-space: nowrap; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('请查看调试信息')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; white-space: nowrap;">复制密码</a> |
 
 **注意：**
 - 共享ID，可能随时被盗，强烈建议购买独享ID
@@ -24,7 +24,10 @@ tags:
 <details>
 <summary>此处点击查看抓取调试信息（如表格为空请查看这里）</summary>
 <pre>
-通过原生 Node 请求接口获取，无需日志调试。
+脚本执行出错: 未能从任何源抓取到账号数据
+Stack: Error: 未能从任何源抓取到账号数据
+    at scrapeAccounts (/home/runner/work/hexo-blog-source/hexo-blog-source/scripts/scrape-accounts.js:108:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 </pre>
 </details>
 
