@@ -10,11 +10,11 @@ tags:
 
 ## 共享账号信息
 
-**更新时间：** 2026/11/23 04:58:15
+**更新时间：** 2026/11/23 09:29:06
 
 | 编号 | 邮箱 | 国家 | 状态 | 时间 | 操作 |
 | ------| ------| ------| ------| ------| ------|
-| 错误 | 抓取失败 | Unknown | Error | 2026-11-22 | <a href="javascript:void(0)" onclick="copyEmail('抓取失败')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; white-space: nowrap; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('请查看调试信息')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; white-space: nowrap;">复制密码</a> |
+| 错误 | 抓取失败 | Unknown | Error | 2026-11-23 | <a href="javascript:void(0)" onclick="copyEmail('抓取失败')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; white-space: nowrap; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('请查看调试信息')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; white-space: nowrap;">复制密码</a> |
 
 **注意：**
 - 共享ID，可能随时被盗，强烈建议购买独享ID
