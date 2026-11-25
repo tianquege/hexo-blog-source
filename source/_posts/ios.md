@@ -10,17 +10,11 @@ tags:
 
 ## 共享账号信息
 
-**更新时间：** 2026/11/25 18:20:43
+**更新时间：** 2026/11/26 04:04:27
 
 | 编号 | 邮箱 | 国家 | 状态 | 时间 | 操作 |
 | ------| ------| ------| ------| ------| ------|
-| TY-1 | laocaizhi@163.com | 未知(TY) | 正常 | 2026-11-25 | <a href="javascript:void(0)" onclick="copyEmail('laocaizhi@163.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; white-space: nowrap; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('3acDtAgJzKJ6')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; white-space: nowrap;">复制密码</a> |
-| TY-2 | ly901@163.com | 未知(TY) | 正常 | 2026-11-25 | <a href="javascript:void(0)" onclick="copyEmail('ly901@163.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; white-space: nowrap; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('Dtt94F7xZmVX')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; white-space: nowrap;">复制密码</a> |
-| TY-3 | qcb8984@163.com | 未知(TY) | 正常 | 2026-11-25 | <a href="javascript:void(0)" onclick="copyEmail('qcb8984@163.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; white-space: nowrap; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('Kzh5AJkPm25y')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; white-space: nowrap;">复制密码</a> |
-| TY-4 | haoyali123456@163.com | 未知(TY) | 正常 | 2026-11-25 | <a href="javascript:void(0)" onclick="copyEmail('haoyali123456@163.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; white-space: nowrap; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('d1nUxm64cx3n')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; white-space: nowrap;">复制密码</a> |
-| TY-5 | mxrhy123@163.com | 未知(TY) | 正常 | 2026-11-25 | <a href="javascript:void(0)" onclick="copyEmail('mxrhy123@163.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; white-space: nowrap; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('kPfzUaDuvyQ4')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; white-space: nowrap;">复制密码</a> |
-| TY-6 | axe3997@163.com | 未知(TY) | 正常 | 2026-11-25 | <a href="javascript:void(0)" onclick="copyEmail('axe3997@163.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; white-space: nowrap; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('mZS49d1r1ach')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; white-space: nowrap;">复制密码</a> |
-| TY-7 | yangshui1234567@163.com | 未知(TY) | 正常 | 2026-11-25 | <a href="javascript:void(0)" onclick="copyEmail('yangshui1234567@163.com')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; white-space: nowrap; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('81tpyHa6hrUC')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; white-space: nowrap;">复制密码</a> |
+| 错误 | 抓取失败 | Unknown | Error | 2026-11-25 | <a href="javascript:void(0)" onclick="copyEmail('抓取失败')" style="background: #007bff; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; white-space: nowrap; margin-right: 5px;">复制邮箱</a><a href="javascript:void(0)" onclick="copyPassword('请查看调试信息')" style="background: #28a745; color: white; border: none; padding: 3px 8px; border-radius: 3px; cursor: pointer; font-size: 11px; text-decoration: none; display: inline-block; white-space: nowrap;">复制密码</a> |
 
 **注意：**
 - 共享ID，可能随时被盗，强烈建议购买独享ID
@@ -30,7 +24,10 @@ tags:
 <details>
 <summary>此处点击查看抓取调试信息（如表格为空请查看这里）</summary>
 <pre>
-通过原生 Node 请求接口获取，无需日志调试。
+脚本执行出错: 未能从任何源抓取到账号数据
+Stack: Error: 未能从任何源抓取到账号数据
+    at scrapeAccounts (/home/runner/work/hexo-blog-source/hexo-blog-source/scripts/scrape-accounts.js:108:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 </pre>
 </details>
 
